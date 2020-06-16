@@ -1,0 +1,59 @@
+,Features,Importance
+0,colon_hpa_isoform_exp,0.012065201063138388
+1,ovary_hpa_isoform_exp,0.012531614266076106
+2,breast_hpa_isoform_exp,0.013520236204377128
+3,lung_hpa_isoform_exp,0.011937123589788044
+4,salivary gland_hpa_isoform_exp,0.01796292581218275
+5,seminal vesicle_hpa_isoform_exp,0.013014964930530542
+6,lymph node_hpa_isoform_exp,0.012476882373615003
+7,placenta_hpa_isoform_exp,0.012958381280564415
+8,kidney_hpa_isoform_exp,0.012192253863393631
+9,"cervix, uterine_hpa_isoform_exp",0.012558317610852323
+10,adrenal gland_hpa_isoform_exp,0.015705116429598428
+11,thyroid gland_hpa_isoform_exp,0.012624879106984071
+12,stomach 1_hpa_isoform_exp,0.013008675731214916
+13,gallbladder_hpa_isoform_exp,0.013631847732541948
+14,duodenum_hpa_isoform_exp,0.01404033861699807
+15,fallopian tube_hpa_isoform_exp,0.012385157027553384
+16,endometrium 1_hpa_isoform_exp,0.01158460364278915
+17,skin 1_hpa_isoform_exp,0.01595220668357514
+18,spleen_hpa_isoform_exp,0.022629853277168474
+19,gtex_rna_tissue_expression,0.06988899900455182
+20,appendix_hpa_isoform_exp,0.013527385743494188
+21,heart muscle_hpa_isoform_exp,0.016287646085157138
+22,small intestine_hpa_isoform_exp,0.0126953497723716
+23,epididymis_hpa_isoform_exp,0.015921196761880262
+24,testis_hpa_isoform_exp,0.014584791336356826
+25,liver_hpa_isoform_exp,0.013934148066665906
+26,esophagus_hpa_isoform_exp,0.01328017540399342
+27,urinary bladder_hpa_isoform_exp,0.01328869461101595
+28,skeletal muscle_hpa_isoform_exp,0.0174013697906268
+29,tonsil_hpa_isoform_exp,0.013370646502608637
+30,prostate_hpa_isoform_exp,0.012496292003310483
+31,parathyroid gland_hpa_isoform_exp,0.018820939690628
+32,adipose tissue_hpa_isoform_exp,0.013962226958395883
+33,smooth muscle_hpa_isoform_exp,0.012652261401540316
+34,rectum_hpa_isoform_exp,0.013226986757860899
+35,bone marrow_hpa_isoform_exp,0.019389443309300657
+36,mentha_source_feature,0.06408861817756428
+37,chr_no_source_feature,0.000821077989739966
+38,qPhos_site_number,0.014924114564396827
+39,Phosphosite_hu_no,0.01653747953900882
+40,pFAM_domain_number,0.008624212646695145
+41,pFAM_domain,0.02041039214121492
+42,protein_mass,0.019816517803921005
+43,Ensembl_aa_length,0.016276740760449004
+44,Ensembl_isoform_no,0.01564422585243636
+45,trans_count,0.014815379084698245
+46,gc_content,0.01980882208020276
+47,trans_len,0.02013930922024267
+48,gene_length,0.037076275709800016
+49,exon_no,0.01929342632880874
+50,cds_length,0.014825010962844021
+51,HIP_RNA,0.02289193140806377
+52,DFC_RNA,0.017025400348412326
+53,V1C_RNA,0.015825408727263474
+54,AMY_RNA,0.01924723802312261
+55,MD_RNA,0.018372248065848223
+56,STR_RNA,0.01623735514237169
+57,CBC_RNA,0.01978968298019436
