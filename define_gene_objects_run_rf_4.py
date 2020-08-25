@@ -392,7 +392,7 @@ def run_random_forest(training_gene_pair_objects, train_test_gene_pair_objects, 
 
 	print ('X_test', len(X_test), 'y_test', len(y_test))
 
-	forest = RandomForestRegressor(n_estimators=100, oob_score=True)
+	forest = RandomForestRegressor(n_estimators=100, oob_score=True, random_state=0)
 	#forest = RandomForestRegressor(200)
 	forest.fit(X_train, y_train)
 
@@ -459,7 +459,7 @@ def run_random_forest(training_gene_pair_objects, train_test_gene_pair_objects, 
 	print (df)
 
 	#df.to_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/random_forest/ypredict_ytest_%s.csv'%number)
-	df.to_csv('ypredict_ytest_%s.csv'%number)
+	#df.to_csv('ypredict_ytest_%s.csv'%number)
 
 
 	return df

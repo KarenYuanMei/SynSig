@@ -1,15 +1,11 @@
-#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation
+#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation; fig 2c
 
 import numpy as np
-#from igraph import *
+from igraph import *
 import pandas as pd
 import sys
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
-
-from mlxtend.evaluate import permutation_test
-
-
 
 #-----load your ontology onto HiView-------------------------------------------------------------------------
 #code for uploading to HiView taken from DDOT package: https://github.com/michaelkyu/ddot/blob/master/examples/Tutorial.ipynb
@@ -20,8 +16,6 @@ import networkx as nx
 import matplotlib
 matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
-matplotlib.rcParams.update({'font.size': 22})
-
 
 #import seaborn as sns; sns.set()
 
@@ -38,8 +32,9 @@ from collections import defaultdict
 
 from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
+matplotlib.rcParams.update({'font.size': 22})
 
-#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation
+
 
 def find_test_genes(test_genes_file):
 	test_genes=pd.read_csv(test_genes_file)
@@ -104,7 +99,7 @@ def make_avg_score_df(i):
 
 	table = pd.pivot_table(df, values='ypredict', index=['Gene2'], columns=['Gene1'], aggfunc=np.sum)
 	print (table)
-	table.to_csv('table.csv')
+	#table.to_csv('table.csv')
 
 	#print (len(list(set(table.index)&set(overlap))))
 	table['mean']=table.mean(axis=1)
@@ -134,68 +129,69 @@ def make_avg_score_df(i):
 
 	return final
 
-def find_distributions(gene_list1, gene_list2):
-	all_scores=[]
-	for gene1 in gene_list1:
-		#print (gene1)
-		gene2_array=master_dict[gene1]
-		scores=[]
-		for gene2 in gene2_array:
-			if gene2 in gene_list2:
-				score=gene2_array[gene2]
-				scores.append(score)
-		all_scores.append(scores)
+#this is the MASTER function that combines all of the above functions to plot an average ROC curve:
+def plot_mean_ROC():
 
-	score_np=np.array(all_scores)
-	score_array=np.mean(score_np, axis=1)
-	#print (score_array)
-	return score_array
+	#tprs = []
+	#mean_fpr = np.linspace(0, 1, 80)
+
+	#auc_list=[]
+
+	for i in range(5):
+		final=make_avg_score_df(i)
+		probs=final['mean'].tolist()
+		y=final['group'].tolist()
+
+		fpr, tpr, thresholds = roc_curve(y, probs)
+
+		#true_false=list(zip(tpr, fpr))
+
+		#ROC=list(zip(thresholds, tpr, fpr))
+
+		#ROC_df=pd.DataFrame({'Threshold': thresholds, "True_Positives": tpr, "False_Positives": fpr})
+
+		#ROC_df.to_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/random_forest/ROC_df_%s.csv'%i)
+
+		#print (ROC)
+		auc = roc_auc_score(y, probs)
+		#auc_list.append(auc)
+		print('AUC: %.3f' % auc)
 
 
+		ns_probs = [0 for _ in range(len(y))]
+		ns_auc = roc_auc_score(y, ns_probs)
+		ns_fpr, ns_tpr, _ = roc_curve(y, ns_probs)
 
-def plot_distributions(positive_array, mixed_array):
+		lr_auc = roc_auc_score(y, probs)
+		fpr, tpr, _ = roc_curve(y, probs)
+		#tprs.append(np.interp(mean_fpr, fpr, tpr))
+		#tprs[-1][0] = 0.0
 
-	bins=np.histogram(np.hstack((positive_array,mixed_array)), bins=40)[1] #get the bin edges
-	
-	
-	plt.hist(positive_array, bins, color='darkblue', label='Synapse to Synapse', alpha=0.5, edgecolor='black', linewidth=0.8)
-	plt.hist(mixed_array, bins, color='grey', label='Negative to Synapse', alpha=0.5, edgecolor='black', linewidth=0.8)
+		#plt.plot(fpr, tpr, marker='.', label='Random Forest Classifier')
+		#auc_mean=np.mean(auc_list)
+		#print (auc_list)
+		#print ('mean', np.mean(auc_list))
+		plt.plot(ns_fpr, ns_tpr, linestyle='--', color='k')
+		#mean_tpr = np.mean(tprs, axis=0)
+		#mean_tpr[-1] = 1.0
+		#mean_auc = auc(mean_fpr, mean_tpr)
+		#std_auc = np.std(aucs)
+		plt.plot(fpr, tpr, linewidth=3, color='navy')
 
+		# std_tpr = np.std(tprs, axis=0)
+		# tprs_upper = np.minimum(mean_tpr + std_tpr, 1)
+		# tprs_lower = np.maximum(mean_tpr - std_tpr, 0)
+		# plt.fill_between(mean_fpr, tprs_lower, tprs_upper, color='grey', alpha=.2,
+		#                  label=r'$\pm$ 1 std. dev.')
+		# #plt.title('Avg ROC Curve for Predicting Synapse Genes \n 5-Fold Cross-Validation', fontweight = 'bold')
 
-	plt.xlabel('Average Predicted Semantic Similarity Per Gene', fontweight='bold')
-	plt.ylabel('Frequency', fontweight = 'bold')
-	#plt.title('Average Predicted Semantic Similarity', fontweight = 'bold')
-	#plt.xlim(2,6)
-	#plt.ylim(0,8)
-	plt.grid(False)
-	plt.legend()
+		plt.xlabel('False Positive Rate', fontweight='bold')
+		plt.ylabel('True Positive Rate', fontweight='bold')
+		plt.grid(False)
+		# show the legend
+		#plt.legend()
+			# show the plot
 	plt.show()
-	plt.close()
 
-all_pos=[]
-all_neg=[]
-for i in range(5):
-	final=make_avg_score_df(i)
-	print (final)
-	pos=final[final['group']==1]
-	print (pos)
-	pos_mean=pos['mean'].tolist()
-	all_pos.append(pos_mean)
-	
-
-	neg=final[final['group']==0]
-	print (neg)
-	neg_mean=neg['mean'].tolist()
-	all_neg.append(neg_mean)
-
-pos_list = [item for sublist in all_pos for item in sublist]
-neg_list = [item for sublist in all_neg for item in sublist]
-
-p_value = permutation_test(pos_list, neg_list,
-                           method='approximate',
-                           num_rounds=10000,
-                           seed=0)
-print(p_value)
-
-plot_distributions(pos_list, neg_list)
-
+if __name__ == '__main__':
+	plot_mean_ROC()

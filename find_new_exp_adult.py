@@ -1,3 +1,5 @@
+#Goal: Generate Fig 3d
+
 import pandas as pd
 #import networkx as nx
 import numpy as np
@@ -20,7 +22,7 @@ matplotlib.use("TKAgg")
 print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
-from matplotlib_venn import venn3, venn3_circles
+from matplotlib_venn import venn3, venn3_circles, venn3_unweighted
 from matplotlib_venn import venn2, venn2_circles
 import venn
 
@@ -139,7 +141,7 @@ go_syn=find_GO_synapse()
 
 db=list(set(syngo+synDB+synsysnet+go_syn))
 
-v=venn3([set(adult), set(db), set(pred)], set_labels=('Adult Brain \n Synapse Validation', 'Synapse Databases', 'Predicted'), set_colors=('coral', 'skyblue', 'lightgreen'), alpha = 0.7)
+v=venn3([set(adult), set(db), set(pred)], set_labels=('Adult Brain \n Synapse Validation', 'Synapse Databases', 'SynSig'), set_colors=('coral', 'skyblue', 'lightgreen'), alpha = 0.7)
 for text in v.set_labels:
     text.set_fontweight('bold')
 for text in v.set_labels:
@@ -149,6 +151,29 @@ for text in v.subset_labels:
 
 plt.show()
 plt.close()
+
+v=venn3_unweighted([set(adult), set(db), set(pred)], set_labels=('Adult Brain \n Synapse Validation', 'Synapse Databases', 'SynSig'), set_colors=('gray', 'lightgray', 'red'), alpha = 0.7)
+for text in v.set_labels:
+    text.set_fontweight('bold')
+for text in v.set_labels:
+    text.set_fontsize(25)
+for text in v.subset_labels:
+    text.set_fontsize(25)
+
+plt.show()
+plt.close()
+
+v=venn3([set(adult), set(db), set(pred)], set_labels=('Adult Brain \n Synapse Validation', 'Synapse Databases', 'SynSig'), set_colors=('gray', 'lightgray', 'red'), alpha = 0.7)
+for text in v.set_labels:
+    text.set_fontweight('bold')
+for text in v.set_labels:
+    text.set_fontsize(25)
+for text in v.subset_labels:
+    text.set_fontsize(25)
+
+plt.show()
+plt.close()
+
 
 overlap=list(set(adult)&set(pred))
 new=list(set(overlap)-set(db))

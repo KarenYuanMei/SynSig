@@ -53,7 +53,7 @@ def plot_all_predicted():
 	df.rename(columns={'ytest': 'Reference Scores', 'ypredict': 'Predicted Scores'}, inplace=True)
 	
 	#g=sns.jointplot(x=df['Predicted Scores'], y=df['Reference Scores'], kind='kde')
-	g=sns.kdeplot(df['Predicted Scores'], df['Reference Scores'], cmap='Purples', shade=True)
+	g=sns.kdeplot(df['Predicted Scores'], df['Reference Scores'], cmap='Purples', shade=True, cbar=True)
 	
 	y_test=df['Reference Scores'].tolist()
 	yfit=df['Predicted Scores'].tolist()
@@ -72,6 +72,9 @@ def plot_all_predicted():
 	#g.ax_joint.legend([phantom],['r={:f}, p={:f}'.format(r,p)])
 	#g.ax_joint.legend([phantom],['r={:f}, p<0.00001'.format(r,p)])
 	#plt.title('RF Performance: Predicted vs. True',fontweight='bold')
+
+	#plt.xlim(2, 11)
+	plt.ylim(0, 14)
 
 	plt.show()
 	plt.close()
