@@ -101,7 +101,7 @@ def create_data_pair_objects(gene_pairs):
 	for item in gene_pairs:
 		gene1=item[0]
 		gene2=item[1]
-		pair_objects=PairOfGenes(gene1, gene2)
+		pair_objects=PairOfGenes(gene1, gene2, include_GO=False)
 		gene_pair_objects.append(pair_objects)
 	return gene_pair_objects
 
