@@ -17,7 +17,6 @@ matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 matplotlib.rcParams.update({'font.size': 22})
 
-
 import seaborn as sns;sns.set(style="white",font_scale=2)
 
 sns.set_style("ticks")
@@ -27,7 +26,6 @@ from scipy.stats.stats import pearsonr, spearmanr
 
 #construct the random forest so that when doing the 5X cross validation, the model is not seeing 20% of the genes, not just rows--------------------
 import random
-
 
 import numpy as np, pandas as pd; np.random.seed(0)
 #sns.set(font_scale=2)

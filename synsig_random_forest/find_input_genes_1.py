@@ -1,6 +1,7 @@
 #Goal: to select random genes for synapse and non-synapse categories:
 
 #select positive synapse examples by using the intersection of synsysnet, syndb, and go-synapse
+#select negative synapse examples by determining the genes not in any of these databases
 
 
 import pandas as pd
@@ -25,12 +26,12 @@ def GO_Focus(Term):
 	return go_genes, subont_genes
 
 def find_synDB_genes():
-	synDB=pd.read_csv('/Users/karenmei/Documents/BrainHierarchyDataSource/SynDB_Master.csv')
+	synDB=pd.read_csv('../prev_databases/SynDB_Master.csv')
 	synDB_genes=synDB['Symbol'].tolist()
 	return synDB_genes
 
 def find_synsysnet_genes():
-	synsysnet=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_Genes/SynSysNet_genes.csv')
+	synsysnet=pd.read_csv('../prev_databases/SynSysNet_genes.csv')
 	synsysnet_genes=synsysnet['gene_name'].tolist()
 	return synsysnet_genes
 
@@ -46,7 +47,7 @@ def find_positives(subont_genes, synDB_genes, synsysnet_genes, pool_genes):
 	overlap=list(set(pos)&set(pool_genes))
 	print (len(overlap))
 	df=pd.DataFrame({'genes': overlap})
-	df.to_csv('positive_pool.csv')
+	df.to_csv('positive_pool_new.csv')
 	return overlap
 
 #find negative pool:----------------------------------------------------------------------------------------------------
@@ -55,7 +56,7 @@ def find_negatives(go_genes, subont_genes, synDB_genes, synsysnet_genes, pool_ge
 	overlap=list(set(negatives)&set(pool_genes))
 	print (len(overlap))
 	df=pd.DataFrame({'genes': overlap})
-	df.to_csv('negative_pool.csv')
+	df.to_csv('negative_pool_new.csv')
 	return overlap
 
 #find positive and negative pools for input examples:
@@ -88,7 +89,7 @@ def find_pos_neg_training(gene_pool, gene_list, name):
 
 	df=pd.DataFrame(genes, columns=['genes'])
 
-	df.to_csv('synapse_%s.csv'%name)
+	df.to_csv('synapse_%s_new.csv'%name)
 
 	
 	return genes

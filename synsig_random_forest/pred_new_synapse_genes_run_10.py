@@ -7,18 +7,11 @@ from itertools import combinations, combinations_with_replacement
 from itertools import product
 from scipy import spatial
 
-import networkx as nx
 import os
 import ddot
 from ddot import Ontology
 
 import pickle
-
-
-#import matplotlib
-#matplotlib.use("TKAgg")
-#from matplotlib import pyplot as plt
-
 
 from sklearn.ensemble import RandomForestRegressor
 
@@ -26,7 +19,7 @@ from sklearn import metrics
 from sklearn.metrics import explained_variance_score, mean_absolute_error, r2_score
 from scipy.stats.stats import pearsonr, spearmanr
 import pylab
-from sklearn.datasets import make_regression
+#from sklearn.datasets import make_regression
 
 from define_training_synapse_objects_8 import PairOfGenes
 

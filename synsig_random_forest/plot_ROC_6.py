@@ -1,4 +1,4 @@
-#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation; fig 2c
+#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation; 5-fold cross-validation on input genes
 
 import numpy as np
 from igraph import *

@@ -1,0 +1,2658 @@
+Location,Symbol
+SynDB_Pre,LRRC47
+SynDB_Pre,KCNAB2
+SynDB_Pre,VAMP3
+SynDB_Pre,ENO1
+SynDB_Pre,PINK1
+SynDB_Pre,ALPL
+SynDB_Pre,RUNX3
+SynDB_Pre,EPB41
+SynDB_Pre,DEM1
+SynDB_Pre,UQCRH
+SynDB_Pre,EPS15
+SynDB_Pre,DNAJC6
+SynDB_Pre,GNAI3
+SynDB_Pre,KCNA3
+SynDB_Pre,ATP5F1
+SynDB_Pre,ATP1A1
+SynDB_Pre,SV2A
+SynDB_Pre,HORMAD1
+SynDB_Pre,S100A13
+SynDB_Pre,S100A1
+SynDB_Pre,ATP1A2
+SynDB_Pre,NDUFS2
+SynDB_Pre,MGST3
+SynDB_Pre,ATP1B1
+SynDB_Pre,TNR
+SynDB_Pre,RASAL2
+SynDB_Pre,GLUL
+SynDB_Pre,ASPM
+SynDB_Pre,CSRP1
+SynDB_Pre,SYT2
+SynDB_Pre,PPFIA4
+SynDB_Pre,NFASC
+SynDB_Pre,SERTAD4
+SynDB_Pre,ARF1
+SynDB_Pre,ACTA1
+SynDB_Pre,ACTN2
+SynDB_Pre,FH
+SynDB_Pre,YWHAQ
+SynDB_Pre,HPCAL1
+SynDB_Pre,VSNL1
+SynDB_Pre,GDF7
+SynDB_Pre,HADHB
+SynDB_Pre,MAPRE3
+SynDB_Pre,EHD3
+SynDB_Pre,NRXN1
+SynDB_Pre,SPTBN1
+SynDB_Pre,RTN4
+SynDB_Pre,RAB1A
+SynDB_Pre,AAK1
+SynDB_Pre,ATP6V1B1
+SynDB_Pre,ACTG2
+SynDB_Pre,IMMT
+SynDB_Pre,DPP4
+SynDB_Pre,SCN2A
+SynDB_Pre,SCN1A
+SynDB_Pre,SLC25A12
+SynDB_Pre,ADAM23
+SynDB_Pre,MAP2
+SynDB_Pre,ARPC2
+SynDB_Pre,WNT10A
+SynDB_Pre,NDUFA10
+SynDB_Pre,IL5RA
+SynDB_Pre,ARPC4
+SynDB_Pre,SLC6A1
+SynDB_Pre,SYN2
+SynDB_Pre,DYNC1LI1
+SynDB_Pre,CTNNB1
+SynDB_Pre,UQCRC1
+SynDB_Pre,BSN
+SynDB_Pre,GNAI2
+SynDB_Pre,TKT
+SynDB_Pre,ERC2
+SynDB_Pre,PDHB
+SynDB_Pre,ATP6V1A
+SynDB_Pre,NDUFB4
+SynDB_Pre,ALDH1L1
+SynDB_Pre,KCNAB1
+SynDB_Pre,AP2M1
+SynDB_Pre,OPA1
+SynDB_Pre,DLG1
+SynDB_Pre,GAK
+SynDB_Pre,CTBP1
+SynDB_Pre,ADD1
+SynDB_Pre,SLC4A4
+SynDB_Pre,SNCA
+SynDB_Pre,PPP3CA
+SynDB_Pre,ANK2
+SynDB_Pre,ANXA5
+SynDB_Pre,SLC25A4
+SynDB_Pre,GOLPH3
+SynDB_Pre,RAB3C
+SynDB_Pre,SNCAIP
+SynDB_Pre,ACSL6
+SynDB_Pre,VDAC1
+SynDB_Pre,PPP2CA
+SynDB_Pre,NDUFA2
+SynDB_Pre,CAMK2A
+SynDB_Pre,ANXA6
+SynDB_Pre,CPLX2
+SynDB_Pre,CANX
+SynDB_Pre,TUBB2A
+SynDB_Pre,SOX4
+SynDB_Pre,DDR1
+SynDB_Pre,HSPA1B
+SynDB_Pre,PACSIN1
+SynDB_Pre,CPNE5
+SynDB_Pre,HSP90AB1
+SynDB_Pre,RIMS1
+SynDB_Pre,GNA12
+SynDB_Pre,ACTB
+SynDB_Pre,RAC1
+SynDB_Pre,AMPH
+SynDB_Pre,DBNL
+SynDB_Pre,OGDH
+SynDB_Pre,PPIA
+SynDB_Pre,STX1A
+SynDB_Pre,MDH2
+SynDB_Pre,GNAI1
+SynDB_Pre,PCLO
+SynDB_Pre,ADAM22
+SynDB_Pre,GNB2
+SynDB_Pre,VGF
+SynDB_Pre,DLD
+SynDB_Pre,NRCAM
+SynDB_Pre,CAV1
+SynDB_Pre,WASL
+SynDB_Pre,CHCHD3
+SynDB_Pre,EXOC4
+SynDB_Pre,CDK5
+SynDB_Pre,ATP6V1B2
+SynDB_Pre,PPP3CC
+SynDB_Pre,NEFL
+SynDB_Pre,DPYSL2
+SynDB_Pre,VDAC3
+SynDB_Pre,SDCBP
+SynDB_Pre,WWP1
+SynDB_Pre,UQCRB
+SynDB_Pre,YWHAZ
+SynDB_Pre,ATP6V1C1
+SynDB_Pre,RIMS2
+SynDB_Pre,SYBU
+SynDB_Pre,PTK2
+SynDB_Pre,CYC1
+SynDB_Pre,SH3GL2
+SynDB_Pre,VCP
+SynDB_Pre,TLN1
+SynDB_Pre,CLTA
+SynDB_Pre,HSPA5
+SynDB_Pre,STXBP1
+SynDB_Pre,DNM1
+SynDB_Pre,SPTAN1
+SynDB_Pre,PFKP
+SynDB_Pre,ATP5C1
+SynDB_Pre,KIF5B
+SynDB_Pre,OGDHL
+SynDB_Pre,PRKG1
+SynDB_Pre,HK1
+SynDB_Pre,PPP3CB
+SynDB_Pre,VDAC2
+SynDB_Pre,GLUD1
+SynDB_Pre,SFXN3
+SynDB_Pre,INA
+SynDB_Pre,DPYSL4
+SynDB_Pre,AP2A2
+SynDB_Pre,BRSK2
+SynDB_Pre,HBB
+SynDB_Pre,HBD
+SynDB_Pre,LDHA
+SynDB_Pre,MAPK8IP1
+SynDB_Pre,NDUFS3
+SynDB_Pre,MTCH2
+SynDB_Pre,NRXN2
+SynDB_Pre,SF3B2
+SynDB_Pre,RAB1B
+SynDB_Pre,DPP3
+SynDB_Pre,ACTN3
+SynDB_Pre,SPTBN2
+SynDB_Pre,PC
+SynDB_Pre,PPFIA1
+SynDB_Pre,MAP6
+SynDB_Pre,NDUFC2
+SynDB_Pre,ME3
+SynDB_Pre,DLAT
+SynDB_Pre,NCAM1
+SynDB_Pre,ATP5L
+SynDB_Pre,THY1
+SynDB_Pre,HSPA8
+SynDB_Pre,NDUFA9
+SynDB_Pre,KCNA1
+SynDB_Pre,VAMP1
+SynDB_Pre,GAPDH
+SynDB_Pre,TPI1
+SynDB_Pre,ENO2
+SynDB_Pre,PHB2
+SynDB_Pre,CNTN1
+SynDB_Pre,PFKM
+SynDB_Pre,AMHR2
+SynDB_Pre,CS
+SynDB_Pre,ATP5B
+SynDB_Pre,DCTN2
+SynDB_Pre,SYT1
+SynDB_Pre,GIT2
+SynDB_Pre,ATP2A2
+SynDB_Pre,RPH3A
+SynDB_Pre,ARHGEF7
+SynDB_Pre,STXBP6
+SynDB_Pre,RTN1
+SynDB_Pre,GPHN
+SynDB_Pre,ACTN1
+SynDB_Pre,PAPLN
+SynDB_Pre,STON2
+SynDB_Pre,CALM1
+SynDB_Pre,DYNC1H1
+SynDB_Pre,HSP90AA1
+SynDB_Pre,RAGE
+SynDB_Pre,CKB
+SynDB_Pre,CYFIP1
+SynDB_Pre,MAP1A
+SynDB_Pre,MYO5A
+SynDB_Pre,TLN2
+SynDB_Pre,TPM1
+SynDB_Pre,PKM2
+SynDB_Pre,NPTN
+SynDB_Pre,COX5A
+SynDB_Pre,IDH3A
+SynDB_Pre,SNRPA1
+SynDB_Pre,HBA2
+SynDB_Pre,HBA1
+SynDB_Pre,MAPK8IP3
+SynDB_Pre,CASKIN1
+SynDB_Pre,XYLT1
+SynDB_Pre,UQCRC2
+SynDB_Pre,TUFM
+SynDB_Pre,ALDOA
+SynDB_Pre,STX4
+SynDB_Pre,VPS35
+SynDB_Pre,GNAO1
+SynDB_Pre,ATP6V0D1
+SynDB_Pre,LCAT
+SynDB_Pre,AP1G1
+SynDB_Pre,TUBB3
+SynDB_Pre,YWHAE
+SynDB_Pre,PFN1
+SynDB_Pre,C1QBP
+SynDB_Pre,EIF5A
+SynDB_Pre,VAMP2
+SynDB_Pre,UBB
+SynDB_Pre,EPN2
+SynDB_Pre,KCNJ12
+SynDB_Pre,ALDOC
+SynDB_Pre,GIT1
+SynDB_Pre,AP2B1
+SynDB_Pre,JUP
+SynDB_Pre,CNP
+SynDB_Pre,ATP6V0A1
+SynDB_Pre,MPP2
+SynDB_Pre,GFAP
+SynDB_Pre,NSF
+SynDB_Pre,COL1A1
+SynDB_Pre,CLTC
+SynDB_Pre,GNA13
+SynDB_Pre,PRKCA
+SynDB_Pre,ATP5H
+SynDB_Pre,GRB2
+SynDB_Pre,ACTG1
+SynDB_Pre,HGS
+SynDB_Pre,EPB41L3
+SynDB_Pre,NDUFV2
+SynDB_Pre,NAPG
+SynDB_Pre,AQP4
+SynDB_Pre,CDH2
+SynDB_Pre,ATP5A1
+SynDB_Pre,WDR7
+SynDB_Pre,MBP
+SynDB_Pre,BSG
+SynDB_Pre,SGTA
+SynDB_Pre,PIP5K1C
+SynDB_Pre,EEF2
+SynDB_Pre,TUBB4
+SynDB_Pre,STXBP2
+SynDB_Pre,COL5A3
+SynDB_Pre,DNM2
+SynDB_Pre,PRDX2
+SynDB_Pre,CALR
+SynDB_Pre,PRKACA
+SynDB_Pre,UNC13A
+SynDB_Pre,RAB3A
+SynDB_Pre,UQCRFS1
+SynDB_Pre,POP4
+SynDB_Pre,SPTBN4
+SynDB_Pre,RABAC1
+SynDB_Pre,ATP1A3
+SynDB_Pre,NAPA
+SynDB_Pre,SPHK2
+SynDB_Pre,PPFIA3
+SynDB_Pre,AP2A1
+SynDB_Pre,PPP2R1A
+SynDB_Pre,PRKCG
+SynDB_Pre,CSNK2A1
+SynDB_Pre,SNPH
+SynDB_Pre,PLCB1
+SynDB_Pre,SNAP25
+SynDB_Pre,NAPB
+SynDB_Pre,SRC
+SynDB_Pre,YWHAB
+SynDB_Pre,GNAS
+SynDB_Pre,TUBB1
+SynDB_Pre,DNAJC5
+SynDB_Pre,ATP5J
+SynDB_Pre,SYNJ1
+SynDB_Pre,ATP5O
+SynDB_Pre,NDUFV3
+SynDB_Pre,PFKL
+SynDB_Pre,S100B
+SynDB_Pre,SLC25A18
+SynDB_Pre,ATP6V1E1
+SynDB_Pre,TUBA8
+SynDB_Pre,SNAP29
+SynDB_Pre,MAPK1
+SynDB_Pre,AP1B1
+SynDB_Pre,YWHAH
+SynDB_Pre,SYN3
+SynDB_Pre,ACO2
+SynDB_Pre,NDUFA6
+SynDB_Pre,SAMM50
+SynDB_Pre,PDHA1
+SynDB_Pre,CASK
+SynDB_Pre,SYN1
+SynDB_Pre,SYP
+SynDB_Pre,DLG3
+SynDB_Pre,PRPS1
+SynDB_Pre,SLC25A5
+SynDB_Pre,MAGEA5
+SynDB_Pre,L1CAM
+SynDB_Pre,GDI1
+Location,Symbol
+cat_vesicle,VAMP3
+cat_vesicle,ENO1
+cat_vesicle,STX12
+cat_vesicle,PGM1
+cat_vesicle,SLC6A17
+cat_vesicle,SV2A
+cat_vesicle,SCAMP3
+cat_vesicle,RABGAP1L
+cat_vesicle,STX6
+cat_vesicle,ATP6V1G3
+cat_vesicle,SYT2
+cat_vesicle,SNAP47
+cat_vesicle,ACTA1
+cat_vesicle,HPCAL1
+cat_vesicle,ATP6V1C2
+cat_vesicle,VSNL1
+cat_vesicle,SLC30A3
+cat_vesicle,ATP6V1E2
+cat_vesicle,CALM2
+cat_vesicle,RTN4
+cat_vesicle,AAK1
+cat_vesicle,ATP6V1B1
+cat_vesicle,DCTN1
+cat_vesicle,RAB3GAP1
+cat_vesicle,PDK1
+cat_vesicle,ARPC2
+cat_vesicle,KIF1A
+cat_vesicle,SYN2
+cat_vesicle,ATP6V1A
+cat_vesicle,RAP1GDS1
+cat_vesicle,CLCN3
+cat_vesicle,SV2C
+cat_vesicle,TMED9
+cat_vesicle,ATP6V1G2
+cat_vesicle,EEF1A1
+cat_vesicle,STX7
+cat_vesicle,STXBP5
+cat_vesicle,SYNJ2
+cat_vesicle,AMPH
+cat_vesicle,RALA
+cat_vesicle,STX1A
+cat_vesicle,ATP6V1F
+cat_vesicle,ATP6V1B2
+cat_vesicle,ATP6V1H
+cat_vesicle,ATP6V0D2
+cat_vesicle,ATP6V1C1
+cat_vesicle,CLTA
+cat_vesicle,ATP6V1G1
+cat_vesicle,DNM1
+cat_vesicle,SPTAN1
+cat_vesicle,SLC18A3
+cat_vesicle,ACTA2
+cat_vesicle,INA
+cat_vesicle,VTI1A
+cat_vesicle,SLC18A2
+cat_vesicle,LDHA
+cat_vesicle,SLC17A6
+cat_vesicle,RTN3
+cat_vesicle,SYT12
+cat_vesicle,MAP6
+cat_vesicle,PICALM
+cat_vesicle,THY1
+cat_vesicle,HSPA8
+cat_vesicle,VAMP1
+cat_vesicle,GAPDH
+cat_vesicle,CAPZA3
+cat_vesicle,KRAS
+cat_vesicle,PFKM
+cat_vesicle,RACGAP1
+cat_vesicle,SYT1
+cat_vesicle,ARPC3
+cat_vesicle,RPH3A
+cat_vesicle,RTN1
+cat_vesicle,ATP6V1D
+cat_vesicle,HSP90AA1
+cat_vesicle,MYO5A
+cat_vesicle,SV2B
+cat_vesicle,SYNGR3
+cat_vesicle,ATP6V0C
+cat_vesicle,SYT17
+cat_vesicle,ALDOA
+cat_vesicle,ATP6V0D1
+cat_vesicle,PFN1
+cat_vesicle,VAMP2
+cat_vesicle,ATP6V0A1
+cat_vesicle,VAT1
+cat_vesicle,NSF
+cat_vesicle,VAPA
+cat_vesicle,WDR7
+cat_vesicle,STXBP2
+cat_vesicle,GPI
+cat_vesicle,AP2A1
+cat_vesicle,SYT5
+cat_vesicle,SNAP25
+cat_vesicle,SLC32A1
+cat_vesicle,STX16
+cat_vesicle,TUBB1
+cat_vesicle,EEF1A2
+cat_vesicle,SYNJ1
+cat_vesicle,ATP6V1E1
+cat_vesicle,SNAP29
+cat_vesicle,AP1B1
+cat_vesicle,SYN3
+cat_vesicle,SYNGR1
+cat_vesicle,SYN1
+cat_vesicle,SYP
+cat_vesicle,PGK1
+Location,Symbol
+cat_preactivezone,ENO1
+cat_preactivezone,CDC42
+cat_preactivezone,OSCP1
+cat_preactivezone,PRDX1
+cat_preactivezone,SLC6A17
+cat_preactivezone,ATP5F1
+cat_preactivezone,ATP1A1
+cat_preactivezone,PPIAL4B
+cat_preactivezone,SV2A
+cat_preactivezone,IGSF8
+cat_preactivezone,ATP1A2
+cat_preactivezone,ATP1A4
+cat_preactivezone,ATP1B1
+cat_preactivezone,GLUL
+cat_preactivezone,ATP2B4
+cat_preactivezone,NFASC
+cat_preactivezone,PLXNA2
+cat_preactivezone,ARF1
+cat_preactivezone,ACTA1
+cat_preactivezone,YWHAQ
+cat_preactivezone,ATP6V1C2
+cat_preactivezone,VSNL1
+cat_preactivezone,SLC30A3
+cat_preactivezone,ATP6V1E2
+cat_preactivezone,SPTBN1
+cat_preactivezone,MDH1
+cat_preactivezone,RAB1A
+cat_preactivezone,ATP6V1B1
+cat_preactivezone,COX5B
+cat_preactivezone,DPP10
+cat_preactivezone,DPP4
+cat_preactivezone,PRKAG3
+cat_preactivezone,NDUFA10
+cat_preactivezone,ARPC4
+cat_preactivezone,ATP2B2
+cat_preactivezone,SLC6A11
+cat_preactivezone,SLC6A1
+cat_preactivezone,SYN2
+cat_preactivezone,RAB5A
+cat_preactivezone,UQCRC1
+cat_preactivezone,BSN
+cat_preactivezone,GNAI2
+cat_preactivezone,PDHB
+cat_preactivezone,ALCAM
+cat_preactivezone,CD47
+cat_preactivezone,NDUFB4
+cat_preactivezone,RAB7A
+cat_preactivezone,RAB6B
+cat_preactivezone,KCNAB1
+cat_preactivezone,AP2M1
+cat_preactivezone,QDPR
+cat_preactivezone,UCHL1
+cat_preactivezone,ANXA5
+cat_preactivezone,GPM6A
+cat_preactivezone,SLC25A4
+cat_preactivezone,BASP1
+cat_preactivezone,SLC1A3
+cat_preactivezone,RAB3C
+cat_preactivezone,SV2C
+cat_preactivezone,UQCRQ
+cat_preactivezone,VDAC1
+cat_preactivezone,CAMK2A
+cat_preactivezone,ANXA6
+cat_preactivezone,SFXN1
+cat_preactivezone,CPLX2
+cat_preactivezone,TUBB2A
+cat_preactivezone,TUBB2B
+cat_preactivezone,PGK2
+cat_preactivezone,ACTB
+cat_preactivezone,RAC1
+cat_preactivezone,GBAS
+cat_preactivezone,STX1A
+cat_preactivezone,GNAI1
+cat_preactivezone,CACNA2D1
+cat_preactivezone,PCLO
+cat_preactivezone,HEPACAM2
+cat_preactivezone,GNB2
+cat_preactivezone,PLXNA4
+cat_preactivezone,ATP6V1B2
+cat_preactivezone,NEFL
+cat_preactivezone,VDAC3
+cat_preactivezone,RAB2A
+cat_preactivezone,PDP1
+cat_preactivezone,YWHAZ
+cat_preactivezone,ATP6V1C1
+cat_preactivezone,TMEM65
+cat_preactivezone,LY6H
+cat_preactivezone,PLEC
+cat_preactivezone,CYC1
+cat_preactivezone,SLC1A1
+cat_preactivezone,GNAQ
+cat_preactivezone,RAB14
+cat_preactivezone,HSPA5
+cat_preactivezone,STXBP1
+cat_preactivezone,DNM1
+cat_preactivezone,SPTAN1
+cat_preactivezone,TUBB2C
+cat_preactivezone,ATP5C1
+cat_preactivezone,CHAT
+cat_preactivezone,CISD1
+cat_preactivezone,HK1
+cat_preactivezone,VDAC2
+cat_preactivezone,LGI1
+cat_preactivezone,PGAM1
+cat_preactivezone,GOT1
+cat_preactivezone,INA
+cat_preactivezone,HRAS
+cat_preactivezone,CD81
+cat_preactivezone,SLC1A2
+cat_preactivezone,SLC3A2
+cat_preactivezone,RTN3
+cat_preactivezone,RAB1B
+cat_preactivezone,GSTP1
+cat_preactivezone,NDUFV1
+cat_preactivezone,NCAM1
+cat_preactivezone,FXYD2
+cat_preactivezone,FXYD6
+cat_preactivezone,ATP5L
+cat_preactivezone,THY1
+cat_preactivezone,HSPA8
+cat_preactivezone,NTM
+cat_preactivezone,NDUFA9
+cat_preactivezone,VAMP1
+cat_preactivezone,GAPDH
+cat_preactivezone,TPI1
+cat_preactivezone,ENO2
+cat_preactivezone,PHB2
+cat_preactivezone,LDHB
+cat_preactivezone,KRAS
+cat_preactivezone,DNM1L
+cat_preactivezone,CNTN1
+cat_preactivezone,TUBA1B
+cat_preactivezone,TUBA1A
+cat_preactivezone,TUBA1C
+cat_preactivezone,ATP5B
+cat_preactivezone,SYT1
+cat_preactivezone,ATP2B1
+cat_preactivezone,SLC25A3
+cat_preactivezone,ARPC3
+cat_preactivezone,RPH3A
+cat_preactivezone,RAB35
+cat_preactivezone,ATP12A
+cat_preactivezone,NDRG2
+cat_preactivezone,RAB2B
+cat_preactivezone,ATP6V1D
+cat_preactivezone,HSP90AA1
+cat_preactivezone,CKB
+cat_preactivezone,RAB11A
+cat_preactivezone,PKM2
+cat_preactivezone,NPTN
+cat_preactivezone,COX5A
+cat_preactivezone,LINGO1
+cat_preactivezone,SV2B
+cat_preactivezone,SYNGR3
+cat_preactivezone,ALDOA
+cat_preactivezone,GNAO1
+cat_preactivezone,ARL2BP
+cat_preactivezone,ATP6V0D1
+cat_preactivezone,TUBB3
+cat_preactivezone,YWHAE
+cat_preactivezone,ATP1B2
+cat_preactivezone,VAMP2
+cat_preactivezone,ALDOC
+cat_preactivezone,CNP
+cat_preactivezone,ATP6V0A1
+cat_preactivezone,CNTNAP1
+cat_preactivezone,GFAP
+cat_preactivezone,PHB
+cat_preactivezone,NME1
+cat_preactivezone,CLTC
+cat_preactivezone,TTYH2
+cat_preactivezone,ATP5H
+cat_preactivezone,SYNGR2
+cat_preactivezone,ACTG1
+cat_preactivezone,NAPG
+cat_preactivezone,GNAL
+cat_preactivezone,MBP
+cat_preactivezone,TUBB4
+cat_preactivezone,DNM2
+cat_preactivezone,RAB3D
+cat_preactivezone,UNC13A
+cat_preactivezone,RAB3A
+cat_preactivezone,GPI
+cat_preactivezone,FXYD7
+cat_preactivezone,ATP1A3
+cat_preactivezone,APOE
+cat_preactivezone,NAPA
+cat_preactivezone,SYNGR4
+cat_preactivezone,SLC17A7
+cat_preactivezone,PRKCG
+cat_preactivezone,SIRPA
+cat_preactivezone,SNAP25
+cat_preactivezone,NAPB
+cat_preactivezone,SLC32A1
+cat_preactivezone,NCAM2
+cat_preactivezone,SOD1
+cat_preactivezone,ATP6V1E1
+cat_preactivezone,GNAZ
+cat_preactivezone,YWHAH
+cat_preactivezone,SYNGR1
+cat_preactivezone,NDUFA6
+cat_preactivezone,MAOA
+cat_preactivezone,SYN1
+cat_preactivezone,SYP
+cat_preactivezone,PGK1
+cat_preactivezone,PLP1
+cat_preactivezone,ATP2B3
+cat_preactivezone,L1CAM
+cat_preactivezone,GDI1
+Location,Symbol
+cat_post.csv,AGRN
+cat_post.csv,ATAD3A
+cat_post.csv,GNB1
+cat_post.csv,LRRC47
+cat_post.csv,KCNAB2
+cat_post.csv,RPL22
+cat_post.csv,ACOT7
+cat_post.csv,DNAJC11
+cat_post.csv,VAMP3
+cat_post.csv,PARK7
+cat_post.csv,ENO1
+cat_post.csv,PGD
+cat_post.csv,FBXO2
+cat_post.csv,MFN2
+cat_post.csv,EFHD2
+cat_post.csv,PADI2
+cat_post.csv,IGSF21
+cat_post.csv,ALDH4A1
+cat_post.csv,UBR4
+cat_post.csv,KIAA0090
+cat_post.csv,AKR7A2
+cat_post.csv,CAPZB
+cat_post.csv,DDOST
+cat_post.csv,RAP1GAP
+cat_post.csv,CDC42
+cat_post.csv,C1QC
+cat_post.csv,RPL11
+cat_post.csv,SFN
+cat_post.csv,WASF2
+cat_post.csv,STX12
+cat_post.csv,ATPIF1
+cat_post.csv,EPB41
+cat_post.csv,MECR
+cat_post.csv,FABP3
+cat_post.csv,LCK
+cat_post.csv,MARCKSL1
+cat_post.csv,YARS
+cat_post.csv,HPCA
+cat_post.csv,DLGAP3
+cat_post.csv,SFPQ
+cat_post.csv,NCDN
+cat_post.csv,TRAPPC3
+cat_post.csv,MAP7D1
+cat_post.csv,MACF1
+cat_post.csv,PABPC4
+cat_post.csv,CAP1
+cat_post.csv,SLC2A1
+cat_post.csv,PTPRF
+cat_post.csv,KIF2C
+cat_post.csv,RPS8
+cat_post.csv,PRDX1
+cat_post.csv,AKR1A1
+cat_post.csv,FAAH
+cat_post.csv,CMPK1
+cat_post.csv,CPT2
+cat_post.csv,PPAP2B
+cat_post.csv,DOCK7
+cat_post.csv,DNAJC6
+cat_post.csv,PDE4B
+cat_post.csv,SGIP1
+cat_post.csv,GNG12
+cat_post.csv,LRRC7
+cat_post.csv,LRRC40
+cat_post.csv,NEGR1
+cat_post.csv,CRYZ
+cat_post.csv,PIGK
+cat_post.csv,AK5
+cat_post.csv,DNAJB4
+cat_post.csv,PRKACB
+cat_post.csv,DDAH1
+cat_post.csv,RPL5
+cat_post.csv,ABCD3
+cat_post.csv,AGL
+cat_post.csv,DBT
+cat_post.csv,STXBP3
+cat_post.csv,WDR47
+cat_post.csv,SARS
+cat_post.csv,GNAI3
+cat_post.csv,AMPD2
+cat_post.csv,GSTM2
+cat_post.csv,GSTM3
+cat_post.csv,AHCYL1
+cat_post.csv,KCNA2
+cat_post.csv,ATP5F1
+cat_post.csv,RAP1A
+cat_post.csv,CAPZA1
+cat_post.csv,NRAS
+cat_post.csv,SYCP1
+cat_post.csv,ATP1A1
+cat_post.csv,PHGDH
+cat_post.csv,SEC22B
+cat_post.csv,PEX11B
+cat_post.csv,SV2A
+cat_post.csv,VPS45
+cat_post.csv,ARNT
+cat_post.csv,SNX27
+cat_post.csv,S100A9
+cat_post.csv,S100A4
+cat_post.csv,RAB13
+cat_post.csv,RPS27
+cat_post.csv,TPM3
+cat_post.csv,ADAR
+cat_post.csv,PMVK
+cat_post.csv,PBXIP1
+cat_post.csv,SHC1
+cat_post.csv,MTX1
+cat_post.csv,PKLR
+cat_post.csv,FDPS
+cat_post.csv,ARHGEF2
+cat_post.csv,LMNA
+cat_post.csv,CCT3
+cat_post.csv,HAPLN2
+cat_post.csv,BCAN
+cat_post.csv,DARC
+cat_post.csv,TAGLN2
+cat_post.csv,IGSF8
+cat_post.csv,ATP1A2
+cat_post.csv,ATP1A4
+cat_post.csv,PEA15
+cat_post.csv,COPA
+cat_post.csv,NDUFS2
+cat_post.csv,TOMM40L
+cat_post.csv,HSPA6
+cat_post.csv,MGST3
+cat_post.csv,BRP44
+cat_post.csv,ATP1B1
+cat_post.csv,KIFAP3
+cat_post.csv,DNM3
+cat_post.csv,PRDX6
+cat_post.csv,CACYBP
+cat_post.csv,TNR
+cat_post.csv,ASTN1
+cat_post.csv,RASAL2
+cat_post.csv,GLUL
+cat_post.csv,RGS8
+cat_post.csv,PLA2G4A
+cat_post.csv,CSRP1
+cat_post.csv,SYT2
+cat_post.csv,CYB5R1
+cat_post.csv,PPFIA4
+cat_post.csv,ATP2B4
+cat_post.csv,PLEKHA6
+cat_post.csv,NFASC
+cat_post.csv,CNTN2
+cat_post.csv,PLXNA2
+cat_post.csv,EPRS
+cat_post.csv,IARS2
+cat_post.csv,RAB3GAP2
+cat_post.csv,MARK1
+cat_post.csv,MOSC2
+cat_post.csv,DUSP10
+cat_post.csv,ENAH
+cat_post.csv,PARP1
+cat_post.csv,CDC42BPA
+cat_post.csv,ARF1
+cat_post.csv,GUK1
+cat_post.csv,GNPAT
+cat_post.csv,EXOC8
+cat_post.csv,TOMM20
+cat_post.csv,EDARADD
+cat_post.csv,LGALS8
+cat_post.csv,ACTN2
+cat_post.csv,RYR2
+cat_post.csv,FMN2
+cat_post.csv,RGS7
+cat_post.csv,FH
+cat_post.csv,SCCPDH
+cat_post.csv,ACP1
+cat_post.csv,RPS7
+cat_post.csv,YWHAQ
+cat_post.csv,PDIA6
+cat_post.csv,ROCK2
+cat_post.csv,DDX1
+cat_post.csv,FAM49A
+cat_post.csv,VSNL1
+cat_post.csv,NT5C1B
+cat_post.csv,RHOB
+cat_post.csv,FKBP1B
+cat_post.csv,ITSN2
+cat_post.csv,EFR3B
+cat_post.csv,RAB10
+cat_post.csv,HADHA
+cat_post.csv,HADHB
+cat_post.csv,DPYSL5
+cat_post.csv,MAPRE3
+cat_post.csv,CAD
+cat_post.csv,SLC30A3
+cat_post.csv,PPP1CB
+cat_post.csv,EHD3
+cat_post.csv,BIRC6
+cat_post.csv,STRN
+cat_post.csv,EIF2AK2
+cat_post.csv,CYP1B1
+cat_post.csv,ATL2
+cat_post.csv,SOS1
+cat_post.csv,COX7A2L
+cat_post.csv,LRPPRC
+cat_post.csv,PRKCE
+cat_post.csv,ATP6V1E2
+cat_post.csv,CRIPT
+cat_post.csv,CALM2
+cat_post.csv,KLRAQ1
+cat_post.csv,NRXN1
+cat_post.csv,ACYP2
+cat_post.csv,SPTBN1
+cat_post.csv,RTN4
+cat_post.csv,RPS27A
+cat_post.csv,XPO1
+cat_post.csv,CCT4
+cat_post.csv,MDH1
+cat_post.csv,UGP2
+cat_post.csv,RAB1A
+cat_post.csv,ACTR2
+cat_post.csv,PLEK
+cat_post.csv,AAK1
+cat_post.csv,PCBP1
+cat_post.csv,ADD2
+cat_post.csv,EXOC6B
+cat_post.csv,SFXN5
+cat_post.csv,RAB11FIP5
+cat_post.csv,CCT7
+cat_post.csv,FBXO41
+cat_post.csv,DCTN1
+cat_post.csv,CTNNA2
+cat_post.csv,LRRTM1
+cat_post.csv,SUCLG1
+cat_post.csv,CAPG
+cat_post.csv,IMMT
+cat_post.csv,COX5B
+cat_post.csv,ACTR1B
+cat_post.csv,RPL31
+cat_post.csv,SEPT10
+cat_post.csv,ACTR3
+cat_post.csv,CCDC93
+cat_post.csv,CLASP1
+cat_post.csv,BIN1
+cat_post.csv,RAB3GAP1
+cat_post.csv,DARS
+cat_post.csv,KIF5C
+cat_post.csv,CACNB4
+cat_post.csv,FMNL2
+cat_post.csv,GPD2
+cat_post.csv,PKP4
+cat_post.csv,PSMD14
+cat_post.csv,SCN2A
+cat_post.csv,STK39
+cat_post.csv,GAD1
+cat_post.csv,CYBRD1
+cat_post.csv,DYNC1I2
+cat_post.csv,SLC25A12
+cat_post.csv,RAPGEF4
+cat_post.csv,OLA1
+cat_post.csv,MTX2
+cat_post.csv,PDE11A
+cat_post.csv,PRKRA
+cat_post.csv,SESTD1
+cat_post.csv,PDE1A
+cat_post.csv,NCKAP1
+cat_post.csv,HIBCH
+cat_post.csv,GLS
+cat_post.csv,STAT1
+cat_post.csv,MYO1B
+cat_post.csv,HECW2
+cat_post.csv,COQ10B
+cat_post.csv,HSPD1
+cat_post.csv,ABI2
+cat_post.csv,RAPH1
+cat_post.csv,NDUFS1
+cat_post.csv,EEF1B2
+cat_post.csv,ADAM23
+cat_post.csv,MAP2
+cat_post.csv,LANCL1
+cat_post.csv,ATIC
+cat_post.csv,ARPC2
+cat_post.csv,PNKD
+cat_post.csv,TUBA4A
+cat_post.csv,DNAJB2
+cat_post.csv,DES
+cat_post.csv,SLC4A3
+cat_post.csv,EPHA4
+cat_post.csv,FARSB
+cat_post.csv,ACSL3
+cat_post.csv,SERPINE2
+cat_post.csv,DOCK10
+cat_post.csv,IRS1
+cat_post.csv,MFF
+cat_post.csv,PSMD1
+cat_post.csv,NGEF
+cat_post.csv,ATG16L1
+cat_post.csv,AGAP1
+cat_post.csv,NDUFA10
+cat_post.csv,GPC1
+cat_post.csv,KIF1A
+cat_post.csv,PPP1R7
+cat_post.csv,HDLBP
+cat_post.csv,SEPT2
+cat_post.csv,CHL1
+cat_post.csv,GRM7
+cat_post.csv,SRGAP3
+cat_post.csv,MTMR14
+cat_post.csv,ARPC4
+cat_post.csv,SEC13
+cat_post.csv,ATP2B2
+cat_post.csv,SYN2
+cat_post.csv,RAF1
+cat_post.csv,CAND2
+cat_post.csv,IQSEC1
+cat_post.csv,RFTN1
+cat_post.csv,RAB5A
+cat_post.csv,NKIRAS1
+cat_post.csv,CMC1
+cat_post.csv,AZI2
+cat_post.csv,DYNC1LI1
+cat_post.csv,CLASP2
+cat_post.csv,PDCD6IP
+cat_post.csv,PLCD1
+cat_post.csv,ACAA1
+cat_post.csv,WDR48
+cat_post.csv,RPSA
+cat_post.csv,RPL14
+cat_post.csv,CTNNB1
+cat_post.csv,HIGD1A
+cat_post.csv,SACM1L
+cat_post.csv,PTPN23
+cat_post.csv,CSPG5
+cat_post.csv,DHX30
+cat_post.csv,MAP4
+cat_post.csv,UQCRC1
+cat_post.csv,NCKIPSD
+cat_post.csv,PRKAR2A
+cat_post.csv,WDR6
+cat_post.csv,QARS
+cat_post.csv,GPX1
+cat_post.csv,RHOA
+cat_post.csv,BSN
+cat_post.csv,CAMKV
+cat_post.csv,GNAI2
+cat_post.csv,CACNA2D2
+cat_post.csv,DOCK3
+cat_post.csv,GRM2
+cat_post.csv,ABHD14B
+cat_post.csv,TKT
+cat_post.csv,CACNA2D3
+cat_post.csv,ERC2
+cat_post.csv,APPL1
+cat_post.csv,SLMAP
+cat_post.csv,PDHB
+cat_post.csv,FAM107A
+cat_post.csv,CADPS
+cat_post.csv,PRICKLE2
+cat_post.csv,MINA
+cat_post.csv,TOMM70A
+cat_post.csv,RPL24
+cat_post.csv,TAGLN3
+cat_post.csv,ATP6V1A
+cat_post.csv,GAP43
+cat_post.csv,LSAMP
+cat_post.csv,GSK3B
+cat_post.csv,NDUFB4
+cat_post.csv,GOLGB1
+cat_post.csv,KPNA1
+cat_post.csv,KALRN
+cat_post.csv,SNX4
+cat_post.csv,ALDH1L1
+cat_post.csv,CHCHD6
+cat_post.csv,PLXNA1
+cat_post.csv,RPN1
+cat_post.csv,RAB7A
+cat_post.csv,COPG
+cat_post.csv,DNAJC13
+cat_post.csv,SRPRB
+cat_post.csv,RAB6B
+cat_post.csv,MRAS
+cat_post.csv,COPB2
+cat_post.csv,PFN2
+cat_post.csv,MLF1
+cat_post.csv,TNIK
+cat_post.csv,NLGN1
+cat_post.csv,PIK3CA
+cat_post.csv,GNB4
+cat_post.csv,PEX5L
+cat_post.csv,DNAJC19
+cat_post.csv,MCCC1
+cat_post.csv,MAP6D1
+cat_post.csv,AP2M1
+cat_post.csv,ABCF3
+cat_post.csv,PSMD2
+cat_post.csv,EIF4G1
+cat_post.csv,MAGEF1
+cat_post.csv,VPS8
+cat_post.csv,EIF4A2
+cat_post.csv,OPA1
+cat_post.csv,APOD
+cat_post.csv,DLG1
+cat_post.csv,BDH1
+cat_post.csv,ATP5I
+cat_post.csv,GAK
+cat_post.csv,CTBP1
+cat_post.csv,LETM1
+cat_post.csv,ADD1
+cat_post.csv,HTT
+cat_post.csv,CRMP1
+cat_post.csv,WFS1
+cat_post.csv,ABLIM2
+cat_post.csv,WDR1
+cat_post.csv,QDPR
+cat_post.csv,LAP3
+cat_post.csv,RPL9
+cat_post.csv,UCHL1
+cat_post.csv,LIMCH1
+cat_post.csv,TMEM33
+cat_post.csv,ATP8A1
+cat_post.csv,KCTD8
+cat_post.csv,GABRA4
+cat_post.csv,FRYL
+cat_post.csv,EXOC1
+cat_post.csv,PAICS
+cat_post.csv,LPHN3
+cat_post.csv,RUFY3
+cat_post.csv,SLC4A4
+cat_post.csv,CDKL2
+cat_post.csv,G3BP2
+cat_post.csv,USO1
+cat_post.csv,SEPT11
+cat_post.csv,CCNG2
+cat_post.csv,ANXA3
+cat_post.csv,PRKG2
+cat_post.csv,SCD5
+cat_post.csv,SEC31A
+cat_post.csv,MAPK10
+cat_post.csv,SNCA
+cat_post.csv,GRID2
+cat_post.csv,RAP1GDS1
+cat_post.csv,EIF4E
+cat_post.csv,PPP3CA
+cat_post.csv,HADH
+cat_post.csv,ANK2
+cat_post.csv,CAMK2D
+cat_post.csv,ANXA5
+cat_post.csv,FGF2
+cat_post.csv,SLC25A31
+cat_post.csv,HSPA4L
+cat_post.csv,DCLK2
+cat_post.csv,RPS3A
+cat_post.csv,TRIM2
+cat_post.csv,FGB
+cat_post.csv,FGG
+cat_post.csv,GRIA2
+cat_post.csv,ETFDH
+cat_post.csv,PPID
+cat_post.csv,RAPGEF2
+cat_post.csv,GPM6A
+cat_post.csv,ENPP6
+cat_post.csv,SLC25A4
+cat_post.csv,SORBS2
+cat_post.csv,CCDC127
+cat_post.csv,EXOC3
+cat_post.csv,TPPP
+cat_post.csv,NDUFS6
+cat_post.csv,CCT5
+cat_post.csv,CTNND2
+cat_post.csv,TRIO
+cat_post.csv,BASP1
+cat_post.csv,CDH10
+cat_post.csv,SLC1A3
+cat_post.csv,OXCT1
+cat_post.csv,NNT
+cat_post.csv,RAB3C
+cat_post.csv,PDE4D
+cat_post.csv,KIF2A
+cat_post.csv,ERBB2IP
+cat_post.csv,MRPS36
+cat_post.csv,MCCC2
+cat_post.csv,MAP1B
+cat_post.csv,TNPO1
+cat_post.csv,F2RL1
+cat_post.csv,AP3B1
+cat_post.csv,HOMER1
+cat_post.csv,RASGRF2
+cat_post.csv,VCAN
+cat_post.csv,HAPLN1
+cat_post.csv,TTC37
+cat_post.csv,SLC25A46
+cat_post.csv,APC
+cat_post.csv,REEP5
+cat_post.csv,AP3S1
+cat_post.csv,HSD17B4
+cat_post.csv,SNX2
+cat_post.csv,ALDH7A1
+cat_post.csv,LMNB1
+cat_post.csv,SLC12A2
+cat_post.csv,ACSL6
+cat_post.csv,KIF3A
+cat_post.csv,SEPT8
+cat_post.csv,HSPA4
+cat_post.csv,VDAC1
+cat_post.csv,PPP2CA
+cat_post.csv,HSPA9
+cat_post.csv,CTNNA1
+cat_post.csv,PURA
+Location,Symbol
+cat_post (1).csv,NDUFA2
+cat_post (1).csv,HARS2
+cat_post (1).csv,PCDHB6
+cat_post (1).csv,PCDH1
+cat_post (1).csv,ARHGAP26
+cat_post (1).csv,KCTD16
+cat_post (1).csv,DPYSL3
+cat_post (1).csv,JAKMIP2
+cat_post (1).csv,SPINK5
+cat_post (1).csv,ABLIM3
+cat_post (1).csv,CAMK2A
+cat_post (1).csv,RPS14
+cat_post (1).csv,SYNPO
+cat_post (1).csv,DCTN4
+cat_post (1).csv,ANXA6
+cat_post (1).csv,GRIA1
+cat_post (1).csv,SGCD
+cat_post (1).csv,CYFIP2
+cat_post (1).csv,GABRA1
+cat_post (1).csv,NUDCD2
+cat_post (1).csv,RARS
+cat_post (1).csv,DOCK2
+cat_post (1).csv,NPM1
+cat_post (1).csv,SFXN1
+cat_post (1).csv,CLTB
+cat_post (1).csv,GPRIN1
+cat_post (1).csv,PRR7
+cat_post (1).csv,DBN1
+cat_post (1).csv,PDLIM7
+cat_post (1).csv,CANX
+cat_post (1).csv,GNB2L1
+cat_post (1).csv,EXOC2
+cat_post (1).csv,TUBB2A
+cat_post (1).csv,TUBB2B
+cat_post (1).csv,PECI
+cat_post (1).csv,NRN1
+cat_post (1).csv,SSR1
+cat_post (1).csv,DSP
+cat_post (1).csv,PHACTR1
+cat_post (1).csv,RANBP9
+cat_post (1).csv,CAP2
+cat_post (1).csv,ALDH5A1
+cat_post (1).csv,HIST1H4A
+cat_post (1).csv,HIST1H1E
+cat_post (1).csv,HIST1H2AE
+cat_post (1).csv,GABBR1
+cat_post (1).csv,MOG
+cat_post (1).csv,GNL1
+cat_post (1).csv,FLOT1
+cat_post (1).csv,ATP6V1G2
+cat_post (1).csv,CSNK2B
+cat_post (1).csv,VARS
+cat_post (1).csv,HSPA1L
+cat_post (1).csv,HSPA1A
+cat_post (1).csv,HSPA1B
+cat_post (1).csv,EHMT2
+cat_post (1).csv,SKIV2L
+cat_post (1).csv,PRRT1
+cat_post (1).csv,AGER
+cat_post (1).csv,VPS52
+cat_post (1).csv,RPS18
+cat_post (1).csv,SYNGAP1
+cat_post (1).csv,RPS10
+cat_post (1).csv,PACSIN1
+cat_post (1).csv,RPL10A
+cat_post (1).csv,CPNE5
+cat_post (1).csv,PPIL1
+cat_post (1).csv,MTCH1
+cat_post (1).csv,DAAM2
+cat_post (1).csv,PPP2R5D
+cat_post (1).csv,TJAP1
+cat_post (1).csv,VEGFA
+cat_post (1).csv,HSP90AB1
+cat_post (1).csv,NFKBIE
+cat_post (1).csv,DST
+cat_post (1).csv,ZNF451
+cat_post (1).csv,BAG2
+cat_post (1).csv,BAI3
+cat_post (1).csv,RIMS1
+cat_post (1).csv,EEF1A1
+cat_post (1).csv,MYO6
+cat_post (1).csv,SH3BGRL2
+cat_post (1).csv,SNAP91
+cat_post (1).csv,NT5E
+cat_post (1).csv,SYNCRIP
+cat_post (1).csv,KIAA0776
+cat_post (1).csv,GRIK2
+cat_post (1).csv,SNX3
+cat_post (1).csv,WASF1
+cat_post (1).csv,REV3L
+cat_post (1).csv,FYN
+cat_post (1).csv,GJA1
+cat_post (1).csv,FABP7
+cat_post (1).csv,TPD52L1
+cat_post (1).csv,KIAA0408
+cat_post (1).csv,EPB41L2
+cat_post (1).csv,STX7
+cat_post (1).csv,RPS12
+cat_post (1).csv,VTA1
+cat_post (1).csv,GRM1
+cat_post (1).csv,STXBP5
+cat_post (1).csv,PCMT1
+cat_post (1).csv,MTHFD1L
+cat_post (1).csv,AKAP12
+cat_post (1).csv,SYNE1
+cat_post (1).csv,RGS17
+cat_post (1).csv,SNX9
+cat_post (1).csv,SYNJ2
+cat_post (1).csv,EZR
+cat_post (1).csv,SOD2
+cat_post (1).csv,TCP1
+cat_post (1).csv,PDE10A
+cat_post (1).csv,BRP44L
+cat_post (1).csv,MLLT4
+cat_post (1).csv,ACTB
+cat_post (1).csv,FSCN1
+cat_post (1).csv,CYTH3
+cat_post (1).csv,RAC1
+cat_post (1).csv,ICA1
+cat_post (1).csv,NDUFA4
+cat_post (1).csv,SCIN
+cat_post (1).csv,DGKB
+cat_post (1).csv,MPP6
+cat_post (1).csv,CYCS
+cat_post (1).csv,SCRN1
+cat_post (1).csv,AQP1
+cat_post (1).csv,SEPT7
+cat_post (1).csv,AMPH
+cat_post (1).csv,VPS41
+cat_post (1).csv,RALA
+cat_post (1).csv,HECW1
+cat_post (1).csv,DBNL
+cat_post (1).csv,PGAM2
+cat_post (1).csv,CAMK2B
+cat_post (1).csv,OGDH
+cat_post (1).csv,PPIA
+cat_post (1).csv,PURB
+cat_post (1).csv,GRB10
+cat_post (1).csv,LANCL2
+cat_post (1).csv,GBAS
+cat_post (1).csv,CCT6A
+cat_post (1).csv,BAZ1B
+cat_post (1).csv,STX1A
+cat_post (1).csv,CLIP2
+cat_post (1).csv,HIP1
+cat_post (1).csv,POR
+cat_post (1).csv,MDH2
+cat_post (1).csv,HSPB1
+cat_post (1).csv,YWHAG
+cat_post (1).csv,MAGI2
+cat_post (1).csv,GNAI1
+cat_post (1).csv,CACNA2D1
+cat_post (1).csv,PCLO
+cat_post (1).csv,GRM3
+cat_post (1).csv,ABCB1
+cat_post (1).csv,ADAM22
+cat_post (1).csv,SRI
+cat_post (1).csv,AKAP9
+cat_post (1).csv,PPP1R9A
+cat_post (1).csv,DYNC1I1
+cat_post (1).csv,SLC25A13
+cat_post (1).csv,LMTK2
+cat_post (1).csv,ARPC1A
+cat_post (1).csv,ATP5J2
+cat_post (1).csv,TSC22D4
+cat_post (1).csv,ACTL6B
+cat_post (1).csv,GNB2
+cat_post (1).csv,AP1S1
+cat_post (1).csv,VGF
+cat_post (1).csv,FIS1
+cat_post (1).csv,ARMC10
+cat_post (1).csv,SRPK2
+cat_post (1).csv,PRKAR2B
+cat_post (1).csv,DLD
+cat_post (1).csv,NRCAM
+cat_post (1).csv,DOCK4
+cat_post (1).csv,GPR85
+cat_post (1).csv,CAPZA2
+cat_post (1).csv,CTTNBP2
+cat_post (1).csv,PTPRZ1
+cat_post (1).csv,NDUFA5
+cat_post (1).csv,WASL
+cat_post (1).csv,ARF5
+cat_post (1).csv,SND1
+cat_post (1).csv,FLNC
+cat_post (1).csv,FAM40B
+cat_post (1).csv,PLXNA4
+cat_post (1).csv,CHCHD3
+cat_post (1).csv,EXOC4
+cat_post (1).csv,WDR91
+cat_post (1).csv,KIAA1549
+cat_post (1).csv,AGK
+cat_post (1).csv,SSBP1
+cat_post (1).csv,KEL
+cat_post (1).csv,GSTK1
+cat_post (1).csv,CNTNAP2
+cat_post (1).csv,ABCB8
+cat_post (1).csv,CDK5
+cat_post (1).csv,AGAP3
+cat_post (1).csv,ACTR3B
+cat_post (1).csv,DPP6
+cat_post (1).csv,UBE3C
+cat_post (1).csv,DNAJB6
+cat_post (1).csv,DLGAP2
+cat_post (1).csv,KBTBD11
+cat_post (1).csv,AGPAT5
+cat_post (1).csv,SOX7
+cat_post (1).csv,PSD3
+cat_post (1).csv,ATP6V1B2
+cat_post (1).csv,LZTS1
+cat_post (1).csv,XPO7
+cat_post (1).csv,EPB49
+cat_post (1).csv,PHYHIP
+cat_post (1).csv,STC1
+cat_post (1).csv,NEFM
+cat_post (1).csv,NEFL
+cat_post (1).csv,DOCK5
+cat_post (1).csv,DPYSL2
+cat_post (1).csv,PTK2B
+cat_post (1).csv,CLU
+cat_post (1).csv,DUSP4
+cat_post (1).csv,ERLIN2
+cat_post (1).csv,PROSC
+cat_post (1).csv,TACC1
+cat_post (1).csv,ANK1
+cat_post (1).csv,AP3M2
+cat_post (1).csv,VDAC3
+cat_post (1).csv,HOOK3
+cat_post (1).csv,PRKDC
+cat_post (1).csv,UBE2V2
+cat_post (1).csv,ATP6V1H
+cat_post (1).csv,LYN
+cat_post (1).csv,SDCBP
+cat_post (1).csv,RAB2A
+cat_post (1).csv,VCPIP1
+cat_post (1).csv,RPL7
+cat_post (1).csv,GDAP1
+cat_post (1).csv,FABP5
+cat_post (1).csv,IMPA1
+cat_post (1).csv,CA1
+cat_post (1).csv,CA2
+cat_post (1).csv,DECR1
+cat_post (1).csv,UQCRB
+cat_post (1).csv,MTDH
+cat_post (1).csv,RPL30
+cat_post (1).csv,COX6C
+cat_post (1).csv,PABPC1
+cat_post (1).csv,YWHAZ
+cat_post (1).csv,NCALD
+cat_post (1).csv,ATP6V1C1
+cat_post (1).csv,RIMS2
+cat_post (1).csv,OXR1
+cat_post (1).csv,TTC35
+cat_post (1).csv,SNTB1
+cat_post (1).csv,NDUFB9
+cat_post (1).csv,KIAA0196
+cat_post (1).csv,FAM49B
+cat_post (1).csv,EFR3A
+cat_post (1).csv,NDRG1
+cat_post (1).csv,TRAPPC9
+cat_post (1).csv,PTK2
+cat_post (1).csv,BAI1
+cat_post (1).csv,ARC
+cat_post (1).csv,LYNX1
+cat_post (1).csv,LY6H
+cat_post (1).csv,EEF1D
+cat_post (1).csv,PYCRL
+cat_post (1).csv,SCRIB
+cat_post (1).csv,EPPK1
+cat_post (1).csv,CYC1
+cat_post (1).csv,SHARPIN
+cat_post (1).csv,VPS28
+cat_post (1).csv,RPL8
+cat_post (1).csv,AK3
+cat_post (1).csv,PTPRD
+cat_post (1).csv,SH3GL2
+cat_post (1).csv,RPS6
+cat_post (1).csv,NDUFB6
+cat_post (1).csv,DNAJA1
+cat_post (1).csv,CNTFR
+cat_post (1).csv,DCTN3
+cat_post (1).csv,KIAA1045
+cat_post (1).csv,VCP
+cat_post (1).csv,STOML2
+cat_post (1).csv,TPM2
+cat_post (1).csv,TLN1
+cat_post (1).csv,GLIPR2
+cat_post (1).csv,CLTA
+cat_post (1).csv,GRHPR
+cat_post (1).csv,TJP2
+cat_post (1).csv,ALDH1A1
+cat_post (1).csv,ANXA1
+cat_post (1).csv,PRUNE2
+cat_post (1).csv,GNA14
+cat_post (1).csv,GNAQ
+cat_post (1).csv,HNRNPK
+cat_post (1).csv,NTRK2
+cat_post (1).csv,DIRAS2
+cat_post (1).csv,AUH
+cat_post (1).csv,IARS
+cat_post (1).csv,TMOD1
+cat_post (1).csv,CORO2A
+cat_post (1).csv,GABBR2
+cat_post (1).csv,AKAP2
+cat_post (1).csv,PALM2
+cat_post (1).csv,HSDL2
+cat_post (1).csv,FKBP15
+cat_post (1).csv,ATP6V1G1
+cat_post (1).csv,TNC
+cat_post (1).csv,ASTN2
+cat_post (1).csv,TRIM32
+cat_post (1).csv,DBC1
+cat_post (1).csv,RAB14
+cat_post (1).csv,GSN
+cat_post (1).csv,STOM
+cat_post (1).csv,DAB2IP
+cat_post (1).csv,NDUFA8
+cat_post (1).csv,RPL35
+cat_post (1).csv,ARPC5L
+cat_post (1).csv,HSPA5
+cat_post (1).csv,GAPVD1
+cat_post (1).csv,RPL12
+cat_post (1).csv,LRSAM1
+cat_post (1).csv,STXBP1
+cat_post (1).csv,AK1
+cat_post (1).csv,DNM1
+cat_post (1).csv,GOLGA2
+cat_post (1).csv,SLC27A4
+cat_post (1).csv,SPTAN1
+cat_post (1).csv,ENDOG
+cat_post (1).csv,LRRC8A
+cat_post (1).csv,SH3GLB2
+cat_post (1).csv,CRAT
+cat_post (1).csv,TSC1
+cat_post (1).csv,RPL7A
+cat_post (1).csv,VAV2
+cat_post (1).csv,OLFM1
+cat_post (1).csv,GPSM1
+cat_post (1).csv,GRIN1
+cat_post (1).csv,TUBB2C
+cat_post (1).csv,WDR37
+cat_post (1).csv,PFKP
+cat_post (1).csv,AKR1C1
+cat_post (1).csv,AKR1C2
+cat_post (1).csv,CALML5
+cat_post (1).csv,GDI2
+cat_post (1).csv,ATP5C1
+cat_post (1).csv,FAM171A1
+cat_post (1).csv,VIM
+cat_post (1).csv,NEBL
+cat_post (1).csv,PIP4K2A
+cat_post (1).csv,KIAA1217
+cat_post (1).csv,ARHGAP21
+cat_post (1).csv,GPR158
+cat_post (1).csv,ABI1
+cat_post (1).csv,ACBD5
+cat_post (1).csv,RAB18
+cat_post (1).csv,MPP7
+cat_post (1).csv,KIF5B
+cat_post (1).csv,CCNY
+cat_post (1).csv,OGDHL
+cat_post (1).csv,ZWINT
+cat_post (1).csv,CISD1
+cat_post (1).csv,TFAM
+cat_post (1).csv,ANK3
+cat_post (1).csv,VPS26A
+cat_post (1).csv,HK1
+cat_post (1).csv,SAR1A
+cat_post (1).csv,CCDC109A
+cat_post (1).csv,ANXA7
+cat_post (1).csv,PPP3CB
+cat_post (1).csv,SEC24C
+cat_post (1).csv,CAMK2G
+cat_post (1).csv,VCL
+cat_post (1).csv,VDAC2
+cat_post (1).csv,COMTD1
+cat_post (1).csv,KCNMA1
+cat_post (1).csv,ANXA11
+cat_post (1).csv,GLUD1
+cat_post (1).csv,ATAD1
+cat_post (1).csv,KIF20B
+cat_post (1).csv,CPEB3
+cat_post (1).csv,EXOC6
+cat_post (1).csv,LGI1
+cat_post (1).csv,SORBS1
+cat_post (1).csv,BLNK
+cat_post (1).csv,PGAM1
+cat_post (1).csv,AVPI1
+cat_post (1).csv,GOLGA7B
+cat_post (1).csv,CRTAC1
+cat_post (1).csv,GOT1
+cat_post (1).csv,ERLIN1
+cat_post (1).csv,NDUFB8
+cat_post (1).csv,SFXN3
+cat_post (1).csv,PSD
+cat_post (1).csv,ACTR1A
+cat_post (1).csv,INA
+cat_post (1).csv,USMG5
+cat_post (1).csv,SH3PXD2A
+cat_post (1).csv,SLK
+cat_post (1).csv,GSTO1
+cat_post (1).csv,ADD3
+cat_post (1).csv,SMC3
+cat_post (1).csv,ABLIM1
+cat_post (1).csv,HSPA12A
+cat_post (1).csv,KIAA1598
+cat_post (1).csv,RAB11FIP2
+cat_post (1).csv,BAG3
+cat_post (1).csv,PLEKHA1
+cat_post (1).csv,DOCK1
+cat_post (1).csv,DPYSL4
+cat_post (1).csv,STK32C
+cat_post (1).csv,RIC8A
+cat_post (1).csv,HRAS
+cat_post (1).csv,TALDO1
+cat_post (1).csv,CEND1
+cat_post (1).csv,SLC25A22
+cat_post (1).csv,AP2A2
+cat_post (1).csv,TOLLIP
+cat_post (1).csv,NAP1L4
+cat_post (1).csv,RHOG
+cat_post (1).csv,RRM1
+cat_post (1).csv,TRIM3
+cat_post (1).csv,TPP1
+cat_post (1).csv,IPO7
+cat_post (1).csv,SBF2
+cat_post (1).csv,RPS13
+cat_post (1).csv,LDHA
+cat_post (1).csv,TSG101
+cat_post (1).csv,PTPN5
+cat_post (1).csv,LIN7C
+cat_post (1).csv,TCP11L1
+cat_post (1).csv,CD59
+cat_post (1).csv,CAT
+cat_post (1).csv,PDHX
+cat_post (1).csv,SLC1A2
+cat_post (1).csv,HSD17B12
+cat_post (1).csv,EXT2
+cat_post (1).csv,MAPK8IP1
+cat_post (1).csv,DGKZ
+cat_post (1).csv,ARHGAP1
+cat_post (1).csv,CKAP5
+cat_post (1).csv,ARFGAP2
+cat_post (1).csv,MADD
+cat_post (1).csv,PSMC3
+cat_post (1).csv,NDUFS3
+cat_post (1).csv,MTCH2
+cat_post (1).csv,RTN4RL2
+cat_post (1).csv,CTNND1
+cat_post (1).csv,SYT7
+cat_post (1).csv,FTH1
+cat_post (1).csv,AHNAK
+cat_post (1).csv,EEF1G
+cat_post (1).csv,B3GAT3
+cat_post (1).csv,GNG3
+cat_post (1).csv,SLC3A2
+cat_post (1).csv,RTN3
+cat_post (1).csv,MARK2
+cat_post (1).csv,MACROD1
+cat_post (1).csv,STIP1
+cat_post (1).csv,BAD
+cat_post (1).csv,PRDX5
+cat_post (1).csv,PYGM
+cat_post (1).csv,EHD1
+cat_post (1).csv,TM7SF2
+cat_post (1).csv,CAPN1
+cat_post (1).csv,CFL1
+cat_post (1).csv,FIBP
+cat_post (1).csv,BANF1
+cat_post (1).csv,PACS1
+cat_post (1).csv,KLC2
+cat_post (1).csv,RAB1B
+cat_post (1).csv,RIN1
+cat_post (1).csv,ACTN3
+cat_post (1).csv,SPTBN2
+cat_post (1).csv,PC
+cat_post (1).csv,ADRBK1
+cat_post (1).csv,PPP1CA
+cat_post (1).csv,CORO1B
+cat_post (1).csv,AIP
+cat_post (1).csv,GSTP1
+cat_post (1).csv,NDUFV1
+cat_post (1).csv,CPT1A
+cat_post (1).csv,PPFIA1
+cat_post (1).csv,CTTN
+cat_post (1).csv,SHANK2
+cat_post (1).csv,PDE2A
+cat_post (1).csv,RAB6A
+cat_post (1).csv,PGM2L1
+cat_post (1).csv,ARRB1
+cat_post (1).csv,RPS3
+cat_post (1).csv,MAP6
+cat_post (1).csv,CAPN5
+cat_post (1).csv,PAK1
+cat_post (1).csv,ODZ4
+cat_post (1).csv,DLG2
+cat_post (1).csv,TMEM126A
+cat_post (1).csv,PICALM
+cat_post (1).csv,GRM5
+cat_post (1).csv,GRIA4
+Location,Symbol
+cat_post (2).csv,AASDHPPT
+cat_post (2).csv,GUCY1A2
+cat_post (2).csv,CUL5
+cat_post (2).csv,ACAT1
+cat_post (2).csv,RDX
+cat_post (2).csv,CRYAB
+cat_post (2).csv,DLAT
+cat_post (2).csv,NCAM1
+cat_post (2).csv,UBE4A
+cat_post (2).csv,ATP5L
+cat_post (2).csv,ARCN1
+cat_post (2).csv,PHLDB1
+cat_post (2).csv,DDX6
+cat_post (2).csv,RPS25
+cat_post (2).csv,VPS11
+cat_post (2).csv,THY1
+cat_post (2).csv,HSPA8
+cat_post (2).csv,NRGN
+cat_post (2).csv,SRPR
+cat_post (2).csv,ST14
+cat_post (2).csv,OPCML
+cat_post (2).csv,IQSEC3
+cat_post (2).csv,NINJ2
+cat_post (2).csv,WNK1
+cat_post (2).csv,ERC1
+cat_post (2).csv,FKBP4
+cat_post (2).csv,NDUFA9
+cat_post (2).csv,CD9
+cat_post (2).csv,GAPDH
+cat_post (2).csv,MLF2
+cat_post (2).csv,USP5
+cat_post (2).csv,TPI1
+cat_post (2).csv,ENO2
+cat_post (2).csv,PHB2
+cat_post (2).csv,GRIN2B
+cat_post (2).csv,ATF7IP
+cat_post (2).csv,STRAP
+cat_post (2).csv,PLEKHA5
+cat_post (2).csv,LDHB
+cat_post (2).csv,KIAA0528
+cat_post (2).csv,KRAS
+cat_post (2).csv,STK38L
+cat_post (2).csv,FGD4
+cat_post (2).csv,DNM1L
+cat_post (2).csv,KIF21A
+cat_post (2).csv,CNTN1
+cat_post (2).csv,TWF1
+cat_post (2).csv,PFKM
+cat_post (2).csv,CACNB3
+cat_post (2).csv,ARF3
+cat_post (2).csv,TUBA1B
+cat_post (2).csv,TUBA1A
+cat_post (2).csv,PRPH
+cat_post (2).csv,FMNL3
+cat_post (2).csv,LIMA1
+cat_post (2).csv,DIP2B
+cat_post (2).csv,KRT6A
+cat_post (2).csv,KRT5
+cat_post (2).csv,EIF4B
+cat_post (2).csv,PCBP2
+cat_post (2).csv,MAP3K12
+cat_post (2).csv,CALCOCO1
+cat_post (2).csv,HNRNPA1
+cat_post (2).csv,NCKAP1L
+cat_post (2).csv,RAB5B
+cat_post (2).csv,MYL6B
+cat_post (2).csv,MYL6
+cat_post (2).csv,CS
+cat_post (2).csv,GLS2
+cat_post (2).csv,ATP5B
+cat_post (2).csv,LRP1
+cat_post (2).csv,SHMT2
+cat_post (2).csv,MARS
+cat_post (2).csv,DCTN2
+cat_post (2).csv,KIF5A
+cat_post (2).csv,AGAP2
+cat_post (2).csv,USP15
+cat_post (2).csv,TBK1
+cat_post (2).csv,WIF1
+cat_post (2).csv,GRIP1
+cat_post (2).csv,CAND1
+cat_post (2).csv,CCT2
+cat_post (2).csv,RAB21
+cat_post (2).csv,NAP1L1
+cat_post (2).csv,SYT1
+cat_post (2).csv,PPP1R12A
+cat_post (2).csv,LIN7A
+cat_post (2).csv,PPFIA2
+cat_post (2).csv,ATP2B1
+cat_post (2).csv,EEA1
+cat_post (2).csv,UBE2N
+cat_post (2).csv,NDUFA12
+cat_post (2).csv,SLC25A3
+cat_post (2).csv,ANKS1B
+cat_post (2).csv,PMCH
+cat_post (2).csv,HSP90B1
+cat_post (2).csv,KIAA1033
+cat_post (2).csv,APPL2
+cat_post (2).csv,CKAP4
+cat_post (2).csv,CORO1C
+cat_post (2).csv,ATP2A2
+cat_post (2).csv,ARPC3
+cat_post (2).csv,VPS29
+cat_post (2).csv,PPP1CC
+cat_post (2).csv,ALDH2
+cat_post (2).csv,RPL6
+cat_post (2).csv,PTPN11
+cat_post (2).csv,RPH3A
+cat_post (2).csv,RASAL1
+cat_post (2).csv,NOS1
+cat_post (2).csv,PEBP1
+cat_post (2).csv,HSPB8
+cat_post (2).csv,CIT
+cat_post (2).csv,RAB35
+cat_post (2).csv,RPLP0
+cat_post (2).csv,DYNLL1
+cat_post (2).csv,CAMKK2
+cat_post (2).csv,VPS33A
+cat_post (2).csv,CLIP1
+cat_post (2).csv,HIP1R
+cat_post (2).csv,UBC
+cat_post (2).csv,TMEM132B
+cat_post (2).csv,RIMBP2
+cat_post (2).csv,RAN
+cat_post (2).csv,PGAM5
+cat_post (2).csv,GJB6
+cat_post (2).csv,SACS
+cat_post (2).csv,ATP12A
+cat_post (2).csv,FAM123A
+cat_post (2).csv,ATP8A2
+cat_post (2).csv,WASF3
+cat_post (2).csv,HSPH1
+cat_post (2).csv,NBEA
+cat_post (2).csv,DCLK1
+cat_post (2).csv,TPT1
+cat_post (2).csv,COG3
+cat_post (2).csv,LCP1
+cat_post (2).csv,SUCLA2
+cat_post (2).csv,LMO7
+cat_post (2).csv,KCTD12
+cat_post (2).csv,MYCBP2
+cat_post (2).csv,RAP2A
+cat_post (2).csv,IPO5
+cat_post (2).csv,FARP1
+cat_post (2).csv,DOCK9
+cat_post (2).csv,PCCA
+cat_post (2).csv,ARHGEF7
+cat_post (2).csv,NDRG2
+cat_post (2).csv,DAD1
+cat_post (2).csv,PRMT5
+cat_post (2).csv,MYH6
+cat_post (2).csv,DHRS4
+cat_post (2).csv,CPNE6
+cat_post (2).csv,SCFD1
+cat_post (2).csv,SNX6
+cat_post (2).csv,CFL2
+cat_post (2).csv,SEC23A
+cat_post (2).csv,ATL1
+cat_post (2).csv,TRIM9
+cat_post (2).csv,GNG2
+cat_post (2).csv,KTN1
+cat_post (2).csv,EXOC5
+cat_post (2).csv,DAAM1
+cat_post (2).csv,RTN1
+cat_post (2).csv,WDR89
+cat_post (2).csv,MTHFD1
+cat_post (2).csv,AKAP5
+cat_post (2).csv,HSPA2
+cat_post (2).csv,SPTB
+cat_post (2).csv,RAB15
+cat_post (2).csv,GPHN
+cat_post (2).csv,ATP6V1D
+cat_post (2).csv,EIF2S1
+cat_post (2).csv,VTI1B
+cat_post (2).csv,ACTN1
+cat_post (2).csv,SIPA1L1
+cat_post (2).csv,RGS6
+cat_post (2).csv,ALDH6A1
+cat_post (2).csv,DLST
+cat_post (2).csv,AHSA1
+cat_post (2).csv,NRXN3
+cat_post (2).csv,PSMC1
+cat_post (2).csv,CALM1
+cat_post (2).csv,TTC7B
+cat_post (2).csv,SERPINA3
+cat_post (2).csv,CLMN
+cat_post (2).csv,EVL
+cat_post (2).csv,BEGAIN
+cat_post (2).csv,DYNC1H1
+cat_post (2).csv,HSP90AA1
+cat_post (2).csv,TRAF3
+cat_post (2).csv,CDC42BPB
+cat_post (2).csv,CKB
+cat_post (2).csv,BAG5
+cat_post (2).csv,KLC1
+cat_post (2).csv,INF2
+cat_post (2).csv,AKT1
+cat_post (2).csv,KIAA0284
+cat_post (2).csv,CRIP2
+cat_post (2).csv,CYFIP1
+cat_post (2).csv,TJP1
+cat_post (2).csv,TMEM85
+cat_post (2).csv,FAM82A2
+cat_post (2).csv,VPS18
+cat_post (2).csv,EHD4
+cat_post (2).csv,VPS39
+cat_post (2).csv,LRRC57
+cat_post (2).csv,EPB42
+cat_post (2).csv,TP53BP1
+cat_post (2).csv,MAP1A
+cat_post (2).csv,CKMT1B
+cat_post (2).csv,PDIA3
+cat_post (2).csv,DMXL2
+cat_post (2).csv,TMOD2
+cat_post (2).csv,GNB5
+cat_post (2).csv,MYO5C
+cat_post (2).csv,MYO5A
+cat_post (2).csv,NEDD4
+cat_post (2).csv,TEX9
+cat_post (2).csv,MYO1E
+cat_post (2).csv,FAM81A
+cat_post (2).csv,ANXA2
+cat_post (2).csv,TLN2
+cat_post (2).csv,TPM1
+cat_post (2).csv,RPS27L
+cat_post (2).csv,RAB8B
+cat_post (2).csv,SNX1
+cat_post (2).csv,PPIB
+cat_post (2).csv,PTPLAD1
+cat_post (2).csv,MAP2K1
+cat_post (2).csv,RPL4
+cat_post (2).csv,CORO2B
+cat_post (2).csv,RPLP1
+cat_post (2).csv,PKM2
+cat_post (2).csv,NEO1
+cat_post (2).csv,NPTN
+cat_post (2).csv,ARID3B
+cat_post (2).csv,COX5A
+cat_post (2).csv,LINGO1
+cat_post (2).csv,IDH3A
+cat_post (2).csv,ACSBG1
+cat_post (2).csv,PSMA4
+cat_post (2).csv,TMED3
+cat_post (2).csv,RPS17
+cat_post (2).csv,AP3B2
+cat_post (2).csv,HOMER2
+cat_post (2).csv,SH3GL3
+cat_post (2).csv,PDE8A
+cat_post (2).csv,AP3S2
+cat_post (2).csv,IDH2
+cat_post (2).csv,IQGAP1
+cat_post (2).csv,FES
+cat_post (2).csv,SYNM
+cat_post (2).csv,ASB7
+cat_post (2).csv,TARSL2
+cat_post (2).csv,DECR2
+cat_post (2).csv,RHOT2
+cat_post (2).csv,STUB1
+cat_post (2).csv,MAPK8IP3
+cat_post (2).csv,NME3
+cat_post (2).csv,NDUFB10
+cat_post (2).csv,RPS2
+cat_post (2).csv,SYNGR3
+cat_post (2).csv,SLC9A3R2
+cat_post (2).csv,TSC2
+cat_post (2).csv,CASKIN1
+cat_post (2).csv,TBC1D24
+cat_post (2).csv,PDPK1
+cat_post (2).csv,TRAP1
+cat_post (2).csv,DNAJA3
+cat_post (2).csv,HMOX2
+cat_post (2).csv,ROGDI
+cat_post (2).csv,GRIN2A
+cat_post (2).csv,MKL2
+cat_post (2).csv,NOMO1
+cat_post (2).csv,MYH11
+cat_post (2).csv,RPS15A
+cat_post (2).csv,GPRC5B
+cat_post (2).csv,CRYM
+cat_post (2).csv,UQCRC2
+cat_post (2).csv,PRKCB
+cat_post (2).csv,CACNG3
+cat_post (2).csv,EIF3C
+cat_post (2).csv,TUFM
+cat_post (2).csv,ATP2A1
+cat_post (2).csv,MVP
+cat_post (2).csv,CDIPT
+cat_post (2).csv,TAOK2
+cat_post (2).csv,DOC2A
+cat_post (2).csv,ALDOA
+cat_post (2).csv,MAPK3
+cat_post (2).csv,CORO1A
+cat_post (2).csv,STX1B
+cat_post (2).csv,STX4
+cat_post (2).csv,BCKDK
+cat_post (2).csv,FUS
+cat_post (2).csv,ITGAX
+cat_post (2).csv,VPS35
+cat_post (2).csv,DNAJA2
+cat_post (2).csv,ITFG1
+cat_post (2).csv,CBLN1
+cat_post (2).csv,CYLD
+cat_post (2).csv,GNAO1
+cat_post (2).csv,PLLP
+cat_post (2).csv,CSNK2A2
+cat_post (2).csv,GOT2
+cat_post (2).csv,DYNC1LI2
+cat_post (2).csv,ATP6V0D1
+cat_post (2).csv,SNTB2
+cat_post (2).csv,VPS4A
+cat_post (2).csv,CYB5B
+cat_post (2).csv,AARS
+cat_post (2).csv,VAC14
+cat_post (2).csv,CALB2
+cat_post (2).csv,AP1G1
+cat_post (2).csv,KIAA0174
+cat_post (2).csv,GLG1
+cat_post (2).csv,GABARAPL2
+cat_post (2).csv,KARS
+cat_post (2).csv,DYNLRB2
+cat_post (2).csv,CDH13
+cat_post (2).csv,HSDL1
+cat_post (2).csv,KIAA0513
+cat_post (2).csv,COX4I1
+cat_post (2).csv,FBXO31
+cat_post (2).csv,FAM38A
+cat_post (2).csv,RPL13
+cat_post (2).csv,CHMP1A
+cat_post (2).csv,SPATA2L
+cat_post (2).csv,TUBB3
+cat_post (2).csv,VPS53
+cat_post (2).csv,GLOD4
+cat_post (2).csv,ABR
+cat_post (2).csv,YWHAE
+cat_post (2).csv,MYO1C
+cat_post (2).csv,PITPNA
+cat_post (2).csv,SRR
+cat_post (2).csv,PAFAH1B1
+cat_post (2).csv,CAMKK1
+cat_post (2).csv,ANKFY1
+cat_post (2).csv,PSMB6
+cat_post (2).csv,MINK1
+cat_post (2).csv,SLC25A11
+cat_post (2).csv,PFN1
+cat_post (2).csv,ENO3
+cat_post (2).csv,RABEP1
+cat_post (2).csv,C1QBP
+cat_post (2).csv,DLG4
+cat_post (2).csv,NLGN2
+cat_post (2).csv,FXR2
+cat_post (2).csv,ATP1B2
+cat_post (2).csv,VAMP2
+cat_post (2).csv,NDEL1
+cat_post (2).csv,MYH10
+cat_post (2).csv,GAS7
+cat_post (2).csv,UBB
+cat_post (2).csv,MPRIP
+cat_post (2).csv,COPS3
+cat_post (2).csv,TOM1L2
+cat_post (2).csv,LLGL1
+cat_post (2).csv,FLII
+cat_post (2).csv,EPN2
+cat_post (2).csv,ALDH3A2
+cat_post (2).csv,SPECC1
+cat_post (2).csv,DHRS7B
+cat_post (2).csv,MAP2K3
+cat_post (2).csv,ALDOC
+cat_post (2).csv,RPL23A
+cat_post (2).csv,FLOT2
+cat_post (2).csv,MYO18A
+cat_post (2).csv,TAOK1
+cat_post (2).csv,GIT1
+cat_post (2).csv,GOSR1
+cat_post (2).csv,NF1
+cat_post (2).csv,OMG
+cat_post (2).csv,RHOT1
+cat_post (2).csv,PSMD11
+cat_post (2).csv,CDK5R1
+cat_post (2).csv,MYO1D
+cat_post (2).csv,CCT6B
+cat_post (2).csv,AP2B1
+cat_post (2).csv,ACACA
+cat_post (2).csv,ARHGAP23
+cat_post (2).csv,PIP4K2B
+cat_post (2).csv,RPL23
+cat_post (2).csv,LASP1
+cat_post (2).csv,CACNB1
+cat_post (2).csv,RPL19
+cat_post (2).csv,WIPF2
+cat_post (2).csv,KRT24
+cat_post (2).csv,JUP
+cat_post (2).csv,ACLY
+cat_post (2).csv,CNP
+cat_post (2).csv,RAB5C
+cat_post (2).csv,ATP6V0A1
+cat_post (2).csv,COASY
+cat_post (2).csv,CNTNAP1
+cat_post (2).csv,RPL27
+cat_post (2).csv,VAT1
+cat_post (2).csv,DUSP3
+cat_post (2).csv,MPP3
+cat_post (2).csv,MPP2
+cat_post (2).csv,SLC4A1
+cat_post (2).csv,ADAM11
+cat_post (2).csv,GFAP
+cat_post (2).csv,DCAKD
+cat_post (2).csv,PLCD3
+cat_post (2).csv,FMNL1
+cat_post (2).csv,MAPT
+cat_post (2).csv,NSF
+cat_post (2).csv,MYL4
+cat_post (2).csv,NPEPPS
+cat_post (2).csv,KPNB1
+cat_post (2).csv,CDK5RAP3
+cat_post (2).csv,PHB
+cat_post (2).csv,PPP1R9B
+cat_post (2).csv,LRRC59
+cat_post (2).csv,NME1
+cat_post (2).csv,NME2
+cat_post (2).csv,KIF2B
+cat_post (2).csv,DYNLL2
+cat_post (2).csv,EPX
+cat_post (2).csv,MPO
+cat_post (2).csv,SEPT4
+cat_post (2).csv,PPM1E
+cat_post (2).csv,TRIM37
+cat_post (2).csv,CLTC
+cat_post (2).csv,RPS6KB1
+cat_post (2).csv,CA4
+cat_post (2).csv,DDX5
+cat_post (2).csv,GNA13
+cat_post (2).csv,PRKCA
+cat_post (2).csv,PRKAR1A
+cat_post (2).csv,CDC42EP4
+cat_post (2).csv,RPL38
+cat_post (2).csv,BTBD17
+cat_post (2).csv,RAB37
+cat_post (2).csv,ATP5H
+cat_post (2).csv,GGA3
+cat_post (2).csv,GRB2
+cat_post (2).csv,EXOC7
+cat_post (2).csv,SEPT9
+cat_post (2).csv,NPTX1
+cat_post (2).csv,BAIAP2
+cat_post (2).csv,HGS
+cat_post (2).csv,ARHGDIA
+cat_post (2).csv,PYCR1
+cat_post (2).csv,FASN
+cat_post (2).csv,CSNK1D
+cat_post (2).csv,FN3K
+cat_post (2).csv,TBCD
+cat_post (2).csv,USP14
+cat_post (2).csv,YES1
+cat_post (2).csv,DLGAP1
+cat_post (2).csv,EPB41L3
+cat_post (2).csv,RAB12
+cat_post (2).csv,NDUFV2
+cat_post (2).csv,VAPA
+cat_post (2).csv,NAPG
+cat_post (2).csv,TUBB6
+cat_post (2).csv,AFG3L2
+cat_post (2).csv,SPIRE1
+cat_post (2).csv,ROCK1
+cat_post (2).csv,AQP4
+cat_post (2).csv,CDH2
+cat_post (2).csv,DSG1
+cat_post (2).csv,DTNA
+cat_post (2).csv,MAPRE2
+cat_post (2).csv,ATP5A1
+cat_post (2).csv,RPL17
+cat_post (2).csv,TXNL1
+cat_post (2).csv,WDR7
+cat_post (2).csv,KIAA1468
+cat_post (2).csv,CNDP2
+cat_post (2).csv,MBP
+cat_post (2).csv,BSG
+cat_post (2).csv,HCN2
+cat_post (2).csv,PALM
+cat_post (2).csv,GPX4
+cat_post (2).csv,ATP5D
+cat_post (2).csv,NDUFS7
+cat_post (2).csv,RPS15
+cat_post (2).csv,AP3D1
+cat_post (2).csv,LMNB2
+cat_post (2).csv,GNG7
+cat_post (2).csv,DIRAS1
+cat_post (2).csv,GNA11
+cat_post (2).csv,PIP5K1C
+cat_post (2).csv,EEF2
+cat_post (2).csv,MAP2K2
+cat_post (2).csv,ANKRD24
+cat_post (2).csv,FSD1
+cat_post (2).csv,SH3GL1
+cat_post (2).csv,UBXN6
+cat_post (2).csv,PTPRS
+cat_post (2).csv,RPL36
+cat_post (2).csv,LONP1
+cat_post (2).csv,TUBB4
+cat_post (2).csv,C3
+cat_post (2).csv,PNPLA6
+Location,Symbol
+cat_post (3).csv,AGRN
+cat_post (3).csv,ATAD3A
+cat_post (3).csv,GNB1
+cat_post (3).csv,LRRC47
+cat_post (3).csv,KCNAB2
+cat_post (3).csv,RPL22
+cat_post (3).csv,ACOT7
+cat_post (3).csv,DNAJC11
+cat_post (3).csv,VAMP3
+cat_post (3).csv,PARK7
+cat_post (3).csv,ENO1
+cat_post (3).csv,PGD
+cat_post (3).csv,FBXO2
+cat_post (3).csv,MFN2
+cat_post (3).csv,EFHD2
+cat_post (3).csv,PADI2
+cat_post (3).csv,IGSF21
+cat_post (3).csv,ALDH4A1
+cat_post (3).csv,UBR4
+cat_post (3).csv,KIAA0090
+cat_post (3).csv,AKR7A2
+cat_post (3).csv,CAPZB
+cat_post (3).csv,DDOST
+cat_post (3).csv,RAP1GAP
+cat_post (3).csv,CDC42
+cat_post (3).csv,C1QC
+cat_post (3).csv,RPL11
+cat_post (3).csv,SFN
+cat_post (3).csv,WASF2
+cat_post (3).csv,STX12
+cat_post (3).csv,ATPIF1
+cat_post (3).csv,EPB41
+cat_post (3).csv,MECR
+cat_post (3).csv,FABP3
+cat_post (3).csv,LCK
+cat_post (3).csv,MARCKSL1
+cat_post (3).csv,YARS
+cat_post (3).csv,HPCA
+cat_post (3).csv,DLGAP3
+cat_post (3).csv,SFPQ
+cat_post (3).csv,NCDN
+cat_post (3).csv,TRAPPC3
+cat_post (3).csv,MAP7D1
+cat_post (3).csv,MACF1
+cat_post (3).csv,PABPC4
+cat_post (3).csv,CAP1
+cat_post (3).csv,SLC2A1
+cat_post (3).csv,PTPRF
+cat_post (3).csv,KIF2C
+cat_post (3).csv,RPS8
+cat_post (3).csv,PRDX1
+cat_post (3).csv,AKR1A1
+cat_post (3).csv,FAAH
+cat_post (3).csv,CMPK1
+cat_post (3).csv,CPT2
+cat_post (3).csv,PPAP2B
+cat_post (3).csv,DOCK7
+cat_post (3).csv,DNAJC6
+cat_post (3).csv,PDE4B
+cat_post (3).csv,SGIP1
+cat_post (3).csv,GNG12
+cat_post (3).csv,LRRC7
+cat_post (3).csv,LRRC40
+cat_post (3).csv,NEGR1
+cat_post (3).csv,CRYZ
+cat_post (3).csv,PIGK
+cat_post (3).csv,AK5
+cat_post (3).csv,DNAJB4
+cat_post (3).csv,PRKACB
+cat_post (3).csv,DDAH1
+cat_post (3).csv,RPL5
+cat_post (3).csv,ABCD3
+cat_post (3).csv,AGL
+cat_post (3).csv,DBT
+cat_post (3).csv,STXBP3
+cat_post (3).csv,WDR47
+cat_post (3).csv,SARS
+cat_post (3).csv,GNAI3
+cat_post (3).csv,AMPD2
+cat_post (3).csv,GSTM2
+cat_post (3).csv,GSTM3
+cat_post (3).csv,AHCYL1
+cat_post (3).csv,KCNA2
+cat_post (3).csv,ATP5F1
+cat_post (3).csv,RAP1A
+cat_post (3).csv,CAPZA1
+cat_post (3).csv,NRAS
+cat_post (3).csv,SYCP1
+cat_post (3).csv,ATP1A1
+cat_post (3).csv,PHGDH
+cat_post (3).csv,SEC22B
+cat_post (3).csv,PEX11B
+cat_post (3).csv,SV2A
+cat_post (3).csv,VPS45
+cat_post (3).csv,ARNT
+cat_post (3).csv,SNX27
+cat_post (3).csv,S100A9
+cat_post (3).csv,S100A4
+cat_post (3).csv,RAB13
+cat_post (3).csv,RPS27
+cat_post (3).csv,TPM3
+cat_post (3).csv,ADAR
+cat_post (3).csv,PMVK
+cat_post (3).csv,PBXIP1
+cat_post (3).csv,SHC1
+cat_post (3).csv,MTX1
+cat_post (3).csv,PKLR
+cat_post (3).csv,FDPS
+cat_post (3).csv,ARHGEF2
+cat_post (3).csv,LMNA
+cat_post (3).csv,CCT3
+cat_post (3).csv,HAPLN2
+cat_post (3).csv,BCAN
+cat_post (3).csv,DARC
+cat_post (3).csv,TAGLN2
+cat_post (3).csv,IGSF8
+cat_post (3).csv,ATP1A2
+cat_post (3).csv,ATP1A4
+cat_post (3).csv,PEA15
+cat_post (3).csv,COPA
+cat_post (3).csv,NDUFS2
+cat_post (3).csv,TOMM40L
+cat_post (3).csv,HSPA6
+cat_post (3).csv,MGST3
+cat_post (3).csv,BRP44
+cat_post (3).csv,ATP1B1
+cat_post (3).csv,KIFAP3
+cat_post (3).csv,DNM3
+cat_post (3).csv,PRDX6
+cat_post (3).csv,CACYBP
+cat_post (3).csv,TNR
+cat_post (3).csv,ASTN1
+cat_post (3).csv,RASAL2
+cat_post (3).csv,GLUL
+cat_post (3).csv,RGS8
+cat_post (3).csv,PLA2G4A
+cat_post (3).csv,CSRP1
+cat_post (3).csv,SYT2
+cat_post (3).csv,CYB5R1
+cat_post (3).csv,PPFIA4
+cat_post (3).csv,ATP2B4
+cat_post (3).csv,PLEKHA6
+cat_post (3).csv,NFASC
+cat_post (3).csv,CNTN2
+cat_post (3).csv,PLXNA2
+cat_post (3).csv,EPRS
+cat_post (3).csv,IARS2
+cat_post (3).csv,RAB3GAP2
+cat_post (3).csv,MARK1
+cat_post (3).csv,MOSC2
+cat_post (3).csv,DUSP10
+cat_post (3).csv,ENAH
+cat_post (3).csv,PARP1
+cat_post (3).csv,CDC42BPA
+cat_post (3).csv,ARF1
+cat_post (3).csv,GUK1
+cat_post (3).csv,GNPAT
+cat_post (3).csv,EXOC8
+cat_post (3).csv,TOMM20
+cat_post (3).csv,EDARADD
+cat_post (3).csv,LGALS8
+cat_post (3).csv,ACTN2
+cat_post (3).csv,RYR2
+cat_post (3).csv,FMN2
+cat_post (3).csv,RGS7
+cat_post (3).csv,FH
+cat_post (3).csv,SCCPDH
+cat_post (3).csv,ACP1
+cat_post (3).csv,RPS7
+cat_post (3).csv,YWHAQ
+cat_post (3).csv,PDIA6
+cat_post (3).csv,ROCK2
+cat_post (3).csv,DDX1
+cat_post (3).csv,FAM49A
+cat_post (3).csv,VSNL1
+cat_post (3).csv,NT5C1B
+cat_post (3).csv,RHOB
+cat_post (3).csv,FKBP1B
+cat_post (3).csv,ITSN2
+cat_post (3).csv,EFR3B
+cat_post (3).csv,RAB10
+cat_post (3).csv,HADHA
+cat_post (3).csv,HADHB
+cat_post (3).csv,DPYSL5
+cat_post (3).csv,MAPRE3
+cat_post (3).csv,CAD
+cat_post (3).csv,SLC30A3
+cat_post (3).csv,PPP1CB
+cat_post (3).csv,EHD3
+cat_post (3).csv,BIRC6
+cat_post (3).csv,STRN
+cat_post (3).csv,EIF2AK2
+cat_post (3).csv,CYP1B1
+cat_post (3).csv,ATL2
+cat_post (3).csv,SOS1
+cat_post (3).csv,COX7A2L
+cat_post (3).csv,LRPPRC
+cat_post (3).csv,PRKCE
+cat_post (3).csv,ATP6V1E2
+cat_post (3).csv,CRIPT
+cat_post (3).csv,CALM2
+cat_post (3).csv,KLRAQ1
+cat_post (3).csv,NRXN1
+cat_post (3).csv,ACYP2
+cat_post (3).csv,SPTBN1
+cat_post (3).csv,RTN4
+cat_post (3).csv,RPS27A
+cat_post (3).csv,XPO1
+cat_post (3).csv,CCT4
+cat_post (3).csv,MDH1
+cat_post (3).csv,UGP2
+cat_post (3).csv,RAB1A
+cat_post (3).csv,ACTR2
+cat_post (3).csv,PLEK
+cat_post (3).csv,AAK1
+cat_post (3).csv,PCBP1
+cat_post (3).csv,ADD2
+cat_post (3).csv,EXOC6B
+cat_post (3).csv,SFXN5
+cat_post (3).csv,RAB11FIP5
+cat_post (3).csv,CCT7
+cat_post (3).csv,FBXO41
+cat_post (3).csv,DCTN1
+cat_post (3).csv,CTNNA2
+cat_post (3).csv,LRRTM1
+cat_post (3).csv,SUCLG1
+cat_post (3).csv,CAPG
+cat_post (3).csv,IMMT
+cat_post (3).csv,COX5B
+cat_post (3).csv,ACTR1B
+cat_post (3).csv,RPL31
+cat_post (3).csv,SEPT10
+cat_post (3).csv,ACTR3
+cat_post (3).csv,CCDC93
+cat_post (3).csv,CLASP1
+cat_post (3).csv,BIN1
+cat_post (3).csv,RAB3GAP1
+cat_post (3).csv,DARS
+cat_post (3).csv,KIF5C
+cat_post (3).csv,CACNB4
+cat_post (3).csv,FMNL2
+cat_post (3).csv,GPD2
+cat_post (3).csv,PKP4
+cat_post (3).csv,PSMD14
+cat_post (3).csv,SCN2A
+cat_post (3).csv,STK39
+cat_post (3).csv,GAD1
+cat_post (3).csv,CYBRD1
+cat_post (3).csv,DYNC1I2
+cat_post (3).csv,SLC25A12
+cat_post (3).csv,RAPGEF4
+cat_post (3).csv,OLA1
+cat_post (3).csv,MTX2
+cat_post (3).csv,PDE11A
+cat_post (3).csv,PRKRA
+cat_post (3).csv,SESTD1
+cat_post (3).csv,PDE1A
+cat_post (3).csv,NCKAP1
+cat_post (3).csv,HIBCH
+cat_post (3).csv,GLS
+cat_post (3).csv,STAT1
+cat_post (3).csv,MYO1B
+cat_post (3).csv,HECW2
+cat_post (3).csv,COQ10B
+cat_post (3).csv,HSPD1
+cat_post (3).csv,ABI2
+cat_post (3).csv,RAPH1
+cat_post (3).csv,NDUFS1
+cat_post (3).csv,EEF1B2
+cat_post (3).csv,ADAM23
+cat_post (3).csv,MAP2
+cat_post (3).csv,LANCL1
+cat_post (3).csv,ATIC
+cat_post (3).csv,ARPC2
+cat_post (3).csv,PNKD
+cat_post (3).csv,TUBA4A
+cat_post (3).csv,DNAJB2
+cat_post (3).csv,DES
+cat_post (3).csv,SLC4A3
+cat_post (3).csv,EPHA4
+cat_post (3).csv,FARSB
+cat_post (3).csv,ACSL3
+cat_post (3).csv,SERPINE2
+cat_post (3).csv,DOCK10
+cat_post (3).csv,IRS1
+cat_post (3).csv,MFF
+cat_post (3).csv,PSMD1
+cat_post (3).csv,NGEF
+cat_post (3).csv,ATG16L1
+cat_post (3).csv,AGAP1
+cat_post (3).csv,NDUFA10
+cat_post (3).csv,GPC1
+cat_post (3).csv,KIF1A
+cat_post (3).csv,PPP1R7
+cat_post (3).csv,HDLBP
+cat_post (3).csv,SEPT2
+cat_post (3).csv,CHL1
+cat_post (3).csv,GRM7
+cat_post (3).csv,SRGAP3
+cat_post (3).csv,MTMR14
+cat_post (3).csv,ARPC4
+cat_post (3).csv,SEC13
+cat_post (3).csv,ATP2B2
+cat_post (3).csv,SYN2
+cat_post (3).csv,RAF1
+cat_post (3).csv,CAND2
+cat_post (3).csv,IQSEC1
+cat_post (3).csv,RFTN1
+cat_post (3).csv,RAB5A
+cat_post (3).csv,NKIRAS1
+cat_post (3).csv,CMC1
+cat_post (3).csv,AZI2
+cat_post (3).csv,DYNC1LI1
+cat_post (3).csv,CLASP2
+cat_post (3).csv,PDCD6IP
+cat_post (3).csv,PLCD1
+cat_post (3).csv,ACAA1
+cat_post (3).csv,WDR48
+cat_post (3).csv,RPSA
+cat_post (3).csv,RPL14
+cat_post (3).csv,CTNNB1
+cat_post (3).csv,HIGD1A
+cat_post (3).csv,SACM1L
+cat_post (3).csv,PTPN23
+cat_post (3).csv,CSPG5
+cat_post (3).csv,DHX30
+cat_post (3).csv,MAP4
+cat_post (3).csv,UQCRC1
+cat_post (3).csv,NCKIPSD
+cat_post (3).csv,PRKAR2A
+cat_post (3).csv,WDR6
+cat_post (3).csv,QARS
+cat_post (3).csv,GPX1
+cat_post (3).csv,RHOA
+cat_post (3).csv,BSN
+cat_post (3).csv,CAMKV
+cat_post (3).csv,GNAI2
+cat_post (3).csv,CACNA2D2
+cat_post (3).csv,DOCK3
+cat_post (3).csv,GRM2
+cat_post (3).csv,ABHD14B
+cat_post (3).csv,TKT
+cat_post (3).csv,CACNA2D3
+cat_post (3).csv,ERC2
+cat_post (3).csv,APPL1
+cat_post (3).csv,SLMAP
+cat_post (3).csv,PDHB
+cat_post (3).csv,FAM107A
+cat_post (3).csv,CADPS
+cat_post (3).csv,PRICKLE2
+cat_post (3).csv,MINA
+cat_post (3).csv,TOMM70A
+cat_post (3).csv,RPL24
+cat_post (3).csv,TAGLN3
+cat_post (3).csv,ATP6V1A
+cat_post (3).csv,GAP43
+cat_post (3).csv,LSAMP
+cat_post (3).csv,GSK3B
+cat_post (3).csv,NDUFB4
+cat_post (3).csv,GOLGB1
+cat_post (3).csv,KPNA1
+cat_post (3).csv,KALRN
+cat_post (3).csv,SNX4
+cat_post (3).csv,ALDH1L1
+cat_post (3).csv,CHCHD6
+cat_post (3).csv,PLXNA1
+cat_post (3).csv,RPN1
+cat_post (3).csv,RAB7A
+cat_post (3).csv,COPG
+cat_post (3).csv,DNAJC13
+cat_post (3).csv,SRPRB
+cat_post (3).csv,RAB6B
+cat_post (3).csv,MRAS
+cat_post (3).csv,COPB2
+cat_post (3).csv,PFN2
+cat_post (3).csv,MLF1
+cat_post (3).csv,TNIK
+cat_post (3).csv,NLGN1
+cat_post (3).csv,PIK3CA
+cat_post (3).csv,GNB4
+cat_post (3).csv,PEX5L
+cat_post (3).csv,DNAJC19
+cat_post (3).csv,MCCC1
+cat_post (3).csv,MAP6D1
+cat_post (3).csv,AP2M1
+cat_post (3).csv,ABCF3
+cat_post (3).csv,PSMD2
+cat_post (3).csv,EIF4G1
+cat_post (3).csv,MAGEF1
+cat_post (3).csv,VPS8
+cat_post (3).csv,EIF4A2
+cat_post (3).csv,OPA1
+cat_post (3).csv,APOD
+cat_post (3).csv,DLG1
+cat_post (3).csv,BDH1
+cat_post (3).csv,ATP5I
+cat_post (3).csv,GAK
+cat_post (3).csv,CTBP1
+cat_post (3).csv,LETM1
+cat_post (3).csv,ADD1
+cat_post (3).csv,HTT
+cat_post (3).csv,CRMP1
+cat_post (3).csv,WFS1
+cat_post (3).csv,ABLIM2
+cat_post (3).csv,WDR1
+cat_post (3).csv,QDPR
+cat_post (3).csv,LAP3
+cat_post (3).csv,RPL9
+cat_post (3).csv,UCHL1
+cat_post (3).csv,LIMCH1
+cat_post (3).csv,TMEM33
+cat_post (3).csv,ATP8A1
+cat_post (3).csv,KCTD8
+cat_post (3).csv,GABRA4
+cat_post (3).csv,FRYL
+cat_post (3).csv,EXOC1
+cat_post (3).csv,PAICS
+cat_post (3).csv,LPHN3
+cat_post (3).csv,RUFY3
+cat_post (3).csv,SLC4A4
+cat_post (3).csv,CDKL2
+cat_post (3).csv,G3BP2
+cat_post (3).csv,USO1
+cat_post (3).csv,SEPT11
+cat_post (3).csv,CCNG2
+cat_post (3).csv,ANXA3
+cat_post (3).csv,PRKG2
+cat_post (3).csv,SCD5
+cat_post (3).csv,SEC31A
+cat_post (3).csv,MAPK10
+cat_post (3).csv,SNCA
+cat_post (3).csv,GRID2
+cat_post (3).csv,RAP1GDS1
+cat_post (3).csv,EIF4E
+cat_post (3).csv,PPP3CA
+cat_post (3).csv,HADH
+cat_post (3).csv,ANK2
+cat_post (3).csv,CAMK2D
+cat_post (3).csv,ANXA5
+cat_post (3).csv,FGF2
+cat_post (3).csv,SLC25A31
+cat_post (3).csv,HSPA4L
+cat_post (3).csv,DCLK2
+cat_post (3).csv,RPS3A
+cat_post (3).csv,TRIM2
+cat_post (3).csv,FGB
+cat_post (3).csv,FGG
+cat_post (3).csv,GRIA2
+cat_post (3).csv,ETFDH
+cat_post (3).csv,PPID
+cat_post (3).csv,RAPGEF2
+cat_post (3).csv,GPM6A
+cat_post (3).csv,ENPP6
+cat_post (3).csv,SLC25A4
+cat_post (3).csv,SORBS2
+cat_post (3).csv,CCDC127
+cat_post (3).csv,EXOC3
+cat_post (3).csv,TPPP
+cat_post (3).csv,NDUFS6
+cat_post (3).csv,CCT5
+cat_post (3).csv,CTNND2
+cat_post (3).csv,TRIO
+cat_post (3).csv,BASP1
+cat_post (3).csv,CDH10
+cat_post (3).csv,SLC1A3
+cat_post (3).csv,OXCT1
+cat_post (3).csv,NNT
+cat_post (3).csv,RAB3C
+cat_post (3).csv,PDE4D
+cat_post (3).csv,KIF2A
+cat_post (3).csv,ERBB2IP
+cat_post (3).csv,MRPS36
+cat_post (3).csv,MCCC2
+cat_post (3).csv,MAP1B
+cat_post (3).csv,TNPO1
+cat_post (3).csv,F2RL1
+cat_post (3).csv,AP3B1
+cat_post (3).csv,HOMER1
+cat_post (3).csv,RASGRF2
+cat_post (3).csv,VCAN
+cat_post (3).csv,HAPLN1
+cat_post (3).csv,TTC37
+cat_post (3).csv,SLC25A46
+cat_post (3).csv,APC
+cat_post (3).csv,REEP5
+cat_post (3).csv,AP3S1
+cat_post (3).csv,HSD17B4
+cat_post (3).csv,SNX2
+cat_post (3).csv,ALDH7A1
+cat_post (3).csv,LMNB1
+cat_post (3).csv,SLC12A2
+cat_post (3).csv,ACSL6
+cat_post (3).csv,KIF3A
+cat_post (3).csv,SEPT8
+cat_post (3).csv,HSPA4
+cat_post (3).csv,VDAC1
+cat_post (3).csv,PPP2CA
+cat_post (3).csv,HSPA9
+cat_post (3).csv,CTNNA1
+cat_post (3).csv,PURA
