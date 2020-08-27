@@ -7,9 +7,9 @@ from itertools import combinations, combinations_with_replacement
 from itertools import product
 from scipy import spatial
 
-import os
-import ddot
-from ddot import Ontology
+#import os
+#import ddot
+#from ddot import Ontology
 
 import pickle
 

@@ -11,10 +11,10 @@ from collections import defaultdict
 from itertools import combinations, product
 from scipy import spatial
 
-import networkx as nx
-import os
-import ddot
-from ddot import Ontology
+#import networkx as nx
+#import os
+#import ddot
+#from ddot import Ontology
 
 import pickle
 
