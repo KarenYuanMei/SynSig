@@ -16,7 +16,6 @@ from scipy import spatial
 
 #import pickle
 
-
 import seaborn as sns; sns.set()
 #from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor
@@ -417,7 +416,7 @@ def run_random_forest(training_gene_pair_objects, train_test_gene_pair_objects, 
 	print (df)
 
 	#df.to_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/random_forest/ypredict_ytest_%s.csv'%number)
-	#df.to_csv('ypredict_ytest_%s.csv'%number)
+	df.to_csv('ypredict_ytest_%s.csv'%number)
 
 
 	return df

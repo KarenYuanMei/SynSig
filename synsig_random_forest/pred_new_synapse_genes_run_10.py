@@ -21,8 +21,7 @@ from scipy.stats.stats import pearsonr, spearmanr
 import pylab
 #from sklearn.datasets import make_regression
 
-from define_training_synapse_objects_8 import PairOfGenes
-
+from define_gene_objects_run_rf_4 import PairOfGenes
 
 def load_objects():
 
@@ -40,7 +39,7 @@ def load_objects():
 #     for item in test_gene_pair_objects:
 #     	print (item.GO_score)
 
-def find_train_array(pair_objects):
+def define_feature_list():
 	feature_list = ['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
 		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
 		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
@@ -53,6 +52,10 @@ def find_train_array(pair_objects):
 	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
 
 	feature_list=feature_list+brain_features
+	return feature_list
+
+
+def find_train_array(pair_objects, feature_list):
 	feature_array=[]
 	score_array=[]
 	for item in pair_objects:
@@ -67,18 +70,7 @@ def find_train_array(pair_objects):
 	score_array=np.array(score_array)
 	return feature_array, score_array
 
-def find_data_array(pair_objects):
-	feature_list = ['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number','Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-
-	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-	feature_list=feature_list+brain_features
+def find_data_array(pair_objects, feature_list):
 
 	feature_array=[]
 	gene1_all=[]
@@ -96,23 +88,24 @@ def find_data_array(pair_objects):
 	feature_array=np.array(feature_array)
 	return feature_array, gene1_all, gene2_all
 
-def find_score_array(pair_objects):
-	score_array=[]
-	for item in pair_objects:
-		pair_GO_score=item.GO_score
-		score_array.append(pair_GO_score)
-	score_array=np.array(score_array)
-	return score_array
+# def find_score_array(pair_objects):
+# 	score_array=[]
+# 	for item in pair_objects:
+# 		pair_GO_score=item.GO_score
+# 		score_array.append(pair_GO_score)
+# 	score_array=np.array(score_array)
+# 	return score_array
 
 def run_rf():
 	training_gene_pair_objects, train_data_pair_objects=load_objects()
-	X_train, y_train=find_train_array(training_gene_pair_objects)
+	feature_list=define_feature_list()
+	X_train, y_train=find_train_array(training_gene_pair_objects, feature_list)
 	print (X_train.shape)
 
 	#X_test, y_test=find_train_array(train_test_gene_pair_objects)
 	#print (X_test.shape)
 
-	forest = RandomForestRegressor(n_estimators=100, oob_score=True)
+	forest = RandomForestRegressor(n_estimators=100, oob_score=True, random_state=0)
 	#forest = RandomForestRegressor(200)
 	forest.fit(X_train, y_train)
 
@@ -137,7 +130,7 @@ def run_rf():
 
 	#------actual new genes-------------------------------------------------------------------------------------------------------------
 
-	data_test, data_gene1, data_gene2=find_data_array(train_data_pair_objects)
+	data_test, data_gene1, data_gene2=find_data_array(train_data_pair_objects, feature_list)
 	print (data_test.shape)
 	print (data_test)
 
@@ -160,4 +153,5 @@ def run_rf():
 	print (df)
 	df.to_csv('all_gene_predictions.csv')
 #---when need to run file, use the following command-------------
-run_rf()
+if __name__ == '__main__':
+	run_rf()
