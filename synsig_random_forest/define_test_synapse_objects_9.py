@@ -1,4 +1,5 @@
-#Goal: to generate gene objects and gene_pair objects for all genes so that we can identify novel synapse genes. 
+
+#Goal: Define train-test gene pair objects for random forest to discover novel synapse genes
 
 #do this on the server
 
@@ -17,9 +18,7 @@ from ddot import Ontology
 
 import pickle
 
-
-from define_gene_objects_run_rf_4 import define_features, Gene, PairOfGenes, find_input_features, load_feature, create_feature_value_dict, get_feature_value,create_GO_score_dict, create_gene_list, load_positives, find_pos_genes_in_training
-
+from define_gene_objects_run_rf_4 import Gene, PairOfGenes, define_features,find_input_features, load_feature, create_feature_value_dict, get_feature_value,create_GO_score_dict, create_gene_list, load_positives, find_pos_genes_in_training
 
 
 def get_file_genes(filename):
@@ -33,24 +32,12 @@ def get_all_training(pos_file, neg_file):
 	training=list(set(pos+neg))
 	return training
 
-
-
-def create_training_sets(pos_file, neg_file):
-	training_gene_names=get_all_training(pos_file, neg_file)
-
-	feature_value_dict = create_feature_value_dict(training_gene_names)
-	training_gene_objects = create_gene_list(training_gene_names,False,feature_value_dict)
-	print ('number of training objects', len(training_gene_objects))
-	training_pairs=combinations(training_gene_objects,2)
-	
-	return training_pairs
-
 def create_gene_pair_objects(gene_pairs):
 	gene_pair_objects=[]
 	for item in gene_pairs:
 		gene1=item[0]
 		gene2=item[1]
-		pair_objects=PairOfGenes(gene1, gene2)
+		pair_objects=PairOfGenes(gene1, gene2, include_GO=False)
 		gene_pair_objects.append(pair_objects)
 	return gene_pair_objects
 
@@ -124,15 +111,21 @@ if __name__ == '__main__':
 	pos_file='synapse_positives.csv'
 	neg_file='synapse_negatives.csv'
 
-	#create objects pairs of training genes (200 synapse pos and 200 synapse neg):
-	training_pairs=create_training_sets(pos_file, neg_file)
 
-	training_gene_pair_objects=create_gene_pair_objects(training_pairs)
-	print ('training', len(list(training_gene_pair_objects)))
+	#make object pairs of pos_training and new gene objects:
+	training=get_all_training(pos_file, neg_file)
 
-	with open('training_gene_pair_objects.pkl', 'wb') as output:
-		pickle.dump(training_gene_pair_objects, output, pickle.HIGHEST_PROTOCOL)
+	data_genes=find_data_genes(training)
+	
+	train_data_pairs=create_data_sets(data_genes, training)
+	print ('three')
+	train_data_pair_objects=create_data_pair_objects(train_data_pairs)
+	print (len(list(train_data_pair_objects)))
 
 	print ('DONE')
+
+	with open('train_data_pair_objects.pkl', 'wb') as output:
+		pickle.dump(train_data_pair_objects, output, pickle.HIGHEST_PROTOCOL)
+
 
 	

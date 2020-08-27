@@ -10,26 +10,37 @@ from itertools import combinations, combinations_with_replacement
 from itertools import product
 from scipy import spatial
 
-import networkx as nx
-import os
-import ddot
-from ddot import Ontology
 
-import pickle
+#import ddot
+#from ddot import Ontology
 
-import matplotlib
-matplotlib.use("TKAgg")
-from matplotlib import pyplot as plt
+#import pickle
+
 
 import seaborn as sns; sns.set()
-from sklearn.tree import DecisionTreeClassifier
+#from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
+#from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.metrics import explained_variance_score, mean_absolute_error, r2_score
 from scipy.stats.stats import pearsonr, spearmanr
-import pylab
-from sklearn.datasets import make_regression
+#import pylab
+#from sklearn.datasets import make_regression
+
+def define_features():
+	feature_list=['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
+		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
+		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
+		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
+		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
+		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
+		'chr_no_source_feature', 'qPhos_site_number', 'Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
+		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
+
+	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
+
+	feature_list=feature_list+brain_features
+	return feature_list
 
 
 class Gene:
@@ -49,25 +60,14 @@ class Gene:
 		self.go_scores = GO_scores
 
 class PairOfGenes:
-	def __init__(self,gene1,gene2):
+	def __init__(self,gene1,gene2,include_GO=True):
 		assert isinstance(gene1,Gene), "You screwed up! gene1 needs to be a Gene!"
 		assert isinstance(gene2,Gene), "You screwed up! gene2 needs to be a Gene!"
 
 		self.gene1_name = gene1.name
 		self.gene2_name = gene2.name
 
-		feature_list=['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number', 'Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-
-		brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-
-		feature_list=feature_list+brain_features
+		feature_list=define_features()
 #find the genes in all of the features:
 
 		for feature_name in feature_list:
@@ -78,7 +78,8 @@ class PairOfGenes:
 			else:
 				self.combine_features(gene1_feature,gene2_feature,feature_name)
 
-		self.create_pair_GO_score(gene1, gene2)
+		if include_GO:
+			self.create_pair_GO_score(gene1, gene2)
 
 	def check_for_missing_feature(self, gene1_feature,gene2_feature):
 		#check if numpy array:
@@ -129,17 +130,19 @@ class PairOfGenes:
 		GO_score=gene1.go_scores[gene2_name]
 		self.GO_score = GO_score
 
-def get_training_gene_names(training_file):
+
+
+def get_gene_names(training_file):
 	#function that returns a list of training gene names (strings)
 	genes=pd.read_csv(training_file)
 	gene_names=genes['genes'].tolist()
 	return gene_names
 
-def get_test_gene_names(test_file):
-	#function that returns a list of training gene names (strings)
-	genes=pd.read_csv(test_file)
-	gene_names=genes['genes'].tolist()
-	return gene_names
+# def get_test_gene_names(test_file):
+# 	#function that returns a list of training gene names (strings)
+# 	genes=pd.read_csv(test_file)
+# 	gene_names=genes['genes'].tolist()
+# 	return gene_names
 
 def find_input_genes(training_genes, test_genes):
 	input_genes=list(set(training_genes+test_genes))
@@ -148,7 +151,7 @@ def find_input_genes(training_genes, test_genes):
 def find_input_features(filename, input_genes):
 	string_files=['pFAM_domain', 'mentha_source_feature','biogrid_source_feature', 'bioplex_source_feature', 'chr_no_source_feature']
 	if filename not in string_files:
-		df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/normalized_features/normalized_%s.csv'%filename)
+		df=pd.read_csv('../features/normalized_%s.csv'%filename)
 
 		symbol=df['Norm_Symbol']
 		df.drop(labels=['Norm_Symbol', 'Genes'], axis=1,inplace = True)
@@ -158,7 +161,7 @@ def find_input_features(filename, input_genes):
 		df=df.loc[input_genes]
 
 	else:
-		df = pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/normalized_features/normalized_%s.csv'%filename,converters={"Interactors": lambda x: x.strip("[]").split(", ")})
+		df = pd.read_csv('../features/normalized_%s.csv'%filename,converters={"Interactors": lambda x: x.strip("[]").split(", ")})
 		symbol=df['Norm_Symbol']
 		df.drop(labels=['Norm_Symbol', 'Genes'], axis=1,inplace = True)
 		df.insert(0, 'Genes', symbol)
@@ -210,24 +213,12 @@ def load_feature(filename, input_genes):
 	#format is: dict[feature_name] returns another dictionary. This dictionary d can be used as follows: d[gene_name] = feature value for gene_name
 
 def create_feature_value_dict(input_genes):
-	#source_feature_files=['Bayes_PSD', 'HPA_IHC', 'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length','mentha_source_feature', 'bioplex_source_feature', 'biogrid_source_feature', 'CBC_Proteomics', 'STR_Proteomics', 'MD_Proteomics', 'AMY_Proteomics', 'V1C_Proteomics', 'DFC_Proteomics', 'HIP_Proteomics', 'CBC_RNA', 'STR_RNA', 'MD_RNA', 'AMY_RNA', 'V1C_RNA', 'DFC_RNA', 'HIP_RNA', 'mathieson_halflife', 'fornasiero_halflife', 'fornasiero_aa', 'hpa_isoform_exp', 'chr_no_source_feature']
-	source_feature_files = ['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number', 'Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-
-	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-
-	source_feature_files=source_feature_files+brain_features
+	feature_list=define_features()
 #find the genes in all of the features:
 
 	all_feature_values=[]
 	items=[]
-	for item in source_feature_files:
+	for item in feature_list:
 		feature_values=load_feature(item, input_genes)
 		items.append(item)
 		all_feature_values.append(feature_values)
@@ -266,19 +257,7 @@ def create_gene_list(gene_names,is_test_gene,feature_value_dict):
 	#returns a list of Gene objects, corresponding to the names in gene_names
 	#feature_value_dict is a dictionary containing all feature values for all genes
 
-	#feature_list = ['Bayes_PSD', 'HPA_IHC', 'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length','mentha_source_feature', 'bioplex_source_feature', 'biogrid_source_feature', 'CBC_Proteomics', 'STR_Proteomics', 'MD_Proteomics', 'AMY_Proteomics', 'V1C_Proteomics', 'DFC_Proteomics', 'HIP_Proteomics', 'CBC_RNA', 'STR_RNA', 'MD_RNA', 'AMY_RNA', 'V1C_RNA', 'DFC_RNA', 'HIP_RNA', 'mathieson_halflife', 'fornasiero_halflife', 'fornasiero_aa', 'hpa_isoform_exp', 'chr_no_source_feature']
-	feature_list=['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number', 'Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-
-	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-
-	feature_list=feature_list+brain_features
+	feature_list=define_features()
 	gene_list = []
 	for name in gene_names:
 		new_gene = Gene(name, is_test_gene)
@@ -312,8 +291,8 @@ def find_pos_genes_in_training(training_genes, positives):
 	return input_genes
 
 def create_training_and_test_sets(training_file, test_file):
-	training_gene_names = get_training_gene_names(training_file)
-	test_gene_names = get_test_gene_names(test_file)
+	training_gene_names = get_gene_names(training_file)
+	test_gene_names = get_gene_names(test_file)
 	input_genes=find_input_genes(training_gene_names, test_gene_names)
 	#print (input_genes)
 	feature_value_dict = create_feature_value_dict(input_genes)
@@ -341,19 +320,7 @@ def create_gene_pair_objects(gene_pairs):
 	return gene_pair_objects
 
 def find_feature_array(pair_objects):
-	#feature_list = ['HPA_IHC', 'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length','mentha_source_feature', 'bioplex_source_feature', 'biogrid_source_feature', 'CBC_Proteomics', 'STR_Proteomics', 'MD_Proteomics', 'AMY_Proteomics', 'V1C_Proteomics', 'DFC_Proteomics', 'HIP_Proteomics', 'CBC_RNA', 'STR_RNA', 'MD_RNA', 'AMY_RNA', 'V1C_RNA', 'DFC_RNA', 'HIP_RNA', 'hpa_isoform_exp', 'chr_no_source_feature']
-	feature_list = ['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number','Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-
-	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-
-	feature_list=feature_list+brain_features
+	feature_list=define_features()
 #find the genes in all of the features:
 	#feature_list=['Phosphosite_hu_no', 'Phosphosite_mouse_no', 'Coba_2016_phosphorylation', 'qPhos_site_number', 'Ensembl_isoform_no', 'Ensembl_aa_length', 'pFAM_domain', 'pFAM_domain_number',  'protein_mass', 'gtex_rna_tissue_expression', 'HPA_IHC', 'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length','mentha_source_feature', 'bioplex_source_feature', 'biogrid_source_feature', 'CBC_RNA', 'STR_RNA', 'MD_RNA', 'AMY_RNA', 'V1C_RNA', 'DFC_RNA', 'HIP_RNA','hpa_isoform_exp', 'chr_no_source_feature']
 
@@ -406,6 +373,7 @@ def run_random_forest(training_gene_pair_objects, train_test_gene_pair_objects, 
 	performance=forest.feature_importances_
 	performance=performance.tolist()
 
+#metrics:
 	print ('feature importance', performance)
 	print ('train score', forest.score(X_train, y_train))
 	print ('oob_sore', forest.oob_score_)
@@ -417,20 +385,10 @@ def run_random_forest(training_gene_pair_objects, train_test_gene_pair_objects, 
 	yfit=np.array(yfit)
 	print ('yfit', yfit)
 
-	feature_list = ['colon_hpa_isoform_exp', 'ovary_hpa_isoform_exp', 'breast_hpa_isoform_exp', 'lung_hpa_isoform_exp', 'salivary gland_hpa_isoform_exp', 'seminal vesicle_hpa_isoform_exp', 
-		'lymph node_hpa_isoform_exp', 'placenta_hpa_isoform_exp', 'kidney_hpa_isoform_exp', 'cervix, uterine_hpa_isoform_exp', 'adrenal gland_hpa_isoform_exp', 'thyroid gland_hpa_isoform_exp', 
-		'stomach 1_hpa_isoform_exp', 'gallbladder_hpa_isoform_exp', 'duodenum_hpa_isoform_exp', 'fallopian tube_hpa_isoform_exp','endometrium 1_hpa_isoform_exp', 'skin 1_hpa_isoform_exp', 
-		'spleen_hpa_isoform_exp', 'gtex_rna_tissue_expression', 'appendix_hpa_isoform_exp', 'heart muscle_hpa_isoform_exp', 'small intestine_hpa_isoform_exp', 'epididymis_hpa_isoform_exp', 'testis_hpa_isoform_exp', 
-		'liver_hpa_isoform_exp', 'esophagus_hpa_isoform_exp', 'urinary bladder_hpa_isoform_exp', 'skeletal muscle_hpa_isoform_exp', 'tonsil_hpa_isoform_exp', 'prostate_hpa_isoform_exp', 
-		'parathyroid gland_hpa_isoform_exp','adipose tissue_hpa_isoform_exp', 'smooth muscle_hpa_isoform_exp', 'rectum_hpa_isoform_exp', 'bone marrow_hpa_isoform_exp', 'mentha_source_feature', 
-		'chr_no_source_feature', 'qPhos_site_number','Phosphosite_hu_no', 'pFAM_domain_number', 'pFAM_domain', 'protein_mass', 'Ensembl_aa_length', 'Ensembl_isoform_no', 
-		'trans_count', 'gc_content', 'trans_len', 'gene_length', 'exon_no', 'cds_length']
-	brain_features=['HIP_RNA', 'DFC_RNA', 'V1C_RNA', 'AMY_RNA', 'MD_RNA', 'STR_RNA', 'CBC_RNA']
-
-	feature_list=feature_list+brain_features
+	feature_list=define_features()
 
 	perf=pd.DataFrame({'Features': feature_list, 'Importance': performance})
-	perf.to_csv('Feature_Importance_%s.csv'%number)
+	#perf.to_csv('Feature_Importance_%s.csv'%number)
 #find the genes in all of the features:
 
 	df=pd.DataFrame({'ypredict':yfit, 'ytest': y_test})

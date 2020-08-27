@@ -1,4 +1,4 @@
-#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation
+#Goal: to plot the similarity score distributions of synapse-synapse and synapse-nonsynapse genes; plots mean with standard deviation
 
 import numpy as np
 #from igraph import *
@@ -9,13 +9,8 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 from mlxtend.evaluate import permutation_test
 
-
-
 #-----load your ontology onto HiView-------------------------------------------------------------------------
 #code for uploading to HiView taken from DDOT package: https://github.com/michaelkyu/ddot/blob/master/examples/Tutorial.ipynb
-
-
-import networkx as nx
 
 import matplotlib
 matplotlib.use("TKAgg")
@@ -39,7 +34,7 @@ from collections import defaultdict
 from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 
-#Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation
+
 
 def find_test_genes(test_genes_file):
 	test_genes=pd.read_csv(test_genes_file)
@@ -68,10 +63,6 @@ def find_pos_genes_in_training(training_genes, positives):
 
 #convert each predicted score df into a different df with test genes as index, and all of the positive training genes as columns, so that it's easy to compute the average score per test gene to all 160 positive training genes
 def make_avg_score_df(i):
-
-	#data=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/random_forest/ypredict_ytest_%s.csv'%i, index_col=[0])
-
-	#data=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/random_forest/no_ppi_ypredict_ytest_%s.csv'%i, index_col=[0])
 
 	data=pd.read_csv('ypredict_ytest_%s.csv'%i)
 
@@ -152,7 +143,6 @@ def find_distributions(gene_list1, gene_list2):
 	return score_array
 
 
-
 def plot_distributions(positive_array, mixed_array):
 
 	bins=np.histogram(np.hstack((positive_array,mixed_array)), bins=40)[1] #get the bin edges
@@ -172,30 +162,33 @@ def plot_distributions(positive_array, mixed_array):
 	plt.show()
 	plt.close()
 
-all_pos=[]
-all_neg=[]
-for i in range(5):
-	final=make_avg_score_df(i)
-	print (final)
-	pos=final[final['group']==1]
-	print (pos)
-	pos_mean=pos['mean'].tolist()
-	all_pos.append(pos_mean)
-	
+def plot_sim_score_dist():
+	all_pos=[]
+	all_neg=[]
+	for i in range(5):
+		final=make_avg_score_df(i)
+		print (final)
+		pos=final[final['group']==1]
+		print (pos)
+		pos_mean=pos['mean'].tolist()
+		all_pos.append(pos_mean)
+		
 
-	neg=final[final['group']==0]
-	print (neg)
-	neg_mean=neg['mean'].tolist()
-	all_neg.append(neg_mean)
+		neg=final[final['group']==0]
+		print (neg)
+		neg_mean=neg['mean'].tolist()
+		all_neg.append(neg_mean)
 
-pos_list = [item for sublist in all_pos for item in sublist]
-neg_list = [item for sublist in all_neg for item in sublist]
+	pos_list = [item for sublist in all_pos for item in sublist]
+	neg_list = [item for sublist in all_neg for item in sublist]
 
-p_value = permutation_test(pos_list, neg_list,
-                           method='approximate',
-                           num_rounds=10000,
-                           seed=0)
-print(p_value)
+	p_value = permutation_test(pos_list, neg_list,
+	                           method='approximate',
+	                           num_rounds=10000,
+	                           seed=0)
+	print(p_value)
 
-plot_distributions(pos_list, neg_list)
+	plot_distributions(pos_list, neg_list)
 
+if __name__ == '__main__':
+	plot_sim_score_dist()
