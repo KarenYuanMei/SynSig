@@ -15,10 +15,10 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 #sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
 #from scipy.stats import hypergeom
 
-import tkinter
+
 import matplotlib
-matplotlib.use("TKAgg")
-print(matplotlib.get_backend())
+#matplotlib.use("TKAgg")
+#print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
 #from matplotlib_venn import venn3, venn3_circles
@@ -166,7 +166,9 @@ def plot_pr(df):
 	# show the legend
 	pyplot.legend()
 	# show the plot
+	f=plt.figure()
 	pyplot.show()
+	f.savefig("ROC_Syngo.pdf", bbox_inches='tight')
 
 def plot_adult_pr():
 	final=find_true_y()
