@@ -33,9 +33,9 @@ plt.rcParams.update({'font.size': 22})
 plt.rcParams["font.family"] = "Helvetica"
 
 def load_syngo_genes():
-	syngo=Ontology.from_table('../features/SynGO_BP.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_BP.txt')
 	syngo_bp_genes=syngo.genes
-	syngo=Ontology.from_table('../features/SynGO_CC.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_CC.txt')
 	syngo_cc_genes=syngo.genes
 	syngo_genes=list(set(syngo_bp_genes+syngo_cc_genes))
 	return syngo_genes
@@ -105,6 +105,8 @@ def plot_ROC(df):
 
 	#import matplotlib.pyplot as plt
 	#plt.title('ROC Curve for Novel Synapse Predictions Using Experiments')
+	f=plt.figure()
+	
 	plt.plot(fpr, tpr, 'g', label = 'AUC = %0.2f' %auc, linewidth=3)
 	plt.legend(loc = 'lower right')
 	plt.plot([0, 1], [0, 1],'--', color='black')
@@ -119,6 +121,7 @@ def plot_ROC(df):
 	plt.ylabel('True Positive Rate')
 	plt.xlabel('False Positive Rate')
 	plt.show()
+	f.savefig("ROC_Syngo_plot.pdf", bbox_inches='tight')
 
 
 def plot_adult_ROC():
@@ -128,55 +131,8 @@ def plot_adult_ROC():
 	#print (union_df)
 	plot_ROC(final)
 
-def plot_pr(df):
-	from sklearn.datasets import make_classification
-	from sklearn.linear_model import LogisticRegression
-	from sklearn.model_selection import train_test_split
-	from sklearn.metrics import precision_recall_curve
-	from sklearn.metrics import f1_score
-	from sklearn.metrics import auc
-	from matplotlib import pyplot
-	probs=df['avg_scores'].tolist()
-	y=df['union'].tolist()
-
-	lr_precision, lr_recall, thresholds = precision_recall_curve(y, probs)
-	print (len(thresholds), len(lr_precision), len(lr_recall))
-	#print (len(probs))
-	print (thresholds)
-	print (lr_precision)
-	print (lr_recall)
-	lr_auc = auc(lr_recall, lr_precision)
-
-
-	#pr_curve=list(zip(thresholds, lr_precision, lr_recall))
-
-	pr_curve=pd.DataFrame({"Precision": lr_precision, "Recall": lr_recall})
-
-	pr_curve.to_csv('PR_on_syngo.csv')
-
-	# summarize scores
-	print('Logistic: auc=%.3f' % (lr_auc))
-	# plot the precision-recall curves
-	no_skill = len(df[df['union']==1]) / len(y)
-	pyplot.plot([0, 1], [no_skill, no_skill], linestyle='--', label='No Skill')
-	pyplot.plot(lr_recall, lr_precision, marker='.', label='Logistic')
-	# axis labels
-	pyplot.xlabel('Recall')
-	pyplot.ylabel('Precision')
-	# show the legend
-	pyplot.legend()
-	# show the plot
-	f=plt.figure()
-	pyplot.show()
-	f.savefig("ROC_Syngo.pdf", bbox_inches='tight')
-
-def plot_adult_pr():
-	final=find_true_y()
-
-	#print (union_df)
-	plot_pr(final)
 
 if __name__ == '__main__':
 	plot_adult_ROC()
-	plot_adult_pr()
+
 	
