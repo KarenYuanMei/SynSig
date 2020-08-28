@@ -12,17 +12,17 @@ import sys
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
-from scipy.stats import hypergeom
+#sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
+#from scipy.stats import hypergeom
 
 import matplotlib
 matplotlib.use("TKAgg")
 print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
-from matplotlib_venn import venn3, venn3_circles
-from matplotlib_venn import venn2, venn2_circles
-import venn
+#from matplotlib_venn import venn3, venn3_circles
+#from matplotlib_venn import venn2, venn2_circles
+#import venn
 
 from sklearn.metrics import auc
 
@@ -32,9 +32,9 @@ plt.rcParams.update({'font.size': 22})
 plt.rcParams["font.family"] = "Helvetica"
 
 def load_syngo_genes():
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_BP.txt')
+	syngo=Ontology.from_table('../features/SynGO_BP.txt')
 	syngo_bp_genes=syngo.genes
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_CC.txt')
+	syngo=Ontology.from_table('../features/SynGO_CC.txt')
 	syngo_cc_genes=syngo.genes
 	syngo_genes=list(set(syngo_bp_genes+syngo_cc_genes))
 	return syngo_genes
