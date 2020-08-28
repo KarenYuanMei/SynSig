@@ -54,7 +54,7 @@ def find_pred_no_training():
 	return pred_no_training
 
 def load_fetal_brain():
-	df=pd.read_csv('/../experimental_validation/coba_fetal_brain.csv')
+	df=pd.read_csv('../experimental_validation/coba_fetal_brain.csv')
 	#print (df)
 	genes=df['Norm_Symbol'].tolist()
 	training=load_training_genes()
@@ -63,7 +63,7 @@ def load_fetal_brain():
 	return genes
 
 def load_ngn2():
-	df=pd.read_csv('/experimental_validation/Coba_NGN2.csv')
+	df=pd.read_csv('../experimental_validation/Coba_NGN2.csv')
 	genes=df['Norm_Symbol'].tolist()
 	training=load_training_genes()
 	genes=[x.upper() for x in genes]
