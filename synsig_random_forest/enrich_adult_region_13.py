@@ -8,20 +8,20 @@ import numpy as np
 #import os
 import ddot
 from ddot import Ontology
-from collections import defaultdict
-import collections
+#from collections import defaultdict
+#import collections
 import csv
 
-import sys
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
+#import sys
+#import os
+#os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
+#sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
 from scipy.stats import hypergeom
 
 import matplotlib
-matplotlib.use("TKAgg")
-print(matplotlib.get_backend())
+#matplotlib.use("TKAgg")
+#print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
 from matplotlib_venn import venn3, venn3_circles
@@ -55,9 +55,9 @@ def find_pred_no_training():
 
 
 def load_syngo_genes():
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_BP.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_BP.txt')
 	syngo_bp_genes=syngo.genes
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_CC.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_CC.txt')
 	syngo_cc_genes=syngo.genes
 	syngo_genes=list(set(syngo_bp_genes+syngo_cc_genes))
 	training=load_training_genes()
@@ -104,7 +104,7 @@ def load_data_genes_no_training(data_file):
 	return final
 
 def load_adult_ctx():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_ctx_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_ctx_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	training=load_training_genes()
@@ -113,7 +113,7 @@ def load_adult_ctx():
 	return genes
 
 def load_adult_str():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_str_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_str_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	training=load_training_genes()
@@ -122,7 +122,7 @@ def load_adult_str():
 	return genes
 
 def find_synsysnet():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_Genes/SynSysNet_genes.csv')
+	df=pd.read_csv('../prev_databases/SynSysNet_genes.csv')
 	#print (df)
 	genes=df['gene_name'].tolist()
 	#print (len(genes))
@@ -131,7 +131,7 @@ def find_synsysnet():
 	return genes
 
 def find_synDB():
-	df=pd.read_csv('/Users/karenmei/Documents/BrainHierarchyDataSource/SynDB_Master.csv')
+	df=pd.read_csv('../prev_databases/SynDB_Master.csv')
 	#print (df)
 	genes=df['Symbol'].tolist()
 	training=load_training_genes()
@@ -139,33 +139,34 @@ def find_synDB():
 	return genes
 
 def find_GO_synapse():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_Scripts/GO_Synapse.csv')
+	df=pd.read_csv('../prev_databases/GO_Synapse.csv')
 	#print (df)
 	genes=df['genes'].tolist()
 	training=load_training_genes()
 	genes=list(set(genes)-set(training))
 	return genes
 
+if __name__ == '__main__':
+	
+	pred=load_pred_genes()
 
-pred=load_pred_genes()
+	print ('cortex')
+	ctx=load_adult_ctx()
+	find_hypergeometric(ctx, pred)
 
-print ('cortex')
-ctx=load_adult_ctx()
-find_hypergeometric(ctx, pred)
+	print ('striatum')
+	stria=load_adult_str()
+	find_hypergeometric(stria, pred)
 
-print ('striatum')
-stria=load_adult_str()
-find_hypergeometric(stria, pred)
-
-print ('overlap')
-overlap=list(set(ctx)&set(stria))
-find_hypergeometric(overlap, pred)
+	print ('overlap')
+	overlap=list(set(ctx)&set(stria))
+	find_hypergeometric(overlap, pred)
 
 
-print ('syngo')
-syngo=load_syngo_genes()
-find_hypergeometric(pred, syngo)
-#find_hypergeometric(stria, syngo)
+	print ('syngo')
+	syngo=load_syngo_genes()
+	find_hypergeometric(pred, syngo)
+	#find_hypergeometric(stria, syngo)
 
 
 
