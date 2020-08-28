@@ -116,7 +116,7 @@ def load_adult_str():
 	return genes
 
 def find_synsysnet():
-	df=pd.read_csv('../experimental_validation/SynSysNet_genes.csv')
+	df=pd.read_csv('../prev_database/SynSysNet_genes.csv')
 	#print (df)
 	genes=df['gene_name'].tolist()
 	print (len(genes))
