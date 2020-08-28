@@ -15,6 +15,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 #sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
 #from scipy.stats import hypergeom
 
+import tkinter
 import matplotlib
 matplotlib.use("TKAgg")
 print(matplotlib.get_backend())
