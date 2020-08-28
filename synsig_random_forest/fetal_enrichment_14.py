@@ -125,7 +125,7 @@ def find_synsysnet():
 	return genes
 
 def find_synDB():
-	df=pd.read_csv('../experimental_validation/SynDB_Master.csv')
+	df=pd.read_csv('../prev_databases/SynDB_Master.csv')
 	#print (df)
 	genes=df['Symbol'].tolist()
 	training=load_training_genes()
