@@ -24,9 +24,9 @@ import matplotlib
 #print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
-from matplotlib_venn import venn3, venn3_circles
-from matplotlib_venn import venn2, venn2_circles
-import venn
+#from matplotlib_venn import venn3, venn3_circles
+#from matplotlib_venn import venn2, venn2_circles
+#import venn
 
 def load_training_genes():
 	filename='synapse_positives.csv'
