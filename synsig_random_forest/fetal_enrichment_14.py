@@ -8,25 +8,25 @@ import numpy as np
 #import os
 import ddot
 from ddot import Ontology
-from collections import defaultdict
-import collections
+#from collections import defaultdict
+#import collections
 import csv
 
 import sys
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
+#sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
 from scipy.stats import hypergeom
 
 import matplotlib
-matplotlib.use("TKAgg")
-print(matplotlib.get_backend())
+#matplotlib.use("TKAgg")
+#print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
 from matplotlib_venn import venn3, venn3_circles
 from matplotlib_venn import venn2, venn2_circles
-import venn
+#import venn
 
 def load_pred_genes():
 	pred_file='pred_genes_above_4.7.csv'
@@ -54,7 +54,7 @@ def find_pred_no_training():
 	return pred_no_training
 
 def load_fetal_brain():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Coba_human_fetal_2020/coba_fetal_brain.csv')
+	df=pd.read_csv('/../experimental_validation/coba_fetal_brain.csv')
 	#print (df)
 	genes=df['Norm_Symbol'].tolist()
 	training=load_training_genes()
@@ -63,7 +63,7 @@ def load_fetal_brain():
 	return genes
 
 def load_ngn2():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Coba_NGN2_2020/Coba_NGN2.csv')
+	df=pd.read_csv('/experimental_validation/Coba_NGN2.csv')
 	genes=df['Norm_Symbol'].tolist()
 	training=load_training_genes()
 	genes=[x.upper() for x in genes]
@@ -98,7 +98,7 @@ def find_hypergeometric(genes, pred_no_training):
 	return fold
 
 def load_adult_ctx():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_ctx_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_ctx_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	training=load_training_genes()
@@ -107,7 +107,7 @@ def load_adult_ctx():
 	return genes
 
 def load_adult_str():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_str_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_str_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	training=load_training_genes()
@@ -116,7 +116,7 @@ def load_adult_str():
 	return genes
 
 def find_synsysnet():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_Genes/SynSysNet_genes.csv')
+	df=pd.read_csv('../experimental_validation/SynSysNet_genes.csv')
 	#print (df)
 	genes=df['gene_name'].tolist()
 	print (len(genes))
@@ -125,7 +125,7 @@ def find_synsysnet():
 	return genes
 
 def find_synDB():
-	df=pd.read_csv('/Users/karenmei/Documents/BrainHierarchyDataSource/SynDB_Master.csv')
+	df=pd.read_csv('../experimental_validation/SynDB_Master.csv')
 	#print (df)
 	genes=df['Symbol'].tolist()
 	training=load_training_genes()
@@ -133,9 +133,9 @@ def find_synDB():
 	return genes
 
 def load_syngo_genes():
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_BP.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_BP.txt')
 	syngo_bp_genes=syngo.genes
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_CC.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_CC.txt')
 	syngo_cc_genes=syngo.genes
 	syngo_genes=list(set(syngo_bp_genes+syngo_cc_genes))
 	training=load_training_genes()
@@ -143,7 +143,7 @@ def load_syngo_genes():
 	return syngo_genes
 
 def find_GO_synapse():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_Scripts/GO_Synapse.csv')
+	df=pd.read_csv('../prev_databases/GO_Synapse.csv')
 	#print (df)
 	genes=df['genes'].tolist()
 	training=load_training_genes()
@@ -160,6 +160,7 @@ overlap=list(set(fetal_brain)&set(ngn2))
 fetal_all=list(set(fetal_brain+ngn2))
 
 pred=load_pred_genes()
+print ('pred', len(pred))
 
 print ('fetal_brain, SynSig')
 find_hypergeometric(fetal_brain, pred)
@@ -170,21 +171,11 @@ find_hypergeometric(ngn2, pred)
 print ('overlap, SynSig')
 find_hypergeometric(overlap, pred)
 
-# venn3([set(fetal_brain), set(ngn2), set(pred)], set_labels=('fetal_brain', 'ngn2', 'pred'))
-# plt.show()
-# plt.close()
 
 adult_ctx=load_adult_ctx()
 adult_str=load_adult_str()
 adult=list(set(adult_ctx)&set(adult_str))
 adult_all=list(set(adult_ctx+adult_str))
-
-# venn3([set(overlap), set(adult_all), set(pred)], set_labels=('fetal', 'adult', 'pred'))
-# plt.show()
-# plt.close()
-
-
-#print (len(fetal_only_val))
 
 syngo=load_syngo_genes()
 synsysnet=find_synsysnet()
@@ -205,13 +196,6 @@ find_hypergeometric(ngn2, syngo)
 print ('overlap, syngo')
 find_hypergeometric(overlap, syngo)
 
-# find_hypergeometric(fetal_brain, synsysnet)
-# find_hypergeometric(ngn2, synsysnet)
-# find_hypergeometric(overlap, synsysnet)
-
-# find_hypergeometric(fetal_brain, synDB)
-# find_hypergeometric(ngn2, synDB)
-# find_hypergeometric(overlap, synDB)
 
 db=list(set(syngo+synsysnet+synDB+go_synapse))
 db=list(set(db)&set(pred))
@@ -241,48 +225,11 @@ plt.show()
 plt.close()
 
 
-# #plot the figure
-# v=venn2(subsets = (25, 118, 48), set_labels = ("Fetal", "Adult"), set_colors=("red", "lightgray"), alpha = 0.7)
-# venn2_circles(subsets = (25, 118, 48), linewidth=0.5)
-
-# for text in v.set_labels:
-#     text.set_fontweight('bold')
-# for text in v.set_labels:
-#     text.set_fontsize(20)
-# for text in v.subset_labels:
-#     text.set_fontsize(20)
-# plt.show()
-# plt.close()
-
-# v=venn3([set(overlap_pred), set(adult_pred), set(db)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'pink', 'orange'), alpha=0.7)
-# c=venn3_circles([set(overlap_pred), set(adult_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
-# #plt.show()
-
-# for text in v.set_labels:
-#     text.set_fontweight('bold')
-# for text in v.set_labels:
-#     text.set_fontsize(16)
-# for text in v.subset_labels:
-#     text.set_fontsize(16)
-
-# plt.show()
-# plt.close()
-
-
-# #plt.close()
-
 fetal_overlap=list(set(fetal_brain)&set(ngn2)&set(pred))
 adult_overlap=list(set(adult_ctx)&set(adult_str)&set(pred))
 
 fetal_all_overlap=list(set(fetal_brain+ngn2)&set(pred))
 adult_all_overlap=list(set(adult_ctx+adult_str)&set(pred))
-
-# print (len(fetal_overlap), len(adult_overlap))
-# v=venn3([set(fetal_overlap), set(adult_overlap), set(db)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'pink', 'orange'), alpha=0.7)
-
-# plt.show()
-# plt.close()
-
 
 fetal_specific_val=list(set(fetal_overlap)-set(adult_all_overlap)-set(db))
 print (len(fetal_specific_val), fetal_specific_val)
