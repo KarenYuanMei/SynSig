@@ -150,69 +150,81 @@ def find_GO_synapse():
 	genes=list(set(genes)-set(training))
 	return genes
 
+def load_fetal_data():
+	fetal_brain=load_fetal_brain()
+	ngn2=load_ngn2()
+	overlap=list(set(fetal_brain)&set(ngn2))
+	return fetal_brain, ngn2, overlap
+
+def load_adult_data():
+	adult_ctx=load_adult_ctx()
+	adult_str=load_adult_str()
+	adult=list(set(adult_ctx)&set(adult_str))
+	return adult_ctx, adult_str, adult
+
+def load_prev_databases():
+	syngo=load_syngo_genes()
+	synsysnet=find_synsysnet()
+	synDB=find_synDB()
+	go_synapse=find_GO_synapse()
+	return syngo, synsysnet, synDB, go_synapse
 
 
-fetal_brain=load_fetal_brain()
-#print (len(fetal_brain))
-ngn2=load_ngn2()
-#print (len(ngn2))
-overlap=list(set(fetal_brain)&set(ngn2))
+#fetal datasets enrich for synsig
+def find_fetal_enrichment():
+	fetal_brain, ngn2, overlap=load_fetal_data()
+	syngo, synsysnet, synDB, go_synapse=load_prev_databases()
+	
+	pred=load_pred_genes()
+	print ('pred', len(pred))
+
+	#enrich for synsig
+	print ('fetal_brain, SynSig')
+	find_hypergeometric(fetal_brain, pred)
+	print ('ngn2, SynSig')
+	find_hypergeometric(ngn2, pred)
+	print ('overlap, SynSig')
+	find_hypergeometric(overlap, pred)
+
+	#fetal datasets enrich for previous databases:
+	print ('fetal_brain, go_synapse')
+	find_hypergeometric(fetal_brain, go_synapse)
+	print ('ngn2, go_synapse')
+	find_hypergeometric(ngn2, go_synapse)
+	print ('overlap, go_synapse')
+	find_hypergeometric(overlap, go_synapse)
+	print ('fetal_brain, syngo')
+	find_hypergeometric(fetal_brain, syngo)
+	print ('ngn2, syngo')
+	find_hypergeometric(ngn2, syngo)
+	print ('overlap, syngo')
+	find_hypergeometric(overlap, syngo)
+
+
+
+#find validated genes in only fetal
+fetal_brain, ngn2, overlap=load_fetal_data()
+adult_ctx, adult_str, adult=load_adult_data()
+
+adult_all=list(set(adult_ctx+adult_str))
 fetal_all=list(set(fetal_brain+ngn2))
 
-pred=load_pred_genes()
-print ('pred', len(pred))
-
-print ('fetal_brain, SynSig')
-find_hypergeometric(fetal_brain, pred)
-
-print ('ngn2, SynSig')
-find_hypergeometric(ngn2, pred)
-
-print ('overlap, SynSig')
-find_hypergeometric(overlap, pred)
-
-
-adult_ctx=load_adult_ctx()
-adult_str=load_adult_str()
-adult=list(set(adult_ctx)&set(adult_str))
-adult_all=list(set(adult_ctx+adult_str))
-
-syngo=load_syngo_genes()
-synsysnet=find_synsysnet()
-synDB=find_synDB()
-go_synapse=find_GO_synapse()
-
-print ('fetal_brain, go_synapse')
-find_hypergeometric(fetal_brain, go_synapse)
-print ('ngn2, go_synapse')
-find_hypergeometric(ngn2, go_synapse)
-print ('overlap, go_synapse')
-find_hypergeometric(overlap, go_synapse)
-
-print ('fetal_brain, syngo')
-find_hypergeometric(fetal_brain, syngo)
-print ('ngn2, syngo')
-find_hypergeometric(ngn2, syngo)
-print ('overlap, syngo')
-find_hypergeometric(overlap, syngo)
-
-
 db=list(set(syngo+synsysnet+synDB+go_synapse))
-db=list(set(db)&set(pred))
-overlap_pred=list(set(overlap)&set(pred))
-adult_pred=list(set(adult_all)&set(pred))
+db_pred=list(set(db)&set(pred))
+#overlap_pred=list(set(overlap)&set(pred))
+adult_all_pred=list(set(adult_all)&set(pred))
 fetal_all_pred=list(set(fetal_all)&set(pred))
 
 fetal_only=list(set(fetal_all)-set(adult_all)-set(db))
 fetal_only_val=list(set(fetal_only)&set(pred))
 
-#print (fetal_only_val)
+print (len(fetal_only_val))
 df=pd.DataFrame({'genes': fetal_only_val})
 df.to_csv('fetal_only_val.csv')
 
 #plot the overlap of all fetal, all_adult and all database synapse genes:
 
-v=venn3([set(fetal_all_pred), set(adult_pred), set(db)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
+v=venn3([set(fetal_all_pred), set(adult_pred), set(db_pred)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
 c=venn3_circles([set(fetal_all_pred), set(adult_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
 for text in v.set_labels:
     text.set_fontweight('bold')
