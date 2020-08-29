@@ -248,6 +248,9 @@ def find_hc_fetal_adult_val():
 	fetal_all_overlap=list(set(fetal_brain+ngn2)&set(pred))
 	adult_all_overlap=list(set(adult_ctx+adult_str)&set(pred))
 
+	syngo, synsysnet, synDB, go_synapse=load_prev_databases()
+	db=list(set(syngo+synsysnet+synDB+go_synapse))
+
 	fetal_specific_val=list(set(fetal_overlap)-set(adult_all_overlap)-set(db))
 	print (len(fetal_specific_val), fetal_specific_val)
 
