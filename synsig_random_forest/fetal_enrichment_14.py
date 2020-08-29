@@ -211,7 +211,7 @@ fetal_all_pred=list(set(fetal_all)&set(pred))
 fetal_only=list(set(fetal_all_pred)-set(adult_all_pred)-set(db_pred))
 #fetal_only_val=list(set(fetal_only)&set(pred))
 
-print (len(fetal_only_val))
+#print (len(fetal_only_val))
 print (len(fetal_only))
 df=pd.DataFrame({'genes': fetal_only_val})
 df.to_csv('fetal_only_val.csv')
