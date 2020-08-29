@@ -3,30 +3,21 @@
 		#3: find the previously unvalidated adult specific genes that are now validated by experiments
 		#4: draw the intersection between fetal and adult and predicted genes for figure
 import pandas as pd
-#import networkx as nx
 import numpy as np
-#import os
 import ddot
 from ddot import Ontology
-#from collections import defaultdict
-#import collections
 import csv
-
 import sys
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-#sys.path.append("/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/")
 from scipy.stats import hypergeom
 
 import matplotlib
-#matplotlib.use("TKAgg")
-#print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 
 from matplotlib_venn import venn3, venn3_circles
 from matplotlib_venn import venn2, venn2_circles
-#import venn
 
 def load_pred_genes():
 	pred_file='pred_genes_above_4.7.csv'
@@ -154,13 +145,13 @@ def load_fetal_data():
 	fetal_brain=load_fetal_brain()
 	ngn2=load_ngn2()
 	overlap=list(set(fetal_brain)&set(ngn2))
-	return fetal_brain, ngn2, overlap
+	return fetal_brain, ngn2, fetal_overlap
 
 def load_adult_data():
 	adult_ctx=load_adult_ctx()
 	adult_str=load_adult_str()
 	adult=list(set(adult_ctx)&set(adult_str))
-	return adult_ctx, adult_str, adult
+	return adult_ctx, adult_str, adult_overlap
 
 def load_prev_databases():
 	syngo=load_syngo_genes()
@@ -202,7 +193,7 @@ def find_fetal_enrichment():
 
 
 
-#find validated genes in only fetal
+#load all datasets
 fetal_brain, ngn2, overlap=load_fetal_data()
 adult_ctx, adult_str, adult=load_adult_data()
 syngo, synsysnet, synDB, go_synapse=load_prev_databases()
@@ -217,10 +208,11 @@ db_pred=list(set(db)&set(pred))
 adult_all_pred=list(set(adult_all)&set(pred))
 fetal_all_pred=list(set(fetal_all)&set(pred))
 
-fetal_only=list(set(fetal_all)-set(adult_all)-set(db))
-fetal_only_val=list(set(fetal_only)&set(pred))
+fetal_only=list(set(fetal_all_pred)-set(adult_all_pred)-set(db_pred))
+#fetal_only_val=list(set(fetal_only)&set(pred))
 
 print (len(fetal_only_val))
+print (len(fetal_only))
 df=pd.DataFrame({'genes': fetal_only_val})
 df.to_csv('fetal_only_val.csv')
 
