@@ -144,13 +144,13 @@ def find_GO_synapse():
 def load_fetal_data():
 	fetal_brain=load_fetal_brain()
 	ngn2=load_ngn2()
-	overlap=list(set(fetal_brain)&set(ngn2))
+	fetal_overlap=list(set(fetal_brain)&set(ngn2))
 	return fetal_brain, ngn2, fetal_overlap
 
 def load_adult_data():
 	adult_ctx=load_adult_ctx()
 	adult_str=load_adult_str()
-	adult=list(set(adult_ctx)&set(adult_str))
+	adult_overlap=list(set(adult_ctx)&set(adult_str))
 	return adult_ctx, adult_str, adult_overlap
 
 def load_prev_databases():
@@ -194,8 +194,8 @@ def find_fetal_enrichment():
 
 
 #load all datasets
-fetal_brain, ngn2, overlap=load_fetal_data()
-adult_ctx, adult_str, adult=load_adult_data()
+fetal_brain, ngn2, fetal_overlap=load_fetal_data()
+adult_ctx, adult_str, adult_overlap=load_adult_data()
 syngo, synsysnet, synDB, go_synapse=load_prev_databases()
 pred=load_pred_genes()
 
