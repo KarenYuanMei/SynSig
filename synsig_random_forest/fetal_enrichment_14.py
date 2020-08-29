@@ -192,53 +192,79 @@ def find_fetal_enrichment():
 	find_hypergeometric(overlap, syngo)
 
 
+def find_overlap_with_synsig():
 
-#load all datasets
-fetal_brain, ngn2, fetal_overlap=load_fetal_data()
-adult_ctx, adult_str, adult_overlap=load_adult_data()
-syngo, synsysnet, synDB, go_synapse=load_prev_databases()
-pred=load_pred_genes()
+	#load all datasets
+	fetal_brain, ngn2, fetal_overlap=load_fetal_data()
+	adult_ctx, adult_str, adult_overlap=load_adult_data()
+	syngo, synsysnet, synDB, go_synapse=load_prev_databases()
+	pred=load_pred_genes()
 
-adult_all=list(set(adult_ctx+adult_str))
-fetal_all=list(set(fetal_brain+ngn2))
+	adult_all=list(set(adult_ctx+adult_str))
+	fetal_all=list(set(fetal_brain+ngn2))
 
-db=list(set(syngo+synsysnet+synDB+go_synapse))
-db_pred=list(set(db)&set(pred))
-#overlap_pred=list(set(overlap)&set(pred))
-adult_all_pred=list(set(adult_all)&set(pred))
-fetal_all_pred=list(set(fetal_all)&set(pred))
+	db=list(set(syngo+synsysnet+synDB+go_synapse))
+	db_pred=list(set(db)&set(pred))
+	#overlap_pred=list(set(overlap)&set(pred))
+	adult_all_pred=list(set(adult_all)&set(pred))
+	fetal_all_pred=list(set(fetal_all)&set(pred))
+	return fetal_all_pred, adult_all_pred, db_pred
 
-fetal_only=list(set(fetal_all_pred)-set(adult_all_pred)-set(db_pred))
-#fetal_only_val=list(set(fetal_only)&set(pred))
+def find_fetal_synsig_only():
+	fetal_all_pred, adult_all_pred, db_pred=find_overlap_with_synsig()
+	fetal_only=list(set(fetal_all_pred)-set(adult_all_pred)-set(db_pred))
+	print (len(fetal_only))
+	df=pd.DataFrame({'genes': fetal_only})
+	df.to_csv('fetal_only_val.csv')
+	return fetal_only
 
-#print (len(fetal_only_val))
-print (len(fetal_only))
-df=pd.DataFrame({'genes': fetal_only_val})
-df.to_csv('fetal_only_val.csv')
+def plot_fetal_adult_db_within_synsig():
+	fetal_all_pred, adult_all_pred, db_pred=find_overlap_with_synsig()
+	#plot the overlap of all fetal, all_adult and all database synapse genes:
 
-#plot the overlap of all fetal, all_adult and all database synapse genes:
+	v=venn3([set(fetal_all_pred), set(adult_all_pred), set(db_pred)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
+	c=venn3_circles([set(fetal_all_pred), set(adult_all_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
+	for text in v.set_labels:
+	    text.set_fontweight('bold')
+	for text in v.set_labels:
+	    text.set_fontsize(25)
+	for text in v.subset_labels:
+	    text.set_fontsize(25)
 
-v=venn3([set(fetal_all_pred), set(adult_all_pred), set(db_pred)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
-c=venn3_circles([set(fetal_all_pred), set(adult_all_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
-for text in v.set_labels:
-    text.set_fontweight('bold')
-for text in v.set_labels:
-    text.set_fontsize(25)
-for text in v.subset_labels:
-    text.set_fontsize(25)
-
-plt.show()
-plt.close()
+	plt.show()
+	plt.close()
 
 
-fetal_overlap=list(set(fetal_brain)&set(ngn2)&set(pred))
-adult_overlap=list(set(adult_ctx)&set(adult_str)&set(pred))
+#find high-confidence fetal synsig genes (supported by both datasets and not in either of the other two datasets) and adult synsig genes (same logic)
 
-fetal_all_overlap=list(set(fetal_brain+ngn2)&set(pred))
-adult_all_overlap=list(set(adult_ctx+adult_str)&set(pred))
+def find_hc_fetal_adult_val():
+	fetal_brain, ngn2, fetal_overlap=load_fetal_data()
+	adult_ctx, adult_str, adult_overlap=load_adult_data()
+	pred=load_pred_genes()
 
-fetal_specific_val=list(set(fetal_overlap)-set(adult_all_overlap)-set(db))
-print (len(fetal_specific_val), fetal_specific_val)
+	fetal_overlap=list(set(fetal_brain)&set(ngn2)&set(pred))
+	adult_overlap=list(set(adult_ctx)&set(adult_str)&set(pred))
 
-adult_specific_val=list(set(adult_overlap)-set(fetal_all_overlap)-set(db))
-print (len(adult_specific_val), adult_specific_val)
+	fetal_all_overlap=list(set(fetal_brain+ngn2)&set(pred))
+	adult_all_overlap=list(set(adult_ctx+adult_str)&set(pred))
+
+	fetal_specific_val=list(set(fetal_overlap)-set(adult_all_overlap)-set(db))
+	print (len(fetal_specific_val), fetal_specific_val)
+
+	adult_specific_val=list(set(adult_overlap)-set(fetal_all_overlap)-set(db))
+	print (len(adult_specific_val), adult_specific_val)
+	return fetal_specific_val, adult_specific_val
+
+if __name__ == '__main__':
+
+	#find how fetal synapse genes are enriched by different databses:
+	find_fetal_enrichment()
+
+	#find the synsig genes validated by only fetal experimental datasets:
+	find_fetal_synsig_only()
+
+	#plot the overlap between fetal, adult, database within synsig genes:
+	plot_fetal_adult_db_within_synsig()
+
+	#find high-confidence synsig genes specific to each period:
+	find_hc_fetal_adult_val()
