@@ -206,6 +206,7 @@ def find_fetal_enrichment():
 fetal_brain, ngn2, overlap=load_fetal_data()
 adult_ctx, adult_str, adult=load_adult_data()
 syngo, synsysnet, synDB, go_synapse=load_prev_databases()
+pred=load_pred_genes()
 
 adult_all=list(set(adult_ctx+adult_str))
 fetal_all=list(set(fetal_brain+ngn2))
