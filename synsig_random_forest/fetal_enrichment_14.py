@@ -227,7 +227,7 @@ df.to_csv('fetal_only_val.csv')
 #plot the overlap of all fetal, all_adult and all database synapse genes:
 
 v=venn3([set(fetal_all_pred), set(adult_all_pred), set(db_pred)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
-c=venn3_circles([set(fetal_all_pred), set(adult_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
+c=venn3_circles([set(fetal_all_pred), set(adult_all_pred), set(db)], linestyle='solid', linewidth=0.5, color="black")
 for text in v.set_labels:
     text.set_fontweight('bold')
 for text in v.set_labels:
