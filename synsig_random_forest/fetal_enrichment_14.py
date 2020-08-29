@@ -110,7 +110,7 @@ def find_synsysnet():
 	df=pd.read_csv('../prev_databases/SynSysNet_genes.csv')
 	#print (df)
 	genes=df['gene_name'].tolist()
-	print (len(genes))
+	#print (len(genes))
 	training=load_training_genes()
 	genes=list(set(genes)-set(training))
 	return genes
@@ -222,6 +222,8 @@ def plot_fetal_adult_db_within_synsig():
 	fetal_all_pred, adult_all_pred, db_pred=find_overlap_with_synsig()
 	#plot the overlap of all fetal, all_adult and all database synapse genes:
 
+	f = plt.figure()
+
 	v=venn3([set(fetal_all_pred), set(adult_all_pred), set(db_pred)], set_labels=('Fetal Synapse', 'Adult Synapse', 'Synapse Databases'), set_colors=('red', 'gray', 'lightblue'), alpha=0.7)
 	c=venn3_circles([set(fetal_all_pred), set(adult_all_pred), set(db_pred)], linestyle='solid', linewidth=0.5, color="black")
 	for text in v.set_labels:
@@ -233,6 +235,7 @@ def plot_fetal_adult_db_within_synsig():
 
 	plt.show()
 	plt.close()
+	f.savefig("fetal_adult_db.pdf", bbox_inches='tight')
 
 
 #find high-confidence fetal synsig genes (supported by both datasets and not in either of the other two datasets) and adult synsig genes (same logic)
