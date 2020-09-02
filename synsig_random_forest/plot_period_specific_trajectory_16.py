@@ -1,6 +1,8 @@
 #Goal: 
-#overlap: the intersection of syndromic autism, fetal experiments, and nonbrain predicted synapse
-#Plot the trajectory of overlap genes
+#plot the trajectories of fetal specific and adult specific synsig genes
+
+
+
 import csv
 import pandas as pd
 import numpy as np
