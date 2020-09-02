@@ -1,4 +1,4 @@
-#Goal: analyze number of transcripts in the human genes as reported by Ensembl to determine if there are differences between synapse and non-synapse genes in this feature
+#Goal: analyze genomic and protein features in the human genes as reported by public resources to determine if there are differences between synapse and non-synapse genes in this feature
 
 #source: Ensembl
 
@@ -9,7 +9,7 @@ import pandas as pd
 from mlxtend.evaluate import permutation_test
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 from scipy import stats
@@ -18,8 +18,8 @@ from numpy.random import seed
 from numpy.random import randn 
 from scipy.stats import mannwhitneyu 
 
-import ddot
-from ddot import Ontology
+#import ddot
+#from ddot import Ontology
 import random
 plt.style.use('seaborn-deep')
 matplotlib.rcParams.update({'font.size': 22})
@@ -204,7 +204,7 @@ def compare_features():
 	training_pos_sem_list=[]
 	exp_pos_sem_list=[]
 	for item in features:
-		filename='/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_7/source_features/%s.csv'%item
+		filename='../features/normalized_%s.csv'%item
 
 		data_type=item
 		print (item)
