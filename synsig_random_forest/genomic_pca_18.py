@@ -45,7 +45,7 @@ def load_data(data_name):
 
 def load_genomic_features():
 	#data_name_list=['gc_content','Phosphosite_hu_no', 'pFam_domain_number', 'protein_mass', 'trans_len', 'gene_length', 'exon_no', 'cds_length', 'Ensembl_isoform_no', 'Ensembl_aa_length']
-	data_name_list=['Phosphosite_hu_no', 'pFam_domain_number', 'protein_mass', 'trans_len', 'gene_length', 'exon_no', 'cds_length', 'Ensembl_isoform_no', 'Ensembl_aa_length']
+	data_name_list=['Phosphosite_hu_no', 'pFAM_domain_number', 'protein_mass', 'trans_len', 'gene_length', 'exon_no', 'cds_length', 'Ensembl_isoform_no', 'Ensembl_aa_length']
 
 	frames=[]
 	for item in data_name_list:
