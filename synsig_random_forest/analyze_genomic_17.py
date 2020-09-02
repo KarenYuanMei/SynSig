@@ -196,7 +196,7 @@ def test_significance(filename, synapse_genes, negative_genes):
 
 def compare_features():
 	expanded_negatives=generate_expanded_negatives()
-	features=['ENSEMBL_aa_length', "cds_length", "exon_no", "gc_content", "gene_length", "Ensembl_isoform_no", "trans_count", "pFAM_domain_number", "Phosphosite_hu_no", "protein_mass"]
+	features=['Ensembl_aa_length', "cds_length", "exon_no", "gc_content", "gene_length", "Ensembl_isoform_no", "trans_count", "pFAM_domain_number", "Phosphosite_hu_no", "protein_mass"]
 	training_p=[]
 	training_ratio=[]
 	exp_p=[]
