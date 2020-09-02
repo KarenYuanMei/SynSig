@@ -84,7 +84,7 @@ def translate_df():
 		trans_cols.append(trans)
 
 	df.columns=trans_cols
-	df.sort_index(axis=1, level=None, ascending=True, inplace=True, kind='quicksort', na_position='last', sort_remaining=True, by=None)
+	df.sort_index(axis=1, level=None, ascending=True, inplace=True, kind='quicksort', na_position='last', sort_remaining=True)
 	#df.to_csv('DFC_expression.csv')
 	return df
 
