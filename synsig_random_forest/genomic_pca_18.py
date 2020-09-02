@@ -1,14 +1,17 @@
+#Goal: to make the dataframe of genomic and protein structural features for input for PCA (which is analyzed in R: see plot_R_figures/genomic_PCA.R)
+
+
 import pandas as pd
 import numpy as np
-import matplotlib
-matplotlib.use("TKAgg")
-from matplotlib import pyplot as plt
+#import matplotlib
+#matplotlib.use("TKAgg")
+#from matplotlib import pyplot as plt
 
 import csv
-import random
+#import random
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.decomposition import PCA
+#from sklearn.preprocessing import StandardScaler
+#from sklearn.decomposition import PCA
 import seaborn as sns
 
 def load_synapse_positives():
@@ -36,7 +39,7 @@ def load_expanded_negatives():
 	return negatives
 
 def load_data(data_name):
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_7/source_features/%s.csv'%data_name)
+	df=pd.read_csv('../features/normalized_%s.csv'%data_name)
 	df=df.set_index('Genes')
 	return df
 
@@ -47,6 +50,7 @@ def load_genomic_features():
 	frames=[]
 	for item in data_name_list:
 		df=load_data(item)
+		df=df.set_index('Norm_Symbol')
 		frames.append(df)
 
 	new=pd.concat(frames, axis=1, join='inner')
