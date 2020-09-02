@@ -12,13 +12,13 @@ from mlxtend.evaluate import permutation_test
 
 import pandas as pd
 
-import mygene
+#import mygene
 
 from collections import Counter
 from collections import defaultdict
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 #import seaborn as sns; sns.set()
@@ -27,10 +27,10 @@ from scipy import stats
 from numpy.random import seed 
 #from numpy.random import randn 
 
-import ddot
-from ddot import Ontology
+#import ddot
+#from ddot import Ontology
 
-import random
+#import random
 from statsmodels.sandbox.stats.multicomp import multipletests
 
 
@@ -40,9 +40,6 @@ plt.style.use('seaborn-deep')
 #plt.style.use('seaborn-deep')
 matplotlib.rcParams.update({'font.size': 22})
 
-
-#source datafile for this feature:
-filename='/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_7/source_features/gtex_rna_tissue_expression.csv'
 
 #load the positive synapse genes (training)
 
@@ -86,16 +83,18 @@ def load_expanded_positives_negatives():
 
 #load the source dataset
 def load_tissue_expression(tissue):
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_7/source_features/gtex_rna_tissue_expression.csv', usecols=['Genes', tissue])
+	df=pd.read_csv('../features/normalized_gtex_rna_tissue_expression.csv', usecols=['Genes', tissue])
 	df=df.set_index('Genes')
 	print (df)
 	return df
 
 #find the list of all tissues in the data
 def find_tissue_list():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_7/source_features/gtex_rna_tissue_expression.csv')
+	df=pd.read_csv('../features/normalized_gtex_rna_tissue_expression.csv')
 	df=df.set_index('Genes')
 	cols=list(df.columns)
+	cols.remove('Norm_Symbol')
+	print ('cols', cols)
 	return cols
 
 #find all the brain tissues
@@ -268,6 +267,8 @@ def analyze_expanded_tissues(brain_tissue_list, non_brain_tissues):
 		
 if __name__ == "__main__":
 	#analyze_by_tissue(brain_tissue_list, 'All_Brain_Tissues')
+	#source datafile for this feature:
+	filename='../features/normalized_gtex_rna_tissue_expression.csv'
 	brain_tissue_list=find_brain_tissue_list()
 	print (brain_tissue_list)
 
