@@ -6,8 +6,8 @@ import pandas as pd
 import numpy as np
 
 import matplotlib
-#matplotlib.use("TKAgg")
-#print(matplotlib.get_backend())
+matplotlib.use("TKAgg")
+print(matplotlib.get_backend())
 from matplotlib import pyplot as plt
 from scipy import stats
 from sklearn import preprocessing
@@ -35,7 +35,7 @@ def get_ctx_df(df):
 	return df
 
 def key_dict():
-	key_file=pd.read_csv('/../other_resources/PsychEncode_key.csv', skiprows=3)
+	key_file=pd.read_csv('../other_resources/PsychEncode_key.csv', skiprows=3)
 	key_file=key_file.drop(key_file.index[[0]])
 
 	dfc_key=key_file[key_file['Regioncode']=='DFC']
@@ -47,7 +47,7 @@ def key_dict():
 	return key_dict
 
 def find_regions():
-	key_file=pd.read_csv('/../other_resources/PsychEncode_key.csv', skiprows=3)
+	key_file=pd.read_csv('../other_resources/PsychEncode_key.csv', skiprows=3)
 	key_file=key_file.drop(key_file.index[[0]])
 
 	regions=key_file['Regioncode'].tolist()
@@ -58,12 +58,13 @@ def find_regions():
 
 def translate_df():
 
-	df=pd.read_csv('/../other_resources/PsychEncode_Ensembl_NoZero.csv')
+	df=pd.read_csv('../other_resources/PsychEncode_Ensembl_NoZero.csv')
 
 	df=get_ctx_df(df)
 	#print (df)
 
 	df.rename(columns=lambda x: x[:x.index('.DFC')], inplace=True)
+	df.to_csv('PsychEncode_Ensembl_DFC.csv')
 
 	age_dict=key_dict()
 
