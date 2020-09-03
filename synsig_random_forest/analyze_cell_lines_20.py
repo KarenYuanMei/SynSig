@@ -11,7 +11,7 @@ from scipy import stats
 import pandas as pd
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 import random
@@ -20,7 +20,7 @@ plt.style.use('seaborn-deep')
 
 #find all of the different cell types
 def find_cell_type():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_line_expression/Thul_2017/cell_line_desc.csv')
+	df=pd.read_csv('../other_resources/cell_line_desc.csv')
 	null_columns=df.columns[df.isnull().any()]
 	types_df=df[df["Description of cell line"].isnull()][null_columns]
 	types=types_df['Name'].tolist()
@@ -34,7 +34,7 @@ def find_cell_type():
 #find_cell_type()
 
 def find_lines_per_type():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_line_expression/Thul_2017/cell_line_desc.csv')
+	df=pd.read_csv('../other_resources/cell_line_desc.csv')
 	#df=df.set_index('Name')
 
 	idx_list=[]
@@ -48,7 +48,7 @@ def find_lines_per_type():
 #find_lines_per_type()
 
 def find_nonbrain_cells():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_line_expression/Thul_2017/Thul_2017.csv')
+	df=pd.read_csv('../other_resources/Thul_2017.csv')
 	cell_lines=list(df.columns)
 
 	#remove "ENSG", 'Gene'
@@ -57,7 +57,7 @@ def find_nonbrain_cells():
 	for item in lines:
 		new=item[:item.index(' (')]
 		line_names.append(new)
-	desc=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_line_expression/Thul_2017/cell_line_desc.csv')
+	desc=pd.read_csv('../other_resources/cell_line_desc.csv')
 	desc=desc.set_index('Name')
 	brain_lines=['SH-SY5Y', 'U-251 MG', 'U-138 MG', 'AF22', 'U-87 MG']
 	nonbrain_lines=list(set(line_names)-set(brain_lines))
@@ -85,12 +85,14 @@ def load_expanded_positives():
 	#novel_synapse_genes=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_8/synapse_genes_above_5.3.csv', usecols=['genes'])
 	novel_synapse_genes=pd.read_csv('pred_genes_above_4.7.csv', usecols=['genes'])
 	novel_synapse_genes=novel_synapse_genes['genes'].tolist()
+	print ('pos', len(novel_synapse_genes))
 	return novel_synapse_genes
 
 def load_expanded_negatives():
 	#negative_genes=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Analyze_Synapse_Features/expanded_negative_list.csv')
 	negative_genes=pd.read_csv('synsig_negative_list.csv')
 	negatives=negative_genes['Genes'].tolist()
+	print ('negative', len(negatives))
 	return negatives
 
 def find_cell_pos_neg(positives, negatives, data):
@@ -103,7 +105,7 @@ def find_cell_pos_neg(positives, negatives, data):
 	return positives, negatives
 
 def normalize_cell_df():
-	data=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_line_expression/Thul_2017/Thul_2017.csv')
+	data=pd.read_csv('../other_resources/Thul_2017.csv')
 
 	cols=list(data.columns)
 
@@ -159,19 +161,14 @@ def analyze_cell_lines(data, positives, negatives, nonbrain_cells, group):
 		pos=nonbrain_df.loc[positives]
 		print (pos)
 		pos_list=pos.tolist()
-		print (pos_list[:5])
-		print ('pos', len(pos_list), np.mean(pos_list))
+		
 
 		neg=nonbrain_df.loc[negatives]
 		neg_list=neg.tolist()
-		#neg_list=[x for x in neg_list if x != 'nan']
-		print ('neg', len(neg_list), np.mean(neg_list))
-		#print (neg_list)
+		
 
 		p_value=permutation_test(pos_list, neg_list, method='approximate', num_rounds=10000, seed=0)
 		print ('permutation test p', p_value)
-
-		name=item[:5]
 
 		fc=np.mean(pos_list)/np.mean(neg_list)
 		fc_list.append(fc)
@@ -182,7 +179,7 @@ def analyze_cell_lines(data, positives, negatives, nonbrain_cells, group):
 
 		p_list.append(p_value)
 
-		print (len(nonbrain_cells), len(fc_list), len(sem_list), len(p_list))
+		#print (len(nonbrain_cells), len(fc_list), len(sem_list), len(p_list))
 
 	df=pd.DataFrame({'Cell_Line': nonbrain_cells, 'Fold_Change': fc_list, 'SEM': sem_list, 'Significance': p_list})
 	print (df)
