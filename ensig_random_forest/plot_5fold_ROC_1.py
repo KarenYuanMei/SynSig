@@ -1,7 +1,7 @@
 #Goal: to plot the ROC curve with python scikit learn; plots mean with standard deviation; five-fold cross-validation for ENSig; Fig6a
 
 import numpy as np
-from igraph import *
+#from igraph import *
 import pandas as pd
 import sys
 import os
@@ -11,10 +11,10 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'
 #code for uploading to HiView taken from DDOT package: https://github.com/michaelkyu/ddot/blob/master/examples/Tutorial.ipynb
 
 
-import networkx as nx
+#import networkx as nx
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 #import seaborn as sns; sns.set()
@@ -70,15 +70,15 @@ def make_avg_score_df(i):
 	data=pd.read_csv('ypredict_ytest_%s.csv'%i)
 
 
-	test_genes_file='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/test_genes_%s.csv'%i
-	training_genes_file='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/training_genes_%s.csv'%i
+	test_genes_file='../synsig_random_forest/test_genes_%s.csv'%i
+	training_genes_file='../synsig_random_forest/training_genes_%s.csv'%i
 
-	positive_filename='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/synapse_positives.csv'
+	positive_filename='../synsig_random_forest/synapse_positives.csv'
 
 	positive_genes=pd.read_csv(positive_filename)
 	positives=positive_genes['genes'].tolist()
 
-	negative_filename='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/synapse_negatives.csv'
+	negative_filename='../synsig_random_forest/synapse_negatives.csv'
 
 	negative_genes=pd.read_csv(negative_filename)
 	negatives=negative_genes['genes'].tolist()
