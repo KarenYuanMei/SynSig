@@ -80,7 +80,8 @@ class PairOfGenes:
 			else:
 				self.combine_features(gene1_feature,gene2_feature,feature_name)
 
-		self.create_pair_GO_score(gene1, gene2)
+		if include_GO:
+			self.create_pair_GO_score(gene1, gene2)
 
 	def check_for_missing_feature(self, gene1_feature,gene2_feature):
 		#check if numpy array:
@@ -204,8 +205,6 @@ def load_feature(filename, input_genes):
 		feature_dict=dict(zip(keys, new_values))
 		#print (feature_dict['KCNMA1'])
 	return feature_dict
-
-
 
 #def create_feature_value_dict():
 	#returns a dictionary containing all feature values for all genes
