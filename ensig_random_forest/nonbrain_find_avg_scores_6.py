@@ -2,7 +2,7 @@
 
 
 import numpy as np
-from igraph import *
+#from igraph import *
 import pandas as pd
 import sys
 import os
@@ -35,15 +35,15 @@ def get_all_training(pos_file, neg_file):
 def find_data_genes(training_genes):
 	#new_index=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Entry_Ontology/synapse_10/no_brain_genes_index.csv')
 
-	new_index=pd.read_csv('../brain_RNA_big_gene_pool_pipeline/big_pool_genes_index.csv')
+	new_index=pd.read_csv('../synsig_random_forest/big_pool_genes_index.csv')
 	all_genes=new_index['genes'].tolist()
 	data_genes=list(set(all_genes)-set(training_genes))
 	return data_genes
 
 
 def find_avg_score():
-	pos_file='../brain_RNA_big_gene_pool_pipeline/synapse_positives.csv'
-	neg_file='../brain_RNA_big_gene_pool_pipeline/synapse_negatives.csv'
+	pos_file='../synsig_random_forest/synapse_positives.csv'
+	neg_file='../synsig_random_forest/synapse_negatives.csv'
 
 	training=get_all_training(pos_file, neg_file)
 	data_genes=find_data_genes(training)
