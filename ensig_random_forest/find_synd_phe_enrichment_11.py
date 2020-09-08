@@ -31,7 +31,7 @@ from statsmodels.sandbox.stats.multicomp import multipletests
 
 
 def find_sfari_syndromic_genes():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI-Gene_genes.csv')
+	df=pd.read_csv('../other_resources/SFARI-Gene_genes.csv')
 	syn = df[df['genetic-category'].str.contains('Syndromic', regex=False, case=False, na=False)]
 	genes=syn['gene-symbol'].tolist()
 	df=df[df['syndromic']==1]
@@ -40,7 +40,7 @@ def find_sfari_syndromic_genes():
 	return genes
 
 def find_sfari_nonsyndromic_genes():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI-Gene_genes.csv')
+	df=pd.read_csv('../other_resources/SFARI-Gene_genes.csv')
 	syndromic=find_sfari_syndromic_genes()
 	all_genes=df['gene-symbol'].tolist()
 	genes=list(set(all_genes)-set(syndromic))
@@ -48,7 +48,7 @@ def find_sfari_nonsyndromic_genes():
 	return genes
 
 def load_pheno_hpo():
-	hpo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/HPO/making_HPO/HPO_parent_child.txt')
+	hpo=Ontology.from_table('../other_resources/HPO_parent_child.txt')
 	#print (hpo)
 	hpo=hpo.propagate(direction='forward', gene_term=True, term_term=False)
 	hpo=hpo.focus(branches=['Phenotypic abnormality'])
