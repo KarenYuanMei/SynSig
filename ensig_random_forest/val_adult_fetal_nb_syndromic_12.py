@@ -128,59 +128,76 @@ def find_db_genes():
 	db=list(set(synsysnet+synDB+GO_synapse+syngo))
 	return db
 
+def find_novel_nb_syndromic():
+	db=find_db_genes()
+	nb=load_nonbrain_pred_genes()
+	syndromic=find_sfari_syndromic_genes()
+	print ('syndromic', len(syndromic))
 
-db=find_db_genes()
-nb=load_nonbrain_pred_genes()
-syndromic=find_sfari_syndromic_genes()
-print ('syndromic', len(syndromic))
+	overlap=list(set(nb)&set(syndromic))
 
-overlap=list(set(nb)&set(syndromic))
-
-overlap_no_db=list(set(overlap)-set(db))
+	overlap_no_db=list(set(overlap)-set(db))
+	return overlap_no_db
 
 #overlap=['DDX3X', 'CTNNB1', 'WAC', 'ASH1L', 'ASPM', 'ARID1B', 'PCCA', 'KIF14', 'CNKSR2', 'CHD1', 'CHD3', 'KDM5B', 'TSC2', 'KCNQ2', 'MED13L', 'RAC1', 'KMT2A', 'CHD8', 'AFF4', 'CHD2', 'ANKRD11', 'SMARCA4', 'ZBTB20', 'TRIP12', 'MYT1L', 'GRID2', 'MTOR', 'SYNE1', 'EP300', 'DYRK1A', 'DPYD', 'SCN2A', 'ARNT2', 'DYNC1H1', 'TCF4', 'RALA', 'SCN8A', 'SLC6A1', 'MED13', 'ATRX', 'KMT2C', 'EHMT1', 'HNRNPU', 'PRKDC', 'SETD2', 'GRIN2B', 'PHIP', 'RAI1', 'NTRK3', 'TCF20']
 
-fetal=find_fetal()
-adult=find_adult()
+def find_fetal_adult_novel(overlap_no_db):
+	fetal=find_fetal()
+	adult=find_adult()
 
-fetal_overlap=list(set(overlap_no_db)&set(fetal))
-#fetal_overlap=list(set(fetal_overlap)-set(db))
-print (len(fetal_overlap))
-print (fetal_overlap)
+	fetal_overlap=list(set(overlap_no_db)&set(fetal))
+	#fetal_overlap=list(set(fetal_overlap)-set(db))
+	print (len(fetal_overlap))
+	print (fetal_overlap)
 
-adult_overlap=list(set(overlap_no_db)&set(adult))
-#adult_overlap=list(set(adult_overlap)-set(db))
-print (len(adult_overlap))
-print (adult_overlap)
+	adult_overlap=list(set(overlap_no_db)&set(adult))
+	#adult_overlap=list(set(adult_overlap)-set(db))
+	print (len(adult_overlap))
+	print (adult_overlap)
+	return fetal_overlap, adult_overlap
 
-fetal_df=pd.DataFrame({'Stage': 'Fetal Synapse: Syndromic Autism Genes','Genes':list(set(fetal_overlap))})
-adult_df=pd.DataFrame({'Stage': 'Adult Synapse: Syndromic Autism Genes','Genes':list(set(adult_overlap))})
 
-final=pd.concat([fetal_df, adult_df], axis=0)
-print (final)
-final.to_csv('nb_val_new_syndromic.csv')
+def make_novel_df(fetal_overlap, adult_overlap):
+
+	fetal_df=pd.DataFrame({'Stage': 'Fetal Synapse: Syndromic Autism Genes','Genes':list(set(fetal_overlap))})
+	adult_df=pd.DataFrame({'Stage': 'Adult Synapse: Syndromic Autism Genes','Genes':list(set(adult_overlap))})
+
+	final=pd.concat([fetal_df, adult_df], axis=0)
+	print (final)
+	final.to_csv('nb_val_new_syndromic.csv')
+	return final
+
+def plot_overlap():
+	fetal=find_fetal()
+	adult=find_adult()
+	nb=load_nonbrain_pred_genes()
+	pred_val=list(set(fetal+adult)&set(nb))
+
+	f = plt.figure()
+
+	v=venn3_unweighted([set(pred_val),set(syndromic), set(db)], set_labels=('Proteomics Validated \n EnSig',  'Syndromic Autism', 'Synapse Databases'), set_colors=('skyblue', 'coral', 'gray'),alpha=0.7)
+	#venn3_circles([set(pred_val),set(syndromic), set(db)], linestyle='solid', linewidth=0.5, color='k');
+	for text in v.set_labels:
+		#print (text)
+		text.set_fontweight('bold')
+	for text in v.set_labels:
+	    text.set_fontsize(30)
+	for text in v.subset_labels:
+		print (text)
+		text.set_fontsize(30)
+
+	target=v.subset_labels[2]
+	target.set_fontweight('bold')
+	target.set_fontsize(35)
+	v.get_patch_by_id('110').set_color('red')
+	plt.show()
+	f.savefig("ensig_synautism_syndb.pdf", bbox_inches='tight')
+	plt.close()
+
 
 #print (df)
-
-pred_val=list(set(fetal+adult)&set(nb))
-
-f = plt.figure()
-
-v=venn3_unweighted([set(pred_val),set(syndromic), set(db)], set_labels=('Proteomics Validated \n ENSig',  'Syndromic Autism', 'Synapse Databases'), set_colors=('skyblue', 'coral', 'gray'),alpha=0.7)
-#venn3_circles([set(pred_val),set(syndromic), set(db)], linestyle='solid', linewidth=0.5, color='k');
-for text in v.set_labels:
-	#print (text)
-	text.set_fontweight('bold')
-for text in v.set_labels:
-    text.set_fontsize(30)
-for text in v.subset_labels:
-	print (text)
-	text.set_fontsize(30)
-
-target=v.subset_labels[2]
-target.set_fontweight('bold')
-target.set_fontsize(35)
-v.get_patch_by_id('110').set_color('red')
-plt.show()
-f.savefig("ensig_synautism_syndb.pdf", bbox_inches='tight')
-plt.close()
+if __name__ == '__main__':
+	overlap_no_db=find_novel_nb_syndromic()
+	fetal_overlap, adult_overlap=find_fetal_adult_novel(overlap_no_db)
+	final=make_novel_df(fetal_overlap, adult_overlap)
+	plot_overlap()
