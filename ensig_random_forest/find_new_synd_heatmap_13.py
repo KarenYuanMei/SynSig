@@ -28,7 +28,7 @@ def load_new_synd():
 	return genes
 
 def load_pheno_hpo():
-	hpo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/HPO/making_HPO/HPO_parent_child.txt')
+	hpo=Ontology.from_table('../other_resources/HPO_parent_child.txt')
 	#print (hpo)
 	hpo=hpo.propagate(direction='forward', gene_term=True, term_term=False)
 	hpo=hpo.focus(branches=['Phenotypic abnormality'])
@@ -55,5 +55,7 @@ def find_gene_phenotypes(genes):
 	df=df.T
 	df.to_csv('synapse_phenotype_heatmap.csv')
 	return df
-genes=load_new_synd()
-find_gene_phenotypes(genes)
+
+if __name__ == '__main__':
+	genes=load_new_synd()
+	find_gene_phenotypes(genes)
