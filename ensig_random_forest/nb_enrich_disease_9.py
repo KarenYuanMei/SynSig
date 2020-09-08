@@ -5,7 +5,7 @@ import pandas as pd
 import csv
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 
@@ -16,11 +16,11 @@ from matplotlib_venn import venn2, venn2_circles
 from matplotlib_venn import venn3, venn3_circles
 
 def load_training_genes():
-	filename='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/synapse_positives.csv'
+	filename='../synsig_random_forest/synapse_positives.csv'
 	df=pd.read_csv(filename, index_col=[0])
 	pos=df['genes'].tolist()
 
-	filename='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/synapse_negatives.csv'
+	filename='../synsig_random_forest/synapse_negatives.csv'
 	df=pd.read_csv(filename, index_col=[0])
 	neg=df['genes'].tolist()
 
@@ -28,7 +28,7 @@ def load_training_genes():
 	return genes
 
 def load_brain_pred_genes():
-	pred_file='/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/pred_genes_above_4.7.csv'
+	pred_file='../synsig_random_forest/pred_genes_above_4.7.csv'
 	pred_df=pd.read_csv(pred_file, index_col=[0])
 	pred_genes=pred_df['genes'].tolist()
 	pred_genes=[x.upper() for x in pred_genes]
@@ -40,7 +40,7 @@ def load_brain_pred_genes():
 	return pred_genes
 
 def load_nonbrain_pred_genes():
-	pred_file='nonbrain_pred_genes_above_4.67.csv'
+	pred_file='../ensig_random_forest/nonbrain_pred_genes_above_4.67.csv'
 	pred_df=pd.read_csv(pred_file, index_col=[0])
 	pred_genes=pred_df['genes'].tolist()
 	pred_genes=[x.upper() for x in pred_genes] 
@@ -65,7 +65,7 @@ def load_decipher_genes():
 	return genes
 
 def find_decipher_syndromic():
-	dd=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_diseases/decipher.csv')
+	dd=pd.read_csv('../other_resources/decipher.csv')
 	dd=dd[dd['DDD category']=="confirmed"]
 	#print (dd)
 	new=dd[dd['disease name'].str.contains("SYNDROME")]
@@ -102,7 +102,7 @@ def find_decipher_syndromic():
 
 def find_sfari_syndromic_genes():
 	#df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI_genes_051120.csv')
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI-Gene_genes.csv')
+	df=pd.read_csv('../other_resources/SFARI-Gene_genes.csv')
 	
 	syn = df[df['genetic-category'].str.contains('Syndromic', regex=False, case=False, na=False)]
 	print (syn)
@@ -124,7 +124,7 @@ def find_sfari_syndromic_genes():
 
 def find_sfari_nonsyndromic_genes():
 	#df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI_genes_051120.csv')
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Disease_genes/Autism/SFARI-Gene_genes.csv')
+	df=pd.read_csv('../other_resources/SFARI-Gene_genes.csv')
 	
 	df = df[~df['genetic-category'].str.contains('Syndromic', regex=False, case=False, na=False)]
 	print (df)
