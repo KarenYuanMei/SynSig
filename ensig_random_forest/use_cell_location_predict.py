@@ -14,7 +14,7 @@ from collections import Counter
 from collections import defaultdict
 
 import matplotlib
-matplotlib.use("TKAgg")
+#matplotlib.use("TKAgg")
 from matplotlib import pyplot as plt
 
 import seaborn as sns; sns.set()
@@ -36,7 +36,7 @@ plt.style.use('seaborn-deep')
 
 
 def load_cell_locations_df():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/cell_location/Thul_cell_location.csv')
+	df=pd.read_csv('../other_resources/Thul_cell_location.csv')
 	df=df[df['Reliability']!='Uncertain']
 
 	#print (df)
@@ -44,16 +44,16 @@ def load_cell_locations_df():
 	return df
 
 def load_syngo_genes():
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_BP.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_BP.txt')
 	syngo_bp_genes=syngo.genes
-	syngo=Ontology.from_table('/Users/karenmei/Documents/Synapse_Ontology/NetworkClass/Metrics/SynGO_CC.txt')
+	syngo=Ontology.from_table('../prev_databases/SynGO_CC.txt')
 	syngo_cc_genes=syngo.genes
 	syngo_genes=list(set(syngo_bp_genes+syngo_cc_genes))
 	return syngo_genes
 
 
 def load_adult_ctx():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_ctx_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_ctx_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	#training=load_training_genes()
@@ -62,7 +62,7 @@ def load_adult_ctx():
 	return genes
 
 def load_adult_str():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Weijun_proteomics/weijun_str_uniprot.csv', sep='\t')
+	df=pd.read_csv('../experimental_validation/weijun_str_uniprot.csv', sep='\t')
 	#print (df)
 	genes=df['To'].tolist()
 	#training=load_training_genes()
@@ -71,7 +71,7 @@ def load_adult_str():
 	return genes
 
 def load_fetal_brain():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Coba_human_fetal_2020/coba_fetal_brain.csv')
+	df=pd.read_csv('../experimental_validation/coba_fetal_brain.csv')
 	#print (df)
 	genes=df['Norm_Symbol'].tolist()
 	#training=load_training_genes()
@@ -80,7 +80,7 @@ def load_fetal_brain():
 	return genes
 
 def load_ngn2():
-	df=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Validation_proteomics/Coba_NGN2_2020/Coba_NGN2.csv')
+	df=pd.read_csv('../experimental_validation/Coba_NGN2.csv')
 	genes=df['Norm_Symbol'].tolist()
 	#training=load_training_genes()
 	genes=[x.upper() for x in genes]
@@ -105,7 +105,7 @@ def load_synapse_positives():
 #load the negative synapse genes (training)
 def load_synapse_negatives():
 	synapse_genes=load_synapse_positives()
-	negatives=pd.read_csv('/Users/karenmei/Documents/Synapse_Paper_Code/synapse_11/brain_RNA_big_gene_pool_pipeline/negative_pool.csv')
+	negatives=pd.read_csv('../synsig_random_forest/negative_pool.csv')
 	negatives=negatives['genes'].tolist()
 	synapse_negatives=list(set(negatives)-set(synapse_genes))
 	#random.shuffle(negatives)
