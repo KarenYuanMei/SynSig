@@ -56,5 +56,5 @@ def find_network_above_threshold(threshold):
 if __name__ == '__main__':
 	#find_frequency_val_df()
 	#plot_lit_ROC()
-	find_network_above_threshold(4.67)
+	find_network_above_threshold(4.65)
 
