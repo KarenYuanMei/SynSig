@@ -53,7 +53,7 @@ def load_nonbrain_pred_genes():
 	return pred_genes
 
 def load_decipher_genes():
-	dd=pd.read_csv('/Users/karenmei/Documents/Synapse_Ontology/Synapse_diseases/decipher.csv')
+	dd=pd.read_csv('../other_resources/decipher.csv')
 	dd=dd[dd['DDD category']=="confirmed"]
 	genes=dd['gene symbol'].tolist()
 	genes=list(set(genes))
