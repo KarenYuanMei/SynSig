@@ -151,6 +151,9 @@ def find_nonbrain_disease_enrichment():
 
 	dd_syn=load_decipher_genes()
 
+	overlap=list(set(dd_syn)&set(nb_pred))
+	print ('decipher', len(overlap))
+
 	#how well does nonbrain predicted genes enrich for general developmental disease genes:
 	venn2([set(nb_pred), set(dd_syn)], set_labels = ('Non-Brain', "Decipher Genes"))
 	plt.show()
@@ -159,6 +162,14 @@ def find_nonbrain_disease_enrichment():
 	#how well does nonbrain predicted genes enrichment for autism nonsyndromic:
 	nonsyndromic=find_sfari_nonsyndromic_genes()
 	print ('sfari', len(nonsyndromic))
+
+	overlap=list(set(nb_pred)&set(nonsyndromic))
+	print ('overlap with nb and nonsyndromic', len(overlap))
+
+	venn2([set(nb_pred), set(nonsyndromic)], set_labels=('Non-Brain Predicted Synapse', 'Nonsyndromic'))
+	plt.show()
+	plt.close()
+
 
 	#how well does nonbrain predicted genes enrichment for autism syndromic:
 	aut_syndromic=find_sfari_syndromic_genes()
@@ -169,12 +180,9 @@ def find_nonbrain_disease_enrichment():
 	plt.close()
 
 	overlap=list(set(nb_pred)&set(aut_syndromic))
-	print ('overlap with nb and syndromic', overlap)
+	print ('overlap with nb and syndromic', len(overlap), overlap)
 
-	venn2([set(nb_pred), set(nonsyndromic)], set_labels=('Non-Brain Predicted Synapse', 'Nonsyndromic'))
-	plt.show()
-	plt.close()
-
+	
 
 if __name__ == '__main__':
 	load_brain_pred_genes()
