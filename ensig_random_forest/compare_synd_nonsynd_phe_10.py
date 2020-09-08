@@ -192,8 +192,8 @@ def compare_synapse_ex_nervous_head():
 if __name__ == '__main__':
 	compare_syndromic_ex_nervous()
 	compare_syndromic_ex_nervous_head()
-	compare_synapse_ex_nervous()
-	compare_synapse_ex_nervous_head()
+	#compare_synapse_ex_nervous()
+	#compare_synapse_ex_nervous_head()
 
 
 	
