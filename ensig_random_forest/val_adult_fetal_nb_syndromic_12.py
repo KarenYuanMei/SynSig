@@ -171,6 +171,8 @@ def plot_overlap():
 	fetal=find_fetal()
 	adult=find_adult()
 	nb=load_nonbrain_pred_genes()
+	syndromic=find_sfari_syndromic_genes()
+	
 	pred_val=list(set(fetal+adult)&set(nb))
 
 	f = plt.figure()
